@@ -1,0 +1,252 @@
+/***************
+******NAVBAR****
+****************/
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none !important;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+li{
+    padding: 5px;
+}
+
+.dropdown-menu a{
+    color: black !important;
+}
+
+.navbar-default .navbar-nav>.open>a{
+    background-color: #9DE9E7 !important;
+    color: black !important;
+}
+
+nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+    color: black !important;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+    background-color: #9DE9E7;
+}
+
+.nav-schedule{
+    margin-top: -6px;
+    background-color: #9DE9E7;
+    color: black;
+    font-weight: bolder;
+}
+
+.FAQ{
+    color: black;
+    font-size: 18px;  
+}
+
+.nav-custom{
+    border: none;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+}
+
+.nav-links{
+    color: black;
+    font-size: 18px;
+    padding: 25px;
+}
+
+button.navbar-toggle{
+    background-color: #9DE9E7 !important;
+}
+
+.navbar-default .navbar-toggle{
+    border-color: black;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: black;
+}
+
+@media (max-width: 1055px) {
+    .nav-links{
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+  .navbar-nav li {
+    text-align: right;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-collapse  {
+    text-align: right;
+    z-index: 1;
+    background-color: white;
+  }
+}
+
+/****** Change Point When Navbar Collapses ******/
+/*@media (max-width: 865px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}*/
+
+/***************
+*****HEADER*****
+****************/
+
+.header-logo{
+    margin-top: -150px;
+}
+
+@media(max-width: 770px) {
+    .header-logo{
+        margin-top: -75px;
+    }
+}
+
+/****************
+*****SERVICES****
+*****************/
+
+.service-title{
+    color: black;
+    border: 5px solid #817C78;
+    height: 20vh;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+.skew:hover{
+    -webkit-transform: skew(-10deg);
+    transform: skew(-10deg);
+    font-style: italic;
+}
+
+.services{
+    padding-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.circle {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  padding: 50% 0;
+  border-radius: 50%;
+  background: white;
+  color: #73716C;
+  border: 5px solid #73716C; 
+  font-family: Helvetica, Arial Black, sans;
+  font-size: 28px;
+  text-align: center;
+  line-height:0;
+}
+
+.contain{
+    
+}
+
+/***************
+*****CONTACT****
+****************/
+
+.contact-box{
+    height: 45vh;
+    position: relative;
+    margin: 15px 15px 15px 15px;
+
+}
+
+.contact-us{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.map{
+    height: 30vh;
+}
+
+.marker{
+    color:red;
+}
+
+/***************
+******FOOTER****
+****************/
+
+footer{
+    background-color:#767474;
+    padding: 10px;
+    text-align: center;
+}
+
+.icons{
+    color: #9DE9E7;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.icons:hover {
+    color: black;
+}
+
+.footer-links:hover {
+    text-decoration: none !important;
+    color: black;
+}
+
+@media(max-width: 768px) {
+    .icons{
+        font-size: 8px !important;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .footer-links{
+        font-size: 8px;
+        line-height: 0 !important;
+    }
+    .footer-address{
+        line-height: 0;
+    }
+}
+
+.footer-links{
+    color: #9DE9E7;
+    margin-top: 10px;
+}

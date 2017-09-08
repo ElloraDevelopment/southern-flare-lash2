@@ -1,6 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import "./index.css";
+import Home from "./landing/home.js";
+import Contact from "./contact.js";
+
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+
 import AuthComponent from "./authentication/auth.js";
 import CmsComponent from "./cms/cms.js";
 
@@ -17,6 +23,12 @@ class App extends React.Component {
       <div className="app-container">
         <AuthComponent />
         <CmsComponent />
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/contact" component={Contact} />
+          </Switch>
+        </BrowserRouter>
       </div>
     )
   }
