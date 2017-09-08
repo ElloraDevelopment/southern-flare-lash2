@@ -7,7 +7,16 @@ let defaultState = {
   token: "",
   priv: "",
   isShowingLogin: false,
-  isShowingSignup: false
+  isShowingSignup: false,
+  products: [
+    {
+      pic: "",
+      title: "",
+      desc: "",
+      price: 0,
+      active: ""
+    }
+  ]
 }
 
 const mainReducer = (state = defaultState, action) => {
@@ -57,6 +66,11 @@ const mainReducer = (state = defaultState, action) => {
     return {
       ...state,
       isShowingLogin: !state.isShowingLogin
+    }
+  } else if (action.type === "SET_DATA") {
+    return {
+      ...state,
+      products: action.data
     }
   } else {
       return {
