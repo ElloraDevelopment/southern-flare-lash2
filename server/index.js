@@ -10,7 +10,8 @@ const settings = require('./config/settings.js');
 //********IMPORT ROUTES**********
 //*******************************
 let authRouter = require('./routes/auth.js');
-let productRouter = require('./routes/cms.js');
+let productRouter = require('./routes/products.js');
+let stylistRouter = require('./routes/stylists.js');
 
 
 let PORT = process.env.PORT || settings.port;
@@ -29,6 +30,7 @@ app.use(bodyParser.json());
 //*******************************
 app.use('/auth', authRouter);
 app.use('/products', productRouter);
+app.use('/stylists', stylistRouter);
 
 
 app.listen(PORT, () => {
