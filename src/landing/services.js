@@ -6,7 +6,7 @@ class Services extends Component {
         return (
             <div className="row text-center services">
                 <Link to="/lashes">
-                    <div className="contain col-md-3 col-sm-3 col-xs-3 ">
+                    <div className="contain col-md-3 col-sm-4 col-xs-4">
                         <div className="circle">
                             <p>Lashes</p>
                         </div>
@@ -14,15 +14,15 @@ class Services extends Component {
                 </Link>
                 
                 <Link to="/perm_makeup">
-                    <div className="contain col-md-3 col-sm-3 col-xs-3 ">
+                    <div className="contain col-md-3 col-sm-4 col-xs-4">
                         <div className="circle">
-                            <p>Permanent Makeup</p>
+                            <p>Permanent</p><br/><p>Makup</p>
                         </div>
                     </div> 
                 </Link>
                 
                 <Link to="/waxing">
-                    <div className="contain col-md-3 col-sm-3 col-xs-3 ">
+                    <div className="contain col-md-3 col-sm-4 col-xs-4 ">
                         <div className="circle">
                             <p>Waxing</p>
                         </div>
@@ -30,9 +30,9 @@ class Services extends Component {
                 </Link>
 
                 <Link to="/facials">
-                    <div className="contain col-md-3 col-sm-3 col-xs-3">
+                    <div className="contain col-md-3 col-sm-4 col-xs-4">
                         <div className="circle">
-                            <p>Lashes</p>
+                            <p>Facials</p>
                         </div>
                     </div> 
                 </Link>

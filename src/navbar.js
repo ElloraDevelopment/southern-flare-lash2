@@ -23,6 +23,7 @@ class MyNavbar extends Component {
               </Link>
             </NavItem>
 
+        {/*Services DROPDOWN*/}
             <NavDropdown className="FAQ" eventKey={4} title="Services" id="basic-nav-dropdown">
                 <Link to="/lashes">
                   <MenuItem className="drop-item" eventKey={3.1}>Lashes</MenuItem>
@@ -41,6 +42,7 @@ class MyNavbar extends Component {
                 </Link> 
               </NavDropdown>
 
+          {/*STAFF*/}
             <NavItem>
               <Link to="/staff">
                 <span className="nav-links">Staff</span>
@@ -53,51 +55,15 @@ class MyNavbar extends Component {
               </Link>
             </NavItem>
 
-              <NavDropdown className="FAQ" eventKey={11} title="FAQ's" id="basic-nav-dropdown">
-                <Link to="/FAQ">
-                  <MenuItem className="drop-item" eventKey={3.1}>What is Microblading?</MenuItem>
-                </Link>
+        {/*FAQ DROPDOWN*/}
+              <NavDropdown className="FAQ" eventKey={2} title="FAQ's" id="basic-nav-dropdown">
+                <MenuItem eventKey={3.1}>
+                  <Link to="/lash_FAQ">Lashes</Link>
+                </MenuItem>
 
-                <Link to="/FAQ">
-                  <MenuItem eventKey={3.2}>How long is the heal time?</MenuItem>
-                </Link>
-                
-                <Link to="/FAQ">   
-                  <MenuItem eventKey={3.3}>Is it tattooing?</MenuItem>
-                </Link>
-
-                <Link to="/FAQ">
-                  <MenuItem eventKey={3.4}>How long will it last?</MenuItem>
-                </Link>
-
-                <Link to="/FAQ">
-                  <MenuItem eventKey={3.5}>Why will I need a touch up?</MenuItem>
-                </Link>
-                
-                <Link to="/FAQ">
-                  <MenuItem eventKey={3.6}>Does it hurt?</MenuItem>
-                </Link>
-
-                <Link to="/FAQ">
-                  <MenuItem eventKey={3.7}>Pre and Post care procedures?</MenuItem>
-                </Link>
-                
-                <Link to="/FAQ">
-                  <MenuItem eventKey={3.8}>Who is not suitable for Microblading?</MenuItem>
-                </Link>
-
-                <Link to="/FAQ">
-                  <MenuItem eventKey={3.9}>Over an existing brow tatoo?</MenuItem>
-                </Link>
-                
-                <Link to="/FAQ">
-                  <MenuItem eventKey={3.10}>How long will it last?</MenuItem>
-                </Link>
-                
-                <Link to="/FAQ">
-                  <MenuItem eventKey={3.11}>Cancelation policy?</MenuItem>
-                </Link>
-                
+                <MenuItem eventKey={3.2}>
+                  <Link to="/perm_FAQ">Permanent Makeup</Link>
+                </MenuItem>
               </NavDropdown>
             
             <NavItem>
