@@ -8,13 +8,11 @@ class ProductsForm extends React.Component {
         <input type="text" placeholder="title" value={this.props.input.title} onChange={(event) => {this.props.handleChange("title", event)}} />
         <input type="text" placeholder="desc" value={this.props.input.desc} onChange={(event) => {this.props.handleChange("desc", event)}} />
         <input type="number" placeholder="price" value={this.props.input.price} onChange={(event) => {this.props.handleChange("price", event)}} />
-        <select value={this.props.input.active} onChange={(event) => {this.props.handleChange("active", event)}} >
-          <option value="active">Active</option>
-          <option value="inactive">Inactive</option>
-        </select>
+        <label>Check if Active</label>
+        <input type="checkbox" checked={this.props.input.active} onChange={(event) => {this.props.handleChange("active", event)}} ></input>
         <button className="add-item" onClick={() => {this.props.handleClick(this.props.input)}}>Add Item</button>
-        <button className="edit-item">Edit Item</button>
-        <button className="remove-item">Remove Item</button>
+        {/* <button className="edit-item">Edit Item</button>
+        <button className="remove-item">Remove Item</button> */}
       </div>
     )
   }

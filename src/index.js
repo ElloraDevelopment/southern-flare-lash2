@@ -9,6 +9,8 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 import AuthComponent from "./authentication/auth.js";
 import CmsComponent from "./cms/cms.js";
+import ProductListContainer from "./product-page/containers/product-list-container.js";
+import Ecwid from "./ecommerce-ecwid/ecwid.js";
 
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
@@ -21,14 +23,19 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-container">
+        <ProductListContainer />
         <AuthComponent />
         <CmsComponent />
+<<<<<<< HEAD
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/contact" component={Contact} />
           </Switch>
         </BrowserRouter>
+=======
+        <Ecwid />
+>>>>>>> product-page
       </div>
     )
   }

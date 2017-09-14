@@ -14,6 +14,17 @@ let defaultState = {
       title: "",
       desc: "",
       price: 0,
+      active: false
+    }
+  ],
+  stylists: [
+    {
+      pic: "",
+      firstName: "",
+      lastName: "",
+      bio: "",
+      services: [],
+      instagram: "",
       active: ""
     }
   ]
@@ -67,10 +78,15 @@ const mainReducer = (state = defaultState, action) => {
       ...state,
       isShowingLogin: !state.isShowingLogin
     }
-  } else if (action.type === "SET_DATA") {
+  } else if (action.type === "SET_PRODUCT_DATA") {
     return {
       ...state,
       products: action.data
+    }
+  } else if (action.type === "SET_STYLIST_DATA") {
+    return {
+      ...state,
+      stylists: action.data
     }
   } else {
       return {

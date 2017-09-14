@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
-
-Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
   pic: {
