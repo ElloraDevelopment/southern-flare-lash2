@@ -6,10 +6,11 @@ import { Panel, Accordion } from "react-bootstrap";
 class PermFAQ extends Component {
     render() {
         return (
-            <div id="lash_FAQ">
+            <div>
+            <div id="lash_FAQ" className="wrapper">
                 <Navbar/>
                     <h4 className="text-center faq-title">Frequently Asked Microblading Questions</h4>
-                <div className="row">
+                <div className="row accord-contain">
                     <div className="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                         <Accordion>
                             <Panel header="What is Microblading?" eventKey="1">Microblading (also referred to as Microstroking, Eyebrow Embroidery, Feather Stroke Brows, 3D Brows, or Micro Pigmentation, etc) is the process of manually implanting color pigment beneath the surface of the skin by means of tiny, sterile, disposable needles to produce the appearance of hair strokes. The result is a very natural looking, well shaped, fuller brow that you won’t have to fill in with cosmetics everyday.</Panel>
@@ -89,6 +90,7 @@ class PermFAQ extends Component {
                     <div className="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                         <Accordion>
                             <Panel header="Who is NOT suitable for Microblading?" eventKey="5">
+                                <strong>Anyone Who...</strong>
                                  <ul>
                                     <li className="bullet-pnt">Have heart conditions or using heart medications.</li>
                                     <li className="bullet-pnt">Accutane within the past year.</li>
@@ -123,6 +125,8 @@ class PermFAQ extends Component {
                     </div>
 
                 </div>
+                
+            </div>
                 <Footer />
             </div>
         );

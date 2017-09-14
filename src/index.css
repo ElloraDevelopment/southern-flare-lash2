@@ -1,4 +1,15 @@
 /***************
+******BODY******
+****************/
+html{
+    height: 100%;
+}
+
+.wrapper{
+    height: 100%;
+    min-height: calc(100vh - 10vh);
+}
+/***************
 ******NAVBAR****
 ****************/
 
@@ -76,6 +87,9 @@ button.navbar-toggle{
     .nav-links{
         padding: 0;
     }
+    .navbar-default .navbar-nav>li>a{
+        padding-right: 2px; 
+    }
 }
 
 @media (max-width: 768px) {
@@ -98,7 +112,13 @@ button.navbar-toggle{
 ****************/
 
 .faq-title{
-    margin-bottom: 5vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    font-family: Bakery;
+    font-size: 26px;
+    border-bottom: 3px solid darkgray;
+    border-top: 3px solid darkgray;
+    margin-top: 0;
 }
 
 .panel-group{
@@ -111,13 +131,21 @@ button.navbar-toggle{
 }
 
 .panel-default>.panel-heading{
-    background-color: #D08E2D;
-    color: white;
+    background-color: white;
     text-align: center;
+    font-family: SummerFont-Light;
+}
+
+.panel-title{
+    font-size: 22px;
 }
 
 li{
     list-style: none;
+}
+
+.accord-contain{
+    margin-top: 2vh;
 }
 
 .bullet-pnt{
@@ -126,6 +154,18 @@ li{
 
 .facts{
     margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  .faq-title{
+      font-size: 34px;
+  }
+  .panel-title{
+      font-size: 28px;
+  }
+  .accord-contain{
+      margin-top: 100px;
+  }
 }
 
 /***************
@@ -161,29 +201,28 @@ li{
     font-style: italic;
 }
 
-.services{
-    padding-top: 5vh;
-    margin-bottom: 5vh;
+.contain{
+    margin-bottom: 15px;
+}
+
+.services-contain{
+    margin-bottom: 15px;
 }
 
 .circle {
   position: relative;
   display: inline-block;
-  width: 100%;
+  width: 50%;
   height: 0;
-  padding: 50% 0;
+  padding: 25% 0;
   border-radius: 50%;
   background: white;
-  color: #73716C;
-  border: 5px solid #73716C; 
+  color: black;
+  border: 3px solid black; 
   font-family: Helvetica, Arial Black, sans;
-  font-size: 28px;
+  font-size: 14px;
   text-align: center;
   line-height:0;
-}
-
-.contain{
-    
 }
 
 /***************
@@ -217,11 +256,13 @@ li{
 ******FOOTER****
 ****************/
 
-footer{
+.footer{
     background-color:#767474;
-    padding: 10px;
     text-align: center;
-    margin-top: 5vh;
+    height: 10vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icons{
@@ -256,5 +297,4 @@ footer{
 
 .footer-links{
     color: #9DE9E7;
-    margin-top: 10px;
 }

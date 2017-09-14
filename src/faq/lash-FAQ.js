@@ -6,10 +6,13 @@ import { Panel, Accordion } from "react-bootstrap";
 class LashFAQ extends Component {
     render() {
         return (
-            <div id="lash_FAQ">
+            <div className="">
+            <div id="lash_FAQ" className="wrapper">
                 <Navbar/>
+
                     <h4 className="text-center faq-title">Frequently Asked Lash Questions</h4>
-                <div className="row">
+                    
+                <div className="row accord-contain">
                     <div className="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                         <Accordion>
                             <Panel header="What are Eyelash Extensions?" eventKey="1">Eyelash Extensions are a synthetic lash material glued to one single individual natural lash with a professional grade adhesive.</Panel>
@@ -63,7 +66,9 @@ class LashFAQ extends Component {
                     </div>
 
                 </div>
-                <Footer />
+                
+            </div>
+                 <Footer />
             </div>
         );
     }
