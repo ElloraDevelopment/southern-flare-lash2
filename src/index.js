@@ -4,6 +4,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import Home from "./landing/home.js";
 import Contact from "./contact.js";
+import LashFAQ from "./faq/lash-FAQ.js";
+import PermFAQ from "./faq/perm-makeup-FAQ.js";
 
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
@@ -23,19 +25,22 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-container">
+
         <ProductListContainer />
         <AuthComponent />
         <CmsComponent />
-<<<<<<< HEAD
+
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/lash_FAQ" component={LashFAQ} />
+            <Route exact path="/perm_FAQ" component={PermFAQ} />
           </Switch>
         </BrowserRouter>
-=======
+
         <Ecwid />
->>>>>>> product-page
+
       </div>
     )
   }

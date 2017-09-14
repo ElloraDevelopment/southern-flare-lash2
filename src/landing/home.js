@@ -8,9 +8,9 @@ import Services from "./services.js";
 class Home extends Component {
     render() {
         return (
-            <div>
-              <Navbar /> 
-              <div className="container-fluid">
+            <div> 
+              <div className="container-fluid wrapper">
+                <Navbar />
                 <Header />
                 <Services/>
               </div>
