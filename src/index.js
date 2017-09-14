@@ -23,8 +23,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-container">
-        {/*<AuthComponent />
-        <CmsComponent />*/}
+        <AuthComponent />
+        <CmsComponent />
 
         <BrowserRouter>
           <Switch>
