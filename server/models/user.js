@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const salt = bcrypt.genSaltSync(10);
-let Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 let userSchema = new Schema ({
   username: {

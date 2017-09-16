@@ -11,8 +11,8 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 import AuthComponent from "./authentication/auth.js";
 import CmsComponent from "./cms/cms.js";
-import ProductListContainer from "./product-page/containers/product-list-container.js";
-import Ecwid from "./ecommerce-ecwid/ecwid.js";
+import ProductListContainer from "./ecommerce/product-page/containers/product-list-container.js";
+import CartListContainer from "./ecommerce/cart/containers/cart-list-container.js";
 
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
@@ -25,11 +25,18 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-container">
+<<<<<<< HEAD
 
         <ProductListContainer />
         <AuthComponent />
         <CmsComponent />
 
+=======
+        <CartListContainer />
+        <ProductListContainer />
+        <AuthComponent />
+        <CmsComponent />
+>>>>>>> cart
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Home} />
@@ -39,8 +46,11 @@ class App extends React.Component {
           </Switch>
         </BrowserRouter>
 
+<<<<<<< HEAD
         <Ecwid />
 
+=======
+>>>>>>> cart
       </div>
     )
   }
