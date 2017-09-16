@@ -8,6 +8,7 @@ class ProductPageComponent extends React.Component {
         <h3>{this.props.product.title}</h3>
         <h4>{this.props.product.desc}</h4>
         <h4>${this.props.product.price}</h4>
+        <button>Add to Cart</button>
       </div>
     )
   }

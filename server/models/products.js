@@ -18,7 +18,7 @@ const productSchema = new Schema({
     required: true
   },
   active: {
-    type: String,
+    type: Boolean,
     required: true
   }
 });
