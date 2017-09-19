@@ -32,14 +32,14 @@ class MyNavbar extends Component {
                 <Link to="/perm_makeup">
                   <MenuItem eventKey={3.2}>Permanent Makeup</MenuItem>
                 </Link>
-                
-                <Link to="/waxing">   
+
+                <Link to="/waxing">
                   <MenuItem eventKey={3.3}>Waxing</MenuItem>
                 </Link>
 
                 <Link to="/facials">
                   <MenuItem eventKey={3.4}>Facials</MenuItem>
-                </Link> 
+                </Link>
               </NavDropdown>
 
           {/*STAFF*/}
@@ -65,7 +65,7 @@ class MyNavbar extends Component {
                   <Link to="/perm_FAQ">Permanent Makeup</Link>
                 </MenuItem>
               </NavDropdown>
-            
+
             <NavItem>
               <Link to="/contact">
                 <span className="nav-links">Contact</span>
@@ -77,7 +77,7 @@ class MyNavbar extends Component {
                 <span className="btn nav-schedule">Schedule Now</span>
               </Link>
             </NavItem>
-          
+
           </Nav>
         </Navbar.Collapse>
       </Navbar>

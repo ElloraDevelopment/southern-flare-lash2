@@ -1,13 +1,12 @@
 //RENDER OUT PRODUCT
 import React from "react";
-// import { Col } from "react-bootstrap";
+
 
 class Stylists extends React.Component {
   render() {
     console.log(this.props.stylist.firstName);
     return (
       <div className="stylists-wrapper">
-        {/* <Col md={4} className="product-col"> */}
           <div className="stylist-pic" style={{backgroundImage: `url(${this.props.stylist.pic})`}}>
             <input className="img-input" onChange={(event) => {this.props.handleUpdate("pic", event)}} placeholder="change picture" />
           </div>
@@ -36,33 +35,10 @@ class Stylists extends React.Component {
 
           <button onClick={() => {this.props.handleEdit(this.props.stylist._id, this.props.inputs)}}>Update</button>
           <button onClick={() => {this.props.handleDelete(this.props.stylist._id);}}>Delete</button>
-        {/* </Col> */}
 
       </div>
     )
   }
 }
-
-// pic: {
-//   type: String,
-// },
-// firstName: {
-//   type: String,
-//   required: true
-// },
-// lastName: {
-//   type: String,
-//   required: true
-// },
-// bio: {
-//   type: String
-// },
-// services: [{
-//   type: String
-// }],
-// instagram: {
-//   type: String
-// }
-// })
 
 export default Stylists;

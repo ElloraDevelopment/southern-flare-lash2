@@ -1,12 +1,10 @@
 //RENDER OUT PRODUCT
 import React from "react";
-import { Col } from "react-bootstrap";
 
 class Products extends React.Component {
   render() {
     return (
       <div className="products-component">
-        <Col md={4} className="product-col">
           <div className="product-pic" style={{backgroundImage: `url(${this.props.product.pic})`}}>
             <input className="img-input" onChange={(event) => {this.props.handleEdit("pic", event);}} placeholder="change picture" />
           </div>
@@ -29,7 +27,6 @@ class Products extends React.Component {
 
           <button onClick={() => {this.props.handleUpdate(this.props.products._id, this.props.input);}}>Update</button>
           <button onClick={() => {this.props.handleDelete(this.props.products._id);}}>Delete</button>
-        </Col>
 
       </div>
     )
