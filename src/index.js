@@ -28,7 +28,7 @@ class App extends React.Component {
       <div className="app-container">
         <AuthComponent />
         <CmsComponent />
-        {/* <CartListContainer /> */}
+        <CartListContainer />
         <ProductListContainer />
         <StylistListContainer />
         <BrowserRouter>
