@@ -29,11 +29,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-container">
-        <AuthComponent />
         <CmsComponent />
         <CartListContainer />
-        <ProductListContainer />
-        <StylistListContainer />
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Home} />
@@ -41,6 +38,9 @@ class App extends React.Component {
             <Route exact path="/lash_FAQ" component={LashFAQ} />
             <Route exact path="/perm_FAQ" component={PermFAQ} />
             <Route exact path="/lashes" component={Lash} />
+            <Route exact path="/staff" component={StylistListContainer} />
+            <Route exact path="/product" component={ProductListContainer} />
+            <Route exact path="/login" component={AuthComponent} />
           </Switch>
         </BrowserRouter>
 

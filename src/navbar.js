@@ -75,15 +75,9 @@ class MyNavbar extends Component {
 
             {/*<NavItem activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="">
                 <span className="btn nav-schedule">Schedule Now</span>
-<<<<<<< HEAD
-              </Link>
-            </NavItem>
-
-=======
             </NavItem>*/}
             <a  href="https://www.schedulicity.com/scheduling/SFLPW8" title="Online scheduling" rel="noopener noreferrer" target="_blank"><img className="schedule-btn" src="//cdn.schedulicity.com/images/schedulenow_lt_yellow3_md.png" alt="Online scheduling" title="Online scheduling" border="0" /></a>
           
->>>>>>> landing
           </Nav>
           <script type="text/javascript" src="https://www.schedulicity.com/api/public/widget/SFLPW8/popup"></script>
         </Navbar.Collapse>

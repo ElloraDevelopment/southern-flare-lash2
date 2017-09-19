@@ -20,7 +20,10 @@ class Footer extends React.Component {
                     </a>
                 </div>
                     <Link to="/careers">
-                        <div className="footer-links">Careers</div>
+                        <div className="footer-links footer-inline">Careers</div>
+                    </Link>
+                    <Link to="/login">
+                        <div className="footer-links footer-inline">Login</div>
                     </Link>
 
                     <div><a className="footer-links" href="tel:336-212-0188">336-212-0188</a></div>
