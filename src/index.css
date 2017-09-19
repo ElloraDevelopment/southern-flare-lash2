@@ -55,7 +55,7 @@ nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
 
 .FAQ{
     color: black;
-    font-size: 18px;  
+    font-size: 18px;
 }
 
 .nav-custom{
@@ -88,7 +88,7 @@ button.navbar-toggle{
         padding: 0;
     }
     .navbar-default .navbar-nav>li>a{
-        padding-right: 2px; 
+        padding-right: 2px;
     }
 }
 
@@ -149,7 +149,7 @@ li{
 }
 
 .bullet-pnt{
-    list-style-type: circle; 
+    list-style-type: circle;
 }
 
 .facts{
@@ -218,7 +218,7 @@ li{
   border-radius: 50%;
   background: white;
   color: black;
-  border: 3px solid black; 
+  border: 3px solid black;
   font-family: Helvetica, Arial Black, sans;
   font-size: 14px;
   text-align: center;
@@ -250,6 +250,28 @@ li{
 
 .marker{
     color:red;
+}
+
+/**********************
+*****STYLIST PAGE******
+**********************/
+.stylist-pic {
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+}
+
+.stylist-list-container-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/**********************
+*****CART PAGE******
+**********************/
+.cart-pic {
+  height: 50px;
 }
 
 /***************

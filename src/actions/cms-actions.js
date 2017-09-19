@@ -16,6 +16,37 @@ export function setStylistData(data) {
 
 //NEED TO REMOVE http://localhost:8080/ TO GO LIVE
 
+export function setCartData(data) {
+  return {
+    type: "SET_CART_DATA",
+    data
+  }
+}
+
+//NEED TO REMOVE http://localhost:8080/ TO GO LIVE
+
+export function loadCartData() {
+  return (dispatch) => {
+    return axios.get(`http://localhost:8080/cart`).then((response) => {
+      dispatch(setCartData(response.data.data));
+    })
+    .catch((err) => {
+      throw err;
+    });
+  }
+}
+
+export function addCartData(id) {
+  return(dispatch) => {
+    return axios.post(`http://localhost:8080/cart/${id}`).then((response) => {
+      dispatch(loadCartData());
+    })
+    .catch((err) => {
+      throw err;
+    });
+  }
+}
+
 export function loadProductData() {
   return (dispatch) => {
     return axios.get(`http://localhost:8080/products`).then((response) => {

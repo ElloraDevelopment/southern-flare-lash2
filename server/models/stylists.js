@@ -19,6 +19,10 @@ const stylistSchema = new Schema({
   services: [{
     type: String
   }],
+  active: {
+    type: Boolean,
+    required: true
+  },
   instagram: {
     type: String
   }

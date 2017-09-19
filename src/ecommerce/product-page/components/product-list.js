@@ -7,12 +7,13 @@ import ProductPageComponent from "./product-page-component.js";
 class ProductList extends React.Component {
   genProducts() {
     return this.props.products.map((product, index) => {
-      return <ProductPageComponent key={product.title + index} product={product}  />
+      return <ProductPageComponent key={product.title + index} product={product} updateCart={this.props.updateCart} handleChange={this.props.handleChange} input={this.props.input} />
     });
   }
   render() {
     return (
       <div className="product-list-wrapper">
+        <h2>Products</h2>
         {this.genProducts()}
       </div>
     )

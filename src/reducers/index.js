@@ -8,15 +8,7 @@ let defaultState = {
   priv: "",
   isShowingLogin: false,
   isShowingSignup: false,
-  products: [
-    {
-      pic: "",
-      title: "",
-      desc: "",
-      price: 0,
-      active: false
-    }
-  ],
+  products: [],
   stylists: [
     {
       pic: "",
@@ -25,9 +17,10 @@ let defaultState = {
       bio: "",
       services: [],
       instagram: "",
-      active: ""
+      active: false
     }
-  ]
+  ],
+  cart: []
 }
 
 const mainReducer = (state = defaultState, action) => {
@@ -87,6 +80,11 @@ const mainReducer = (state = defaultState, action) => {
     return {
       ...state,
       stylists: action.data
+    }
+  } else if (action.type === "SET_CART_DATA") {
+    return {
+      ...state,
+      cart: action.data
     }
   } else {
       return {

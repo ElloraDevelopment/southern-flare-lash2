@@ -12,6 +12,7 @@ class ProductsList extends React.Component {
   render() {
     return (
       <div className="products-list-wrapper">
+        <h2>Edit Products:</h2>
         {this.genProducts()}
       </div>
     )

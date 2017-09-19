@@ -14,6 +14,7 @@ class ProductsFormContainer extends React.Component {
       title: "",
       desc: "",
       price: 0,
+      quantity: 0,
       active: false
     };
     autoBind(this);
@@ -23,10 +24,18 @@ class ProductsFormContainer extends React.Component {
       [key]: event.target.type === "checkbox" ? event.target.checked : event.target.value
     })
   }
+  clearInputs() {
+    for(let key in this.state) {
+      this.setState({
+        [key]: ""
+      });
+    }
+  }
   render() {
     return (
       <div className="products-form-container">
-        <ProductsForm input={this.state} handleChange={this.handleChange} handleClick={this.props.addProductData} />
+        <h2>Add Product:</h2>
+        <ProductsForm input={this.state} clearInputs={this.clearInputs} handleChange={this.handleChange} handleClick={this.props.addProductData} />
       </div>
     )
   }

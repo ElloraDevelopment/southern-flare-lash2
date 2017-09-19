@@ -12,6 +12,7 @@ const settings = require('./config/settings.js');
 let authRouter = require('./routes/auth.js');
 let productRouter = require('./routes/products.js');
 let stylistRouter = require('./routes/stylists.js');
+let cartRouter = require('./routes/cart.js');
 
 
 let PORT = process.env.PORT || settings.port;
@@ -31,6 +32,7 @@ app.use(bodyParser.json());
 app.use('/auth', authRouter);
 app.use('/products', productRouter);
 app.use('/stylists', stylistRouter);
+app.use('/cart', cartRouter);
 
 
 app.listen(PORT, () => {
