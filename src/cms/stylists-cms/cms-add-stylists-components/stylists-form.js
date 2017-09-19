@@ -12,11 +12,6 @@ class StylistsForm extends React.Component {
         <input type="text" placeholder="instagram" value={this.props.input.instagram} onChange={(event) => {this.props.handleChange("instagram", event)}} />
         <label>Check if Active:</label>
         <input type="checkbox" checked={this.props.input.active} onChange={(event) => this.props.handleChange("active", event)} />
-        {/* <select value={this.props.input.active} onChange={(event) => {this.props.handleChange("active", event)}} >
-          <option value="select">Select One</option>
-          <option value="active">Active</option>
-          <option value="inactive">Inactive</option>
-        </select> */}
         <button className="add-item" onClick={() => {this.props.handleClick(this.props.input); this.props.clearInputs();}}>Add Item</button>
       </div>
     )

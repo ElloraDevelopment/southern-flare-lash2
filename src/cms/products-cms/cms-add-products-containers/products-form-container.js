@@ -2,9 +2,9 @@ import React from "react";
 import autoBind from "react-autobind";
 
 import { connect } from "react-redux";
-import * as cmsActionCreators from "../../actions/cms-actions.js";
+import * as cmsActionCreators from "../../../actions/cms-actions.js";
 
-import ProductsForm from "../components/products-form.js";
+import ProductsForm from "../cms-add-products-components/products-form.js";
 
 class ProductsFormContainer extends React.Component {
   constructor() {

@@ -1,5 +1,7 @@
 import axios from "axios";
 
+//NEED TO REMOVE http://localhost:8080/ TO GO LIVE
+
 export function setProductData(data) {
   return {
     type: "SET_PRODUCT_DATA",
@@ -13,8 +15,6 @@ export function setStylistData(data) {
     data
   }
 }
-
-//NEED TO REMOVE http://localhost:8080/ TO GO LIVE
 
 export function setCartData(data) {
   return {
@@ -74,6 +74,7 @@ export function addProductData(data) {
     return (dispatch) => {
       return axios.put(`http://localhost:8080/products/${id}`, data).then((response) => {
         dispatch(loadProductData());
+        alert("product updated");
       })
       .catch((err) => {
         throw err;
@@ -119,6 +120,7 @@ export function addProductData(data) {
       return (dispatch) => {
         return axios.put(`http://localhost:8080/stylists/${id}`, data).then((response) => {
           dispatch(loadStylistData());
+          alert("stylist updated");
         })
         .catch((err) => {
           throw err;
@@ -127,7 +129,6 @@ export function addProductData(data) {
     }
 
     export function deleteStylistData(id) {
-      console.log("called");
       return (dispatch) => {
         return axios.delete(`http://localhost:8080/stylists/${id}`).then((response) => {
           dispatch(loadStylistData());

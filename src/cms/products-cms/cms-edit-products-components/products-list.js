@@ -1,12 +1,12 @@
 //DATA FROM REDUX FOR EACH ITEM IN THE ARRAY MAP
 import React from "react";
 
-import ProductsContainer from "../containers/products-container.js";
+import ProductsContainer from "../cms-edit-products-containers/products-container.js";
 
 class ProductsList extends React.Component {
   genProducts() {
     return this.props.products.map((product, index) => {
-      return <ProductsContainer handleDelete={this.props.deleteProductData} handleEdit={this.props.editProductData} key={product.title + index} product={product} />
+      return <ProductsContainer handleDelete={this.props.handleDelete} handleEdit={this.props.handleEdit} key={product.title + index} product={product} />
     });
   }
   render() {

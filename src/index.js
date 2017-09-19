@@ -26,10 +26,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-container">
-        <CartListContainer />
-        <ProductListContainer />
         <AuthComponent />
         <CmsComponent />
+        {/* <CartListContainer /> */}
+        <ProductListContainer />
         <StylistListContainer />
         <BrowserRouter>
           <Switch>

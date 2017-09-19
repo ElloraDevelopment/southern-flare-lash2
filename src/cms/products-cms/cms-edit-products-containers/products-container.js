@@ -2,25 +2,25 @@
 import React from "react";
 import autoBind from "react-autobind";
 
-import Products from "../components/products.js";
+import Products from "../cms-edit-products-components/products.js";
 
 class ProductsContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state ={
-      ...this.props.products
+      ...props.product
     };
     autoBind(this);
   }
   handleUpdate(key, event) {
       this.setState({
-          [key]: event.target.value
-      })
+          [key]: event.target.type === "checkbox" ? event.target.checked : event.target.value
+      });
   }
   render() {
     return (
       <div className="products-container-wrapper">
-        <Products input={this.state} handleUpdate={this.handleUpdate} handleEdit={this.props.editProductData} handleDelete={this.props.handleDelete} product={this.props.product} />
+        <Products input={this.state} handleUpdate={this.handleUpdate} handleEdit={this.props.handleEdit} handleDelete={this.props.handleDelete} product={this.props.product} />
       </div>
     )
   }

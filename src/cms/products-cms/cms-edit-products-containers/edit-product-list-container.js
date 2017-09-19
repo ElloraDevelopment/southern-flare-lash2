@@ -3,11 +3,11 @@ import React from "react";
 
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as actionCreators from "../../actions/cms-actions.js";
+import * as actionCreators from "../../../actions/cms-actions.js";
 
-import ProductsList from "../components/products-list.js";
+import ProductsList from "../cms-edit-products-components/products-list.js";
 
-class ProductsListContainer extends React.Component {
+class EditProductsListContainer extends React.Component {
   componentWillMount() {
     this.props.loadProductData();
   }
@@ -22,4 +22,4 @@ class ProductsListContainer extends React.Component {
 
 const mapStateToProps = (state) => {return state;}
 
-export default connect(mapStateToProps, actionCreators) (ProductsListContainer);
+export default connect(mapStateToProps, actionCreators) (EditProductsListContainer);

@@ -253,6 +253,16 @@ li{
 }
 
 /**********************
+*****PRODUCT PAGE******
+**********************/
+.product-pic {
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+}
+
+/**********************
 *****STYLIST PAGE******
 **********************/
 .stylist-pic {
