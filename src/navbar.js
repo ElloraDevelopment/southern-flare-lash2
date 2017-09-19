@@ -25,21 +25,22 @@ class MyNavbar extends Component {
 
         {/*Services DROPDOWN*/}
             <NavDropdown className="FAQ" eventKey={4} title="Services" id="basic-nav-dropdown">
-                <Link to="/lashes">
-                  <MenuItem className="drop-item" eventKey={3.1}>Lashes</MenuItem>
-                </Link>
-
-                <Link to="/perm_makeup">
-                  <MenuItem eventKey={3.2}>Permanent Makeup</MenuItem>
-                </Link>
+              <MenuItem className="drop-item" eventKey={3.1}>
+                <Link to="/lashes">Lashes</Link>
+              </MenuItem>
                 
-                <Link to="/waxing">   
-                  <MenuItem eventKey={3.3}>Waxing</MenuItem>
-                </Link>
+              <MenuItem eventKey={3.2}>
+                <Link to="/perm_makeup">Permanent Makeup</Link>
+              </MenuItem>
+                
+              <MenuItem eventKey={3.3}>  
+                <Link to="/waxing">Waxing</Link>
+              </MenuItem>
 
-                <Link to="/facials">
-                  <MenuItem eventKey={3.4}>Facials</MenuItem>
-                </Link> 
+              <MenuItem eventKey={3.4}> 
+                <Link to="/facials">Facials</Link>
+              </MenuItem>
+                 
               </NavDropdown>
 
           {/*STAFF*/}
@@ -72,13 +73,13 @@ class MyNavbar extends Component {
               </Link>
             </NavItem>
 
-            <NavItem className="">
-              <Link  to="/schedule">
+            {/*<NavItem activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="">
                 <span className="btn nav-schedule">Schedule Now</span>
-              </Link>
-            </NavItem>
+            </NavItem>*/}
+            <a  href="https://www.schedulicity.com/scheduling/SFLPW8" title="Online scheduling" rel="noopener noreferrer" target="_blank"><img className="schedule-btn" src="//cdn.schedulicity.com/images/schedulenow_lt_yellow3_md.png" alt="Online scheduling" title="Online scheduling" border="0" /></a>
           
           </Nav>
+          <script type="text/javascript" src="https://www.schedulicity.com/api/public/widget/SFLPW8/popup"></script>
         </Navbar.Collapse>
       </Navbar>
         );

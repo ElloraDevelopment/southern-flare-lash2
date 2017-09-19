@@ -6,11 +6,16 @@ import Home from "./landing/home.js";
 import Contact from "./contact.js";
 import LashFAQ from "./faq/lash-FAQ.js";
 import PermFAQ from "./faq/perm-makeup-FAQ.js";
+import Lash from "./service-pages/lash.js";
 
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 import AuthComponent from "./authentication/auth.js";
 import CmsComponent from "./cms/cms.js";
+<<<<<<< Updated upstream
+=======
+import ProductListContainer from "./product-page/containers/product-list-container.js";
+>>>>>>> Stashed changes
 
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
@@ -32,6 +37,7 @@ class App extends React.Component {
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/lash_FAQ" component={LashFAQ} />
             <Route exact path="/perm_FAQ" component={PermFAQ} />
+            <Route exact path="/lashes" component={Lash} />
           </Switch>
         </BrowserRouter>
       </div>
