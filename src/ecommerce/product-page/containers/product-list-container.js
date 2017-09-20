@@ -6,7 +6,10 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../../../actions/cms-actions.js";
 
+import Navbar from "../../../navbar.js";
+import Footer from "../../../footer.js";
 import ProductList from "../components/product-list.js";
+
 
 class ProductListContainer extends React.Component {
   constructor() {
@@ -27,7 +30,11 @@ class ProductListContainer extends React.Component {
   render() {
     return (
       <div className="product-list-container-wrapper">
-        <ProductList input={this.state} products={this.props.products} updateCart={this.props.addCartData} handleChange={this.handleChange}/>
+        <div className="wrapper">
+          <Navbar />
+          <ProductList input={this.state} products={this.props.products} updateCart={this.props.addCartData} handleChange={this.handleChange}/>
+        </div>
+        <Footer />
       </div>
     )
   }

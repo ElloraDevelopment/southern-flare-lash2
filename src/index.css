@@ -9,21 +9,11 @@ html{
     height: 100%;
     min-height: calc(100vh - 10vh);
 }
+
+
 /***************
 ******NAVBAR****
 ****************/
-
-@media (min-width: 768px) {
-    .navbar .navbar-nav {
-        display: inline-block;
-        float: none !important;
-        vertical-align: top;
-    }
-
-    .navbar .navbar-collapse {
-        text-align: center;
-    }
-}
 
 li{
     padding: 5px;
@@ -46,8 +36,10 @@ nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
     background-color: #9DE9E7;
 }
 
-.nav-schedule{
-    margin-top: -6px;
+.schedule-btn{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 20px;
     background-color: #9DE9E7;
     color: black;
     font-weight: bolder;
@@ -97,15 +89,28 @@ button.navbar-toggle{
     text-align: right;
     z-index: 1;
   }
-}
-
-@media (max-width: 768px) {
-  .navbar .navbar-collapse  {
+  .schedule-btn{
+        margin-right: 5px;
+    }
+.navbar .navbar-collapse  {
     text-align: right;
     z-index: 1;
     background-color: white;
   }
 }
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none !important;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
 
 /***************
 *****FAQ's******
@@ -174,11 +179,13 @@ li{
 
 .header-logo{
     margin-top: -150px;
+    margin-bottom: -100px;
 }
 
 @media(max-width: 770px) {
     .header-logo{
         margin-top: -75px;
+        margin-bottom: -50px;
     }
 }
 
@@ -224,6 +231,19 @@ li{
   text-align: center;
   line-height:0;
 }
+
+/***************
+*****LASHES*****
+****************/
+
+
+.lash-img{
+    height: 30vh;
+    background-image: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 /***************
 *****CONTACT****
@@ -291,16 +311,23 @@ li{
 .footer{
     background-color:#767474;
     text-align: center;
-    height: 10vh;
     display:flex;
     justify-content: center;
     align-items: center;
+    font-size: 12px !important;
+    padding-top: 5px;
+    display: block;
+    vertical-align: middle;
 }
 
 .icons{
     color: #9DE9E7;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.icon-wrapper{
+    padding-top: 5px;
 }
 
 .icons:hover {
@@ -317,6 +344,7 @@ li{
         font-size: 8px !important;
         padding-left: 10px;
         padding-right: 10px;
+        margin-top: 10px;
     }
     .footer-links{
         font-size: 8px;
@@ -325,8 +353,18 @@ li{
     .footer-address{
         line-height: 0;
     }
+    .footer{
+        height: 10vh;
+        padding-top: 0px;
+    }
 }
 
 .footer-links{
     color: #9DE9E7;
+}
+
+.footer-inline{
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
 }
