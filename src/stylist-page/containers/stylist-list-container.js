@@ -12,7 +12,7 @@ class StylistListContainer extends React.Component {
   }
   render() {
     return (
-      <div className="stylist-list-container-wrapper">
+      <div id="staff" className="stylist-list-container-wrapper">
         <StylistList stylists={this.props.stylists} />
       </div>
     )
