@@ -32,7 +32,7 @@ class ProductsForm extends React.Component {
               </ul>
             </li>
             <li>
-              <button className="add-item" onClick={() => {this.props.handleClick(this.props.input); this.props.clearInputs();}}>Add Item</button>
+              <button className="add-item" onClick={() => {this.props.handleClick(this.props.input); this.props.clearInputs();}}>Add Product</button>
             </li>
           </ul>
         </form>
