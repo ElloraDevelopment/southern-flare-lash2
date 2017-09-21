@@ -34,8 +34,8 @@ class StylistsFormContainer extends React.Component {
   }
   render() {
     return (
-      <div className="products-form-container">
-        <h2>Add Stylist:</h2>
+      <div className="stylists-form-container">
+        <h1>Add Stylist:</h1>
         <StylistsForm input={this.state} clearInputs={this.clearInputs} handleChange={this.handleChange} handleClick={this.props.addStylistData} />
       </div>
     )

@@ -15,7 +15,7 @@ class StylistListContainer extends React.Component {
   render() {
     return (
       <div id="staff" className="stylist-list-container-wrapper">
-        <div className="wrapper">
+        <div className="wrapper nav-stylistlist-block">
           <Navbar />
           <StylistList stylists={this.props.stylists} />
         </div>

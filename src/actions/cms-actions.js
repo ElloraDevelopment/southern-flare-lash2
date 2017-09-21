@@ -36,9 +36,9 @@ export function loadCartData() {
   }
 }
 
-export function addCartData(id) {
+export function addCartData(item) {
   return(dispatch) => {
-    return axios.post(`http://localhost:8080/cart/${id}`).then((response) => {
+    return axios.post(`http://localhost:8080/cart/`, item).then((response) => {
       dispatch(loadCartData());
     })
     .catch((err) => {

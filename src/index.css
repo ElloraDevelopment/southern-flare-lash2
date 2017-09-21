@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 /***************
 ******BODY******
 ****************/
@@ -275,6 +279,10 @@ li{
 /**********************
 *****PRODUCT PAGE******
 **********************/
+
+
+
+
 .product-pic {
   height: 200px;
   background-repeat: no-repeat;
@@ -285,17 +293,258 @@ li{
 /**********************
 *****STYLIST PAGE******
 **********************/
-.stylist-pic {
-  height: 200px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left;
-}
 
-.stylist-list-container-wrapper {
+
+/*.stylist-list-container-wrapper {
   position: relative;
   width: 100%;
+}*/
+
+/*Fonts:
+font-family: 'Poiret One', cursive;
+font-family: 'Forum', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;*/
+
+.nav-stylistlist-block {
+  margin: 0 5%;
 }
+
+.flexbox-stylists {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex-item {
+  margin: 20px auto;
+  width: 400px;
+  padding: 15px 14px 0 14px;
+  background-color: rgb(204,204,204);
+  height: 600px;
+  color: #333333;
+  align-items: flex-start;
+}
+
+/*.pic-flex-parent {
+  display: flex;
+  flex-flow: row;
+}*/
+
+.staff-header {
+  margin-top: 7%;
+  font-family: 'Poiret One', cursive;
+  font-weight: bolder;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.staff-pitch {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  letter-spacing: 1.1px;
+  font-size: 18px;
+  margin-top: 30px;
+  line-height: 26px;
+  width: 80%;
+  margin: 0 auto 40px auto;
+}
+
+.stylist-pic {
+  margin: auto;
+  /*background-color: black;*/
+  padding-bottom: 15px;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.stylist-name {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1.2px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.stylist-bio  {
+  font-family: 'Open Sans Condensed', sans-serif;
+  letter-spacing: 1px;
+  text-align: justify;
+  padding-bottom: 15px;
+}
+
+.stylist-services {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.stylist-gallery {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/******************************
+************CMS****************
+*******************************/
+/*Fonts:
+font-family: 'Poiret One', cursive;
+font-family: 'Forum', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;*/
+
+/******ADD STYLIST FORM*******/
+.stylists-form {
+  font: normal 20px/1.5 'Open Sans Condensed', sans-serif;
+  /*background: rgb(88,213,226);*/
+  background: rgb(134,206,216);
+  color: #fff;
+  padding: 30px 10px 30px 0px;
+}
+
+.stylists-form-container, .stylist-list-container-wrapper {
+  margin: 8% 5%;
+}
+
+.stylists-form-container h1 {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.flex-outer li, .flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-outer > li > label, .flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.flex-outer > li > label + *, .flex-inner {
+  flex: 1 0 220px;
+}
+
+.flex-outer li button {
+  margin-left: auto;
+  padding: 7px 16px;
+  border: none;
+  background: #333333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+}
+
+.flex-outer, .flex-inner {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-outer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flex-outer li, .flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-inner {
+  justify-content: space-between;
+}
+
+.flex-inner label {
+  margin-top: 5px;
+  margin-left: 5px;
+  text-transform: lowercase !important;
+}
+
+.flex-outer > li:not(:last-child) {
+  /*margin-bottom: 0px;*/
+}
+
+.flex-outer li label, .flex-outer li p {
+  font-family: 'Raleway', sans-serif !important;
+  padding: 8px;
+  font-weight: 300;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-shadow: .1px .1px .1px black;
+}
+
+.flex-outer li input, .flex-outer li textarea {
+  margin-left: 8px;
+}
+
+.flex-inner li {
+  width: 220px;
+}
+
+.flex-outer li p {
+  margin: 0;
+}
+
+.flex-outer li input:not([type: "checkbox"]) {
+  padding: 15px;
+  border: none;
+}
+
+.flex-outer li textarea {
+  padding: 15px 2px;
+  border: none;
+}
+
+/***********EDIT STYLIST************/
+.stylist-pic {
+  margin: auto;
+  /*background-color: black;*/
+  padding-bottom: 15px;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.stylist-name {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1.2px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.stylist-bio  {
+  font-family: 'Open Sans Condensed', sans-serif;
+  letter-spacing: 1px;
+  text-align: justify;
+  padding-bottom: 15px;
+}
+
+.stylist-services {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.stylist-gallery {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/******ADD PRODUCT FORM*******/
+.products-form-container, .product-list-container-wrapper {
+  margin: 8% 5%;
+}
+
+
+
 
 /**********************
 *****CART PAGE******

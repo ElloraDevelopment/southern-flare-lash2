@@ -17,11 +17,11 @@ class StylistsContainer extends React.Component {
           [key]: event.target.type === "checkbox" ? event.target.checked : event.target.value
       });
   }
-  handleChange(key, event) {
-    this.setState({
-      [key]: event.target.type === "checkbox" ? event.target.checked : event.target.value
-    })
-  }
+  // handleChange(key, event) {
+  //   this.setState({
+  //     [key]: event.target.type === "checkbox" ? event.target.checked : event.target.value
+  //   })
+  // }
   // clearInputs() {
   //   for(let key in this.state) {
   //     this.setState({
