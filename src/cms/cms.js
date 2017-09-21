@@ -10,7 +10,7 @@ class CmsComponent extends React.Component {
     return (
       <div className="cms-component">
         <StylistsFormContainer />
-        <EditStylistsListContainer />
+        {/* <EditStylistsListContainer /> */}
 
         <ProductsFormContainer />
         <EditProductsListContainer />

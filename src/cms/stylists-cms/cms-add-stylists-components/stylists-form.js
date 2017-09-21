@@ -35,7 +35,7 @@ class StylistsForm extends React.Component {
               <ul className="flex-inner">
                 <li>
                   <input type="checkbox" checked={this.props.input.active} onChange={(event) => this.props.handleChange("active", event)} />
-                  <label> Check if Active</label>
+                  <label>Check if Active</label>
                 </li>
               </ul>
             </li>
