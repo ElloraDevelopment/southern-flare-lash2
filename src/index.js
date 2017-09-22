@@ -29,8 +29,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-container">
-        <CmsComponent />
-        <CartListContainer />
+        {/* <CmsComponent /> */}
+        {/* <CartListContainer /> */}
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Home} />

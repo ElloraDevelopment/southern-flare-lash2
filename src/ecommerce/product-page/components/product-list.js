@@ -17,7 +17,9 @@ class ProductList extends React.Component {
     return (
       <div className="product-list-wrapper">
         <h2>Products</h2>
-        {this.genProducts()}
+        <section className="products">
+          {this.genProducts()}
+        </section>
       </div>
     )
   }
