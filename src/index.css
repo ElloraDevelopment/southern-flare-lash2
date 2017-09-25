@@ -352,6 +352,9 @@ li{
   .product-desc {
     font-size: 1.2em;
   }
+  .product-page-component-wrapper {
+    margin: 0 3%;
+  }
 }
 
 .product-pic {
@@ -431,11 +434,12 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 .flexbox-stylists {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .flex-item {
-  margin: 20px auto;
-  width: 23%;
+  margin: 20px 0;
+  width: 24%;
   min-width: 250px;
   padding: 15px 15px 0 15px;
   background-color: rgb(204,204,204);
@@ -465,14 +469,24 @@ font-family: 'Open Sans Condensed', sans-serif;*/
   padding-bottom: 0 !important;
   padding-top: 0 !important;
   max-height: 200px;
-  padding-right: 3px;
+  padding-right: 3px !important;
   overflow-y: scroll;
 }
 
-@media (max-width: 890px) {
+@media (max-width: 1099px) {
   .flex-item {
-    height: 625px;
-    margin: 10px auto;
+    width: 32%;
+  }
+}
+
+@media (max-width: 1025px) {
+  .staff-pitch {
+    width: 85% !important
+  }
+}
+
+@media (max-width: 1056px) {
+  .flex-item {
     width: 33%;
   }
   .stylist-list-container-wrapper {
@@ -480,11 +494,25 @@ font-family: 'Open Sans Condensed', sans-serif;*/
   }
 }
 
-@media (max-width: 412px) {
+@media (max-width: 880px) {
   .flex-item {
     height: 625px;
     margin: 10px auto;
-    width: 100%;
+    width: 48% !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .staff-pitch {
+    width: 95% !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .flex-item {
+    height: 625px;
+    margin: 10px 2%;
+    width: 100% !important;
   }
 }
 
@@ -525,6 +553,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
   font-family: 'Open Sans Condensed', sans-serif;
   letter-spacing: 1px;
   text-align: justify;
+  padding-right: 3px;
 }
 
 .stylist-services {
