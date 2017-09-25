@@ -280,40 +280,138 @@ li{
 *****PRODUCT PAGE******
 **********************/
 .product-list-wrapper {
-  margin: 8% 5%;
+  margin: 5% 0;
+}
+
+.product-list-wrapper h1 {
+  font-family: 'Poiret One', cursive;
+  font-weight: bolder;
+  text-align: center;
+  letter-spacing: .08em;
+  font-size: 2.25em;
+}
+
+.product-list-wrapper h2 {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  letter-spacing: .04em;
+  font-size: 1.4em;
+  line-height: 1.4em;
+  width: 75%;
+  margin: 1.1em auto 2.2em auto;
+  padding: 0 2%;
 }
 
 .products {
   display: flex;
   flex-wrap: wrap;
-}
-
-.product-list-wrapper h2 {
-  padding: 0 2%;
+  justify-content: center;
 }
 
 .product-card {
-  padding: 2%;
-  flex: 1 16%;
-  /*display: flex;*/
+  margin-bottom: 55px;
+  padding: 0 1.2%;
+  height: 600px;
+  flex: 0 1 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1120px) {
+  .product-card {
+    flex: 1 45%;
+    padding: 0 2%;
+  }
+}
+
+@media (max-width: 720px) {
+  .product-card {
+    flex: 1 90%;
+    height: 550px;
+  }
+  .product-list-wrapper h2 {
+    width: 95%;
+    font-size: 1.15em;
+  }
+  .product-title {
+    font-size: 1.45em;
+    height: 54px !important;
+  }
+  .product-desc {
+    height: 200px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .product-desc {
+    font-size: 1.2em;
+  }
 }
 
 .product-pic {
+  flex: 0 1 auto;
   max-width: 100%;
-}
-
-.product-info {
-  margin-top: auto;
-}
-
-
-
-.product-pic {
+  justify-content: center;
   height: 200px;
+  margin: auto;
+  padding-bottom: 15px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left;
 }
+
+.product-info {
+  margin-bottom: auto;
+}
+
+.product-title {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1.2px;
+  text-align: left;
+  height: 75px;
+}
+
+.product-desc  {
+  font-family: 'Open Sans Condensed', sans-serif;
+  /*font-size: 1.4em;*/
+  letter-spacing: 1px;
+  text-align: justify;
+  height: 250px;
+  overflow-y: scroll;
+  padding-right: 3px;
+}
+
+.product-price {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1.2px;
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+.price-cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.add-button {
+  margin-top: 7px;
+  max-height: 32px;
+  padding: 0 7px;
+  border: none;
+  background: #333333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+}
+
+/*<div className="price-cart">
+  <h4 className="product-price">${this.props.product.price}</h4>
+  <button className="add-button" onClick={() =>
+    {this.props.updateCart(this.props.product._id, this.props.product.pic, this.props.product.title, this.props.product.desc, this.props.product.price, this.props.product.quantity)}}
+    >Add to Cart</button>
+</div>*/
 
 /**********************
 *****STYLIST PAGE******
@@ -361,6 +459,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
   padding-bottom: 0 !important;
   padding-top: 0 !important;
   max-height: 200px;
+  padding-right: 3px;
   overflow-y: scroll;
 }
 
@@ -384,22 +483,21 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 }
 
 .staff-header {
-  margin-top: 7%;
+  margin-top: 5%;
   font-family: 'Poiret One', cursive;
   font-weight: bolder;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: .08em;
 }
 
 .staff-pitch {
   font-family: 'Raleway', sans-serif;
   text-align: center;
-  letter-spacing: 1.1px;
-  font-size: 18px;
-  margin-top: 30px;
-  line-height: 26px;
-  width: 80%;
-  margin: 0 auto 40px auto;
+  letter-spacing: .04em;
+  font-size: 1.4em;
+  line-height: 1.4em;
+  width: 75%;
+  margin: 1.1em auto 2.2em auto;
 }
 
 .stylist-pic {
@@ -459,7 +557,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 }
 
 .stylists-form-container, .products-form-container {
-  margin: 8% 5%;
+  margin: 8% 2%;
 }
 
 .stylists-form-container h1, .products-form-container h1 {
@@ -592,7 +690,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 
 /******CMS EDIT PAGES*******/
 .stylist-list-container-wrapper, .products-list-container-wrapper {
-  margin: 8% 5%;
+  margin: 5% 2%;
 }
 
 
