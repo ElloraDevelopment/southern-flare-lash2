@@ -34,7 +34,7 @@ class ProductsFormContainer extends React.Component {
   render() {
     return (
       <div className="products-form-container">
-        <h2>Add Product:</h2>
+        <h1>Add Product:</h1>
         <ProductsForm input={this.state} clearInputs={this.clearInputs} handleChange={this.handleChange} handleClick={this.props.addProductData} />
       </div>
     )

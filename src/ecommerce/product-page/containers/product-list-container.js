@@ -15,13 +15,21 @@ class ProductListContainer extends React.Component {
   constructor() {
     super();
     this.state = {
-      quantity: 0
+      cart: []
     }
     autoBind(this);
   }
-  handleChange(key, event) {
-    this.setState({
-      [key]: event.target.value
+  handleChange(event, index) {
+    this.setState((prevState)=>{
+      //logic here
+      let newCart = [...prevState.cart];
+      //check if there is a current product
+      if(!prevState[index]){
+
+      }
+      return {
+        cart: newCart
+      }
     })
   }
   componentWillMount() {

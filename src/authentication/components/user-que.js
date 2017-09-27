@@ -15,8 +15,9 @@ class UserQue extends React.Component {
   }
   render() {
     return (
-      <div className="user-wrapper" style={{display: this.props.priv === "admin" ? "inherit" : "none"}}>
-        <h5>New User Que</h5>
+      <div className="users-wrapper">
+        <h1 className="admin-header">Site Administration</h1>
+        <h1>Signups Awaiting Authorization:</h1>
         {this.genUsers()}
       </div>
     )

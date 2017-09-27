@@ -17,14 +17,14 @@ class AddRemoveUser extends React.Component {
   render() {
     return (
       <div className="users-wrapper">
-        <p className="user-name">{this.props.user.username}</p>
-        <select className="priv-drop-down "  value={this.state.selected} onChange={this.handleChange}>
+        <h4 className="user-name">{this.props.user.username}</h4>
+        <select className="select-style"  value={this.state.selected} onChange={this.handleChange}>
           <option value="">Select Priviledge</option>
           <option value="admin">Admin</option>
           <option value="user">User</option>
         </select>
-        <button className="btn btn-default btn-success" onClick={() => {this.props.handleAdd(this.props.user.username, this.state.selected, this.props.token);}}>Add User</button>
-        <button className="btn btn-default btn-success" onClick={() => {this.props.handleDeleteQue(this.props.user.username, this.props.user._id, this.props.token)}}>Remove User</button>
+        <button className="admin-button" onClick={() => {this.props.handleAdd(this.props.user.username, this.state.selected, this.props.token);}}>Add User</button>
+        <button className="admin-button" onClick={() => {this.props.handleDeleteQue(this.props.user.username, this.props.user._id, this.props.token)}}>Remove User</button>
       </div>
     )
   }

@@ -25,8 +25,8 @@ componentDidUpdate() {
 
   render() {
     return (
-      <div className="users-container-wrapper" style={{display: this.props.token ? 'inherit' :' none'}}>
-        <Users token={this.props.token} handleLogout={this.props.logout} handleStatus={this.props.changeStatus} currentUsers={this.props.currentUsers} handleDeleteList={this.props.deleteUserList} handleDeleteQue={this.props.deleteUserQue} />
+      <div className="que-containers container-fluid" style={{display: this.props.token ? 'inherit' :' none'}}>
+        <Users token={this.props.token} handleStatus={this.props.changeStatus} currentUsers={this.props.currentUsers} handleDeleteList={this.props.deleteUserList} handleDeleteQue={this.props.deleteUserQue} />
       </div>
     )
   }

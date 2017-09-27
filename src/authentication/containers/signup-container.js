@@ -34,7 +34,7 @@ class SignupContainer extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div style={{display: this.props.token ? 'none' :' inherit'}} className="signup-wrapper">
         <Signup input={this.state} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
       </div>
     )

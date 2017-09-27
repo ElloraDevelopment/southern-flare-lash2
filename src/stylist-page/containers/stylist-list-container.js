@@ -14,13 +14,16 @@ class StylistListContainer extends React.Component {
   }
   render() {
     return (
-      <div id="staff" className="stylist-list-container-wrapper">
-        <div className="wrapper">
-          <Navbar />
-          <StylistList stylists={this.props.stylists} />
+      <div>
+        <Navbar />
+        <div id="staff" className="stylist-list-container-wrapper">
+          <div className="wrapper nav-stylistlist-block">
+            <StylistList stylists={this.props.stylists} />
+          </div>
         </div>
         <Footer />
       </div>
+
     )
   }
 }

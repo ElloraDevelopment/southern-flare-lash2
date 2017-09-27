@@ -32,7 +32,8 @@ class LoginContainer extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div style={{display: this.props.token ? 'none' : 'inherit'}} className="login-wrapper">
+        <h4>Login or sign-up for an account if you do not already have a login</h4>
         <Login input={this.state} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
       </div>
     )

@@ -12,7 +12,6 @@ import PermMakeup from "./service-pages/perm-makeup.js";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 import AuthComponent from "./authentication/auth.js";
-import CmsComponent from "./cms/cms.js";
 
 import ProductListContainer from "./ecommerce/product-page/containers/product-list-container.js";
 import CartListContainer from "./ecommerce/cart/containers/cart-list-container.js";
@@ -30,8 +29,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-container">
-        {/*<CmsComponent />
-        <CartListContainer />*/}
+        {/* <CartListContainer /> */}
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Home} />
