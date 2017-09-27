@@ -1052,7 +1052,8 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 ****************/
 
 .footer{
-    background-color:#767474;
+    background: #333333;
+    color: #f2f2f2;
     text-align: center;
     display:flex;
     justify-content: center;
@@ -1064,7 +1065,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 }
 
 .icons{
-    color: #9DE9E7;
+    color: #f2f2f2;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -1074,7 +1075,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 }
 
 .icons:hover {
-    color: black;
+    color: rgb(134,206,216);
 }
 
 .footer-links:hover {
@@ -1103,7 +1104,15 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 }
 
 .footer-links{
-    color: #9DE9E7;
+    color: #f2f2f2;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+
+}
+
+.footer-links:hover {
+  color: rgb(134,206,216);
 }
 
 .footer-inline{
