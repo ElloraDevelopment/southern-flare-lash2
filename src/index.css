@@ -193,18 +193,9 @@ li{
     }
 }
 
-/****************
-*****SERVICES****
-*****************/
-
-.service-title{
-    color: black;
-    border: 5px solid #817C78;
-    height: 20vh;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
-}
+/************************
+*****LANDING-SERVICES****
+*************************/
 
 .skew:hover{
     -webkit-transform: skew(-10deg);
@@ -236,17 +227,158 @@ li{
   line-height:0;
 }
 
-/***************
-*****LASHES*****
-****************/
+/***********************
+*****SERVICES-PAGES*****
+************************/
 
+.service-header{
+    margin-bottom: 1em;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-family: Bakery;
+    font-size: 68px;
+    border-bottom: 3px solid darkgray;
+    border-top: 3px solid darkgray;
+    margin-top: 0;
+}
 
-.lash-img{
+.flex-vert-align{
+    display: flex;
+    align-items: center;
+    font-family: Caviar Dreams;
+}
+
+.service-page-img{
     height: 30vh;
     background-image: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
+
+/*LASHES*/
+.classic{
+    background-position-y: 80%;
+}
+
+.volume{
+    background-position-y: 30%;
+}
+
+.mega{
+    background-position-y: 60%;
+}
+
+.lift{
+    background-position-y: 60%;
+}
+
+/*PERM_MAKEUP*/
+
+.ombre{
+    background-position-y: 80%;
+}
+
+.microstroking{
+    background-position-y: 30%;
+    background-position-x: 30%;
+}
+
+.hairstroke{
+    background-position-y: 50%;
+}
+
+.eyeliner{
+    background-position-x: 50%;
+}
+
+.lips{
+    height: 50vh !important;
+}
+
+.service-title{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.gray-line{
+    height: 2px;
+    background-color: darkgray;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.any-questions{
+    font-family: Caviar Dreams;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.contact-link{
+    font-weight: bolder;
+}
+
+.lip-caption{
+    color: white;
+    height: 40%;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+@media(max-width: 768px) {
+    .service-para-right{
+        margin-top: 15px;
+    }
+    .service-img-right{
+        margin-top: 15px;
+    }
+    .flex-vert-align{
+        display: inline;
+    }
+    .service-header{
+        margin-bottom: 1em;
+    }
+    .service-para-desktop{
+        display: none;
+    }
+    .service-para-mobile{
+        margin-top: 15px;
+    }
+}
+
+@media(max-width: 1024px){
+    .lips{
+        background-position-y: 60%;
+
+    }
+}
+
+@media(max-width: 1366px){
+    .lips{
+        background-position-x: 50%;
+    }
+}
+
+@media(max-width: 415px){
+    .service-header{
+        font-size: 44px;
+    }
+    .any-questions{
+        font-size: 12px;
+    }
+}
+
+@media(min-width: 769px){
+    .service-para-mobile{
+        display: none;
+    }
+}
+
 
 
 /***************

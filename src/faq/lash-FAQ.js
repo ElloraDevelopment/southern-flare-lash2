@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Navbar from "../navbar.js";
 import Footer from "../footer.js";
 import { Panel, Accordion } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 
 class LashFAQ extends Component {
     render() {
@@ -66,7 +68,9 @@ class LashFAQ extends Component {
                     </div>
 
                 </div>
-                
+                 <div className="row text-center any-questions">
+                    Feel free to <Link className="contact-link" to="/contact">CONTACT US</Link> with any questions about our services.
+                </div>
             </div>
                  <Footer />
             </div>
