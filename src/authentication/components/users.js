@@ -12,10 +12,9 @@ class Users extends React.Component {
   }
   render() {
     return (
-      <div className="users-wrapper">
-        <h5>Current Users:</h5>
+      <div className="users-wrapper" >
+        <h1>Current System Users:</h1>
         {this.genCurrentUsers()}
-        <button className="btn btn-default btn-success logout-button" onClick={() => this.props.handleLogout()}>Log Out</button>
       </div>
     )
   }

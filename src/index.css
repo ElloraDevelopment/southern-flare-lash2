@@ -577,13 +577,176 @@ font-family: 'Forum', cursive;
 font-family: 'Raleway', sans-serif;
 font-family: 'Open Sans Condensed', sans-serif;*/
 
+.cms-component {
+  margin: 4% 3%;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.header-block-cms {
+  text-align: center;
+}
+
+.cms-h1 {
+  text-transform: uppercase;
+  display: inline-block;
+  margin: auto;
+  padding-right: 8px;
+}
+
+.cms-h1 a:link, .cms-h1 a:visited {
+  text-decoration: none;
+  color: #333333;
+}
+
+.cms-h1 a:hover, .cms-h1 a:active {
+  color: rgb(134,206,216);
+}
+
+.cms-button {
+  margin: 10px 10px 40px auto;
+  margin-left: auto;
+  margin-right: 10px;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 2px;
+  background: #333333;
+  color: #f2f2f2;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+}
+
+.cms-add-button {
+  margin-left: 15px;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 2px;
+  background: rgb(134,206,216);
+  color: #f2f2f2;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.4em;
+  text-shadow: .5px .5px .5px grey;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+}
+
+#scrollBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(134,206,216); /* Set a background color */
+    color: white; /* Text color */
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.4em;
+    text-shadow: .5px .5px .5px grey;
+    text-transform: capitalize;
+    letter-spacing: .09em;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 7px 8px;
+    border-radius: 2px;
+}
+
+#logout-btn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 75px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(134,206,216); /* Set a background color */
+    color: white; /* Text color */
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.4em;
+    text-shadow: .5px .5px .5px grey;
+    text-transform: capitalize;
+    letter-spacing: .09em;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 7px 14px;
+    border-radius: 2px;
+}
+
+.admin-logout-button {
+  border: none;
+  padding: 7px 16px;
+  border-radius: 2px;
+  background: rgb(134,206,216);
+  text-shadow: .5px .5px .5px grey;
+  color: #f2f2f2;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  width: 110px;
+}
+
+.modal-button {
+  float: right;
+}
+
+.edit-divider {
+  margin: 8% auto 6% auto;
+  text-align: center;
+}
+
+.line-right {
+  height: 2px;
+  width: 35%;
+  background: #333333;
+  border-radius: 3px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.line-left {
+  height: 2px;
+  width: 35%;
+  background: #333333;
+  border-radius: 3px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.fa-star {
+  color: #333333;
+  font-size: 18px;
+  text-align: center;
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.edit-checkbox {
+  width: 180px !important;
+  display: inline-block;
+}
+
+.edit-inputs h4 {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.cms-edits-list-wrapper h1 {
+  padding: 0px 15px 25px 15px;
+}
+
+.cms-edits-list-wrapper {
+  margin-top: 5%;
+}
+
+
 /******ADD STYLIST AND ADD PRODUCT FORMS*******/
 .stylists-form, .products-form {
   font: normal 20px/1.5 'Open Sans Condensed', sans-serif;
   /*background: rgb(88,213,226);*/
   background: rgb(134,206,216);
   color: #fff;
-  padding: 30px 10px 30px 0px;
+  padding: 25px 10px 25px 0px;
+  width: 80%;
+  margin: auto;
+  border-radius: 2px;
 }
 
 .stylists-form input, .stylists-form textarea, .products-form input, .products-form textarea {
@@ -596,7 +759,41 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 }
 
 .stylists-form-container h1, .products-form-container h1 {
+  margin-left: 10%;
   font-family: 'Open Sans Condensed', sans-serif;
+}
+
+@media (max-width: 600px) {
+  .stylists-form, .products-form {
+    width: 100%;
+    padding: 10px 5px;
+  }
+  .stylists-form-container, .products-form-container {
+    margin: 8% 0%;
+  }
+  .stylists-form-container h1, .products-form-container h1 {
+    margin-left: 0%;
+    font-family: 'Open Sans Condensed', sans-serif;
+  }
+  .cms-h1 {
+    font-size: 2em;
+  }
+  .header-block-cms {
+    margin: 10px 0 !important;
+    padding-bottom: 2em;
+    letter-spacing: .01em;
+    width: 100%;
+  }
+  .cms-component {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 325px) {
+  .cms-h1 {
+    font-size: 1.7em;
+  }
 }
 
 .flex-outer li, .flex-inner {
@@ -687,6 +884,19 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 }
 
 /***********EDIT STYLIST************/
+
+
+.stylists-wrapper input, .stylists-wrapper textarea {
+  width: 100%;
+  padding: 3px 5px;
+  margin-bottom: 10px;
+}
+
+.stylists-wrapper textarea {
+  border: none;
+  overflow-y: scroll;
+}
+
 .stylist-pic {
   margin: auto;
   /*background-color: black;*/
@@ -723,13 +933,112 @@ font-family: 'Open Sans Condensed', sans-serif;*/
   text-align: center;
 }
 
-/******CMS EDIT PAGES*******/
-.stylist-list-container-wrapper, .products-list-container-wrapper {
-  margin: 5% 2%;
+
+
+
+/***********EDIT PRODUCT************/
+.products-wrapper input, .products-wrapper textarea {
+  width: 100%;
+  padding: 3px 5px;
+  margin-bottom: 10px;
+}
+
+.products-wrapper {
+  margin-bottom: 25px;
+}
+
+.product-preview {
+  height: 475px;
+}
+
+.product-preview h2 {
+  height: 60px;
+  overflow-y: scroll;
+}
+
+.product-preview textarea {
+  border: none;
+  padding-right: 3px;
 }
 
 
+/***********EDIT USER QUES************/
+.que-containers {
+  margin: 3% 2%;
+}
 
+@media (max-width: 600px) {
+  .que-containers {
+    margin: 3% 0;
+  }
+}
+
+.users-wrapper {
+  margin: 10px 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.users-wrapper h4 {
+  font-weight: bolder;
+  letter-spacing: .06em;
+}
+
+.select-style {
+  display: inline-block;
+  /*padding: 20px 20px !important;*/
+}
+
+.que-containers h1 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-bottom: 40px;
+}
+
+.admin-button {
+  margin: 10px 5px 40px 15px;
+  border: none;
+  padding: 5px 16px;
+  border-radius: 2px;
+  background: #333333;
+  color: #f2f2f2;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+}
+
+/***********EDIT LOGIN/SIGNUP PAGE************/
+#login-signup {
+  margin: 8% auto;
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  letter-spacing: .07em;
+}
+
+.signup-form-wrapper input, .login-form-wrapper input {
+  width: 150px;
+  padding: 4px 3px;
+  margin-left: 4px;
+}
+
+.signup-form-wrapper button, .login-form-wrapper button {
+  margin: 10px 5px 10px 15px;
+  border: none;
+  padding: 5px 16px;
+  border-radius: 2px;
+  background: #333333;
+  color: #f2f2f2;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+}
+
+.login-wrapper {
+  margin: 15px 0;
+}
+
+.login-wrapper h4 {
+  margin-bottom: 2.1em;
+  font-size: 1.7em;
+}
 
 /**********************
 *****CART PAGE******

@@ -10,6 +10,9 @@ import LoginContainer from "./containers/login-container.js";
 import SignupContainer from "./containers/signup-container.js";
 import UserQueContainer from "./containers/userque-container.js";
 import UsersContainer from "./containers/users-container.js";
+import CmsComponent from "../cms/cms.js";
+import Footer from "../footer.js";
+import Navbar from "../navbar.js";
 
 const customStyles = {
   overlay : {
@@ -67,22 +70,32 @@ class AuthComponent extends React.Component {
   }
   render() {
     return (
-      <div id="login-signup" className="auth-component">
-        {/* <button style={{display: this.props.token ? "none" : "inherit"}} onClick = {() => {this.toggleModal("isShowingSignup")}}>Signup for More Information</button> */}
-        {/* <Modal style={customStyles} isOpen={this.props.isShowingSignup} onRequestClose={() => {this.props.toggleSignup(); this.setMenuCSSToDefault();}} contentLabel="Signup"> */}
-          <SignupContainer />
-          {/* <SignupContainer toggleModal={this.props.toggleSignup} /> */}
-        {/* </Modal> */}
+      <div>
+        <div className="wrapper">
+          <Navbar />
+          <div id="login-signup" className="auth-component">
+            {/* <button style={{display: this.props.token ? "none" : "inherit"}} onClick={() => {this.toggleModal("isShowingLogin")}}>Admin Login</button> */}
+            {/* <Modal style={customStyles} isOpen={this.props.isShowingLogin} onRequestClose={() => {this.props.toggleLogin(); this.setMenuCSSToDefault();}} contentLabel="Login"> */}
+              <LoginContainer />
+              {/* <LoginContainer toggleModal={this.props.toggleLogin} /> */}
+            {/* </Modal> */}
+            {/* <button style={{display: this.props.token ? "none" : "inherit"}} onClick = {() => {this.toggleModal("isShowingSignup")}}>Signup for More Information</button> */}
+            {/* <Modal style={customStyles} isOpen={this.props.isShowingSignup} onRequestClose={() => {this.props.toggleSignup(); this.setMenuCSSToDefault();}} contentLabel="Signup"> */}
+              <SignupContainer />
+              {/* <SignupContainer toggleModal={this.props.toggleSignup} /> */}
+            {/* </Modal> */}
 
-        {/* <button style={{display: this.props.token ? "none" : "inherit"}} onClick={() => {this.toggleModal("isShowingLogin")}}>Admin Login</button> */}
-        {/* <Modal style={customStyles} isOpen={this.props.isShowingLogin} onRequestClose={() => {this.props.toggleLogin(); this.setMenuCSSToDefault();}} contentLabel="Login"> */}
-          <LoginContainer />
-          {/* <LoginContainer toggleModal={this.props.toggleLogin} /> */}
-        {/* </Modal> */}
+          </div>
+            <CmsComponent handleLogout={this.props.logout}/>
+            <div id="user-que"><UserQueContainer /></div>
+            <UsersContainer />
 
-        <UserQueContainer />
-        <UsersContainer />
+
+        </div>
+        <Footer />
       </div>
+
+
     )
   }
 }

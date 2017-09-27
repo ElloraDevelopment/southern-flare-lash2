@@ -6,6 +6,7 @@ import {Navbar, NavItem, Nav, NavDropdown, MenuItem} from "react-bootstrap";
 class MyNavbar extends Component {
     render() {
         return (
+          <div id="hide-nav">
             <Navbar collapseOnSelect fluid className="nav-custom">
         <Navbar.Header>
           <Navbar.Brand>
@@ -28,19 +29,19 @@ class MyNavbar extends Component {
               <MenuItem className="drop-item" eventKey={3.1}>
                 <Link to="/lashes">Lashes</Link>
               </MenuItem>
-                
+
               <MenuItem eventKey={3.2}>
                 <Link to="/perm_makeup">Permanent Makeup</Link>
               </MenuItem>
-                
-              <MenuItem eventKey={3.3}>  
+
+              <MenuItem eventKey={3.3}>
                 <Link to="/waxing">Waxing</Link>
               </MenuItem>
 
-              <MenuItem eventKey={3.4}> 
+              <MenuItem eventKey={3.4}>
                 <Link to="/facials">Facials</Link>
               </MenuItem>
-                 
+
               </NavDropdown>
 
           {/*STAFF*/}
@@ -77,11 +78,13 @@ class MyNavbar extends Component {
                 <span className="btn nav-schedule">Schedule Now</span>
             </NavItem>*/}
             <a  href="https://www.schedulicity.com/scheduling/SFLPW8" title="Online scheduling" rel="noopener noreferrer" target="_blank"><img className="schedule-btn" src="//cdn.schedulicity.com/images/schedulenow_lt_yellow3_md.png" alt="Online scheduling" title="Online scheduling" border="0" /></a>
-          
+
           </Nav>
           <script type="text/javascript" src="https://www.schedulicity.com/api/public/widget/SFLPW8/popup"></script>
         </Navbar.Collapse>
       </Navbar>
+
+          </div>
         );
     }
 }

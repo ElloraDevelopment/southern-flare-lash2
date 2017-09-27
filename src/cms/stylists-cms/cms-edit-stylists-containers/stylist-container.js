@@ -45,7 +45,6 @@ class StylistsContainer extends React.Component {
   // }
 
   render() {
-    console.log(this.state);
     return (
       <div className="stylists-container-wrapper">
         <Stylists inputs={this.state} handleUpdate={this.handleUpdate} handleChange={this.handleChange} handleEdit={this.props.handleEdit} handleDelete={this.props.handleDelete} stylist={this.props.stylist} />

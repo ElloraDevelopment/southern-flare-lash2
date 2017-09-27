@@ -24,7 +24,7 @@ class UserQueContainer extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="que-containers" style={{display: this.props.priv === "admin" ? "inherit" : "none"}}>
         <UserQue handleDeleteQue={this.props.deleteUserQue} handleAdd={this.props.addUser} users={this.props.userQue} priv={this.props.priv} token={this.props.token} />
       </div>
     )
