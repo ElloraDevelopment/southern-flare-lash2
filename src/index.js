@@ -7,6 +7,7 @@ import Contact from "./contact.js";
 import LashFAQ from "./faq/lash-FAQ.js";
 import PermFAQ from "./faq/perm-makeup-FAQ.js";
 import Lash from "./service-pages/lash.js";
+import PermMakeup from "./service-pages/perm-makeup.js";
 
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
@@ -29,8 +30,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-container">
-        <CmsComponent />
-        <CartListContainer />
+        {/*<CmsComponent />
+        <CartListContainer />*/}
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Home} />
@@ -38,6 +39,7 @@ class App extends React.Component {
             <Route exact path="/lash_FAQ" component={LashFAQ} />
             <Route exact path="/perm_FAQ" component={PermFAQ} />
             <Route exact path="/lashes" component={Lash} />
+            <Route exact path="/perm_makeup" component={PermMakeup} />
             <Route exact path="/staff" component={StylistListContainer} />
             <Route exact path="/product" component={ProductListContainer} />
             <Route exact path="/login" component={AuthComponent} />
