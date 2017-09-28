@@ -27,6 +27,7 @@ const store = createStore(reducers, applyMiddleware(thunk));
 
 class App extends React.Component {
   render() {
+    console.log(test);
     return (
       <div className="app-container">
         {/* <CartListContainer /> */}
