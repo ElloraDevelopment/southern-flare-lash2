@@ -10,9 +10,7 @@ class PermMakeup extends Component {
             <div>
                 <div className="wrapper container-fluid">
                 <Navbar />
-                <div className="row text-center service-header">
-                    <p>Permanent Makeup</p>
-                </div>
+                <div className="row text-center service-header">Permanent Makeup</div>
     
     {/*PICTURE LEFT*/}
                 <div className="row flex-vert-align">

@@ -19,6 +19,10 @@ html{
 ******NAVBAR****
 ****************/
 
+.nav-brand{
+  width: 150px;
+}
+
 li{
     padding: 5px;
 }
@@ -28,7 +32,7 @@ li{
 }
 
 .navbar-default .navbar-nav>.open>a{
-    background-color: #9DE9E7 !important;
+    background-color: white !important;
     color: black !important;
 }
 
@@ -37,14 +41,14 @@ nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
-    background-color: #9DE9E7;
+    background-color: #FFFAFA;
 }
 
 .schedule-btn{
     margin-bottom: 15px;
     margin-top: 15px;
     margin-left: 20px;
-    background-color: #9DE9E7;
+    background-color: transparent;
     color: black;
     font-weight: bolder;
 }
@@ -68,7 +72,7 @@ nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
 }
 
 button.navbar-toggle{
-    background-color: #9DE9E7 !important;
+    background-color: white;
 }
 
 .navbar-default .navbar-toggle{
@@ -123,7 +127,7 @@ button.navbar-toggle{
 .faq-title{
     padding-top: 3vh;
     padding-bottom: 3vh;
-    font-family: Bakery;
+    font-family: 'Poiret One', cursive;
     font-size: 26px;
     border-bottom: 3px solid darkgray;
     border-top: 3px solid darkgray;
@@ -175,6 +179,9 @@ li{
   .accord-contain{
       margin-top: 100px;
   }
+  .faq-contact{
+    margin-top: 2em;
+  }
 }
 
 /***************
@@ -182,14 +189,29 @@ li{
 ****************/
 
 .header-logo{
-    margin-top: -150px;
-    margin-bottom: -100px;
+   position: relative;
+   z-index: -1;
+   margin-top: 5%;
+}
+
+.rectangle{
+  position: absolute;
+  border: 3px solid blue;
+  height: 70vh;
+  width: 70%;
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.welcome{
+  margin-right: 5px;
 }
 
 @media(max-width: 770px) {
     .header-logo{
-        margin-top: -75px;
-        margin-bottom: -50px;
+      
     }
 }
 
@@ -235,7 +257,7 @@ li{
     margin-bottom: 1em;
     padding-top: 1vh;
     padding-bottom: 1vh;
-    font-family: Bakery;
+    font-family: 'Poiret One', cursive;
     font-size: 68px;
     border-bottom: 3px solid darkgray;
     border-top: 3px solid darkgray;
@@ -245,7 +267,7 @@ li{
 .flex-vert-align{
     display: flex;
     align-items: center;
-    font-family: Caviar Dreams;
+    font-family: 'Raleway', sans-serif;
 }
 
 .service-page-img{
@@ -279,7 +301,7 @@ li{
 /*PERM_MAKEUP*/
 
 .ombre{
-    background-position-y: 80%;
+    background-position-y: 20%;
 }
 
 .microstroking{
@@ -300,8 +322,9 @@ li{
 }
 
 .service-title{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bolder;
+    font-family: 'Poiret One', cursive;
 }
 
 .gray-line{
@@ -341,7 +364,7 @@ li{
         display: inline;
     }
     .service-header{
-        margin-bottom: 1em;
+        margin-bottom: 20px;
     }
     .service-para-desktop{
         display: none;
@@ -354,7 +377,6 @@ li{
 @media(max-width: 1024px){
     .lips{
         background-position-y: 60%;
-
     }
 }
 
@@ -380,28 +402,97 @@ li{
 }
 
 
+/*FACIALS*/
+
+.facial-treat-makeup{
+  margin-left: 10px;
+  font-size: 45px;
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+}
+
+.gray-line-mobile{
+    height: 2px;
+    background-color: darkgray;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+@media(max-width: 768px){
+  .desktop-facial{
+    display: none;
+  }
+}
+
+@media(min-width: 769px){
+  .mobile-facial{
+    display: none;
+  }
+}
+
+/*WAXING*/
+
+.wax-name{
+  font-size: 20px;
+  display: inline-block;
+}
+
+.wax-price{
+  font-size: 18px;
+  display: inline-block;
+  float: right;
+}
+
+.waxing-img{
+    height: 40vh;
+}
+
+.waxing-line{
+  margin-top: 7vh;
+}
+
+@media(max-width:768px){
+  .waxing-line{
+    margin-top: 0px;
+  }
+}
+
+
 
 /***************
 *****CONTACT****
 ****************/
 
-.contact-box{
-    height: 45vh;
-    position: relative;
-    margin: 15px 15px 15px 15px;
-
+.contact-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*background-color: #FFF7F8;*/
+  font-family: 'Raleway', sans-serif;
 }
 
-.contact-us{
-    font-size: 30px;
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    color: black;
+.contact-links{
+  display: block;
+  color: black;
+  margin-top: 15px;
+}
+
+.contact-icons-wrapper{
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-icons{
+  color: black;
 }
 
 .map{
-    height: 30vh;
+    height: 40vh;
+    margin-bottom: 15px;
 }
 
 .marker{
@@ -1204,6 +1295,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 
 .icon-wrapper{
     padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .icons:hover {
@@ -1213,6 +1305,10 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 .footer-links:hover {
     text-decoration: none !important;
     color: black;
+}
+
+.git-icon {
+    margin-left: 5px;
 }
 
 @media(max-width: 768px) {

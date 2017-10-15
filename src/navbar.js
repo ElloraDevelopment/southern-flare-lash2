@@ -10,9 +10,8 @@ class MyNavbar extends Component {
             <Navbar collapseOnSelect fluid className="nav-custom">
         <Navbar.Header>
           <Navbar.Brand>
-            <Link to="/">
-                <div className="nav-brand" style={{backgroundImage: 'url("images/southernflare.png")'}}></div>
-              </Link>
+            <a href="#">picture</a>
+                {/*<img className="navbar-brand img-responsive" alt="" src={"images/sfl-pics/logo/southernflare.png"}></img>*/}
           </Navbar.Brand>
           <Navbar.Toggle/>
         </Navbar.Header>

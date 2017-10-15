@@ -68,7 +68,7 @@ class LashFAQ extends Component {
                     </div>
 
                 </div>
-                 <div className="row text-center any-questions">
+                 <div className="row text-center any-questions faq-contact">
                     Feel free to <Link className="contact-link" to="/contact">CONTACT US</Link> with any questions about our services.
                 </div>
             </div>

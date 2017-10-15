@@ -8,6 +8,8 @@ import LashFAQ from "./faq/lash-FAQ.js";
 import PermFAQ from "./faq/perm-makeup-FAQ.js";
 import Lash from "./service-pages/lash.js";
 import PermMakeup from "./service-pages/perm-makeup.js";
+import Facials from "./service-pages/facials.js";
+import Waxing from "./service-pages/waxing.js";
 
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
@@ -38,6 +40,8 @@ class App extends React.Component {
             <Route exact path="/perm_FAQ" component={PermFAQ} />
             <Route exact path="/lashes" component={Lash} />
             <Route exact path="/perm_makeup" component={PermMakeup} />
+            <Route exact path="/facials" component={Facials} />
+            <Route exact path="/waxing" component={Waxing} />
             <Route exact path="/staff" component={StylistListContainer} />
             <Route exact path="/product" component={ProductListContainer} />
             <Route exact path="/login" component={AuthComponent} />

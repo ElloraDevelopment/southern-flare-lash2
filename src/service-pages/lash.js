@@ -10,9 +10,7 @@ class Lash extends Component {
         <div>
             <div className="wrapper container-fluid">
                 <Navbar />
-                <div className="row text-center service-header">
-                    <p>Lash Services</p>
-                </div>
+                <div className="row text-center service-header">Lash Services</div>
     
     {/*PICTURE LEFT*/}
                 <div className="row flex-vert-align">
