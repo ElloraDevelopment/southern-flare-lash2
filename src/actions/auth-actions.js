@@ -1,21 +1,22 @@
 import axios from "axios";
 
 // Add a response interceptor
-axios.interceptors.response.use(function (response) {
-    // Do something with response data
-    return response;
-  }, function (error) {
-    // Do something with response error
-    if (401 === error.response.status) {
-    alert("You've been logged out, please log back in to continue session");
-    localStorage.removeItem("token");
-    localStorage.removeItem("priv");
-    //Promise.reject runs a catch((err))
-    return Promise.reject(error);
-   } else {
-       return Promise.reject(error);
-   }
-  });
+// axios.interceptors.response.use(function (response) {
+//     // Do something with response data
+//     return response;
+//   }, function (error) {
+//     // Do something with response error
+//     if (401 === error.response.data.status) {
+//       //because of error, changed error.response.status to error.response.data.status - change back if error not fixed
+//     alert("You've been logged out, please log back in to continue session");
+//     localStorage.removeItem("token");
+//     localStorage.removeItem("priv");
+//     //Promise.reject runs a catch((err))
+//     return Promise.reject(error);
+//    } else {
+//        return Promise.reject(error);
+//    }
+//   });
 
 export function clear() {
   return (dispatch) => {

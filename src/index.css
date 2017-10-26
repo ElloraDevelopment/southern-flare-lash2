@@ -79,12 +79,24 @@ button.navbar-toggle{
     background-color: black;
 }
 
+.cart-icon {
+  font-size: 1.3em;
+}
+
+#nav-cart-quant {
+  margin-left: -12px;
+  color: rgb(134,206,216);
+}
+
 @media (max-width: 1055px) {
     .nav-links{
         padding: 0;
     }
     .navbar-default .navbar-nav>li>a{
         padding-right: 2px;
+    }
+    #nav-cart-quant {
+      margin-left: 5px;
     }
 }
 
@@ -100,6 +112,9 @@ button.navbar-toggle{
     text-align: right;
     z-index: 1;
     background-color: white;
+  }
+  #nav-cart-quant {
+    margin-left: 10px;
   }
 }
 
@@ -403,6 +418,15 @@ li{
   justify-content: space-between;
 }
 
+.item-added {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  font-style: italic;
+  padding: 2px 3.5px  0 0px;
+  color: rgb(134,206,216);
+}
+
 .add-button {
   margin-top: 7px;
   max-height: 32px;
@@ -414,6 +438,8 @@ li{
   letter-spacing: .09em;
   border-radius: 2px;
 }
+
+
 
 /*<div className="price-cart">
   <h4 className="product-price">${this.props.product.price}</h4>
@@ -442,7 +468,6 @@ font-family: 'Open Sans Condensed', sans-serif;*/
   width: 24%;
   min-width: 250px;
   padding: 15px 15px 0 15px;
-  background-color: rgb(204,204,204);
   height: 640px;
   color: #333333;
     display: flex;
@@ -525,7 +550,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 }
 
 .staff-pitch {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Poiret One', cursive;
   text-align: center;
   letter-spacing: .04em;
   font-size: 1.4em;
@@ -536,10 +561,10 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 
 .stylist-pic {
   margin: auto;
-  padding-bottom: 15px;
+  padding: 15px 5px !important;
   height: 250px !important;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover !important;
   background-position: center;
 }
 
@@ -905,6 +930,8 @@ font-family: 'Open Sans Condensed', sans-serif;*/
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  box-shadow: 3px 4px 7px grey;
+  border-radius: 3px;
 }
 
 .stylist-name {
@@ -1043,9 +1070,95 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 /**********************
 *****CART PAGE******
 **********************/
-.cart-pic {
-  height: 50px;
+.cart-list-wrapper {
+  margin: 5% 7%;
 }
+
+@media (max-width: 720px) {
+  .cart-list-wrapper {
+    margin: 5% 2%;
+  }
+}
+
+.cart-list-wrapper h2 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bolder;
+  text-align: left;
+  letter-spacing: .08em;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.cart-list-wrapper th {
+  font-family: 'Raleway', cursive;
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+
+.cart-list-wrapper th, .cart-component-wrapper td {
+  padding: 5px 8px;
+}
+
+.cart-separator-line {
+  margin: 9px 0;
+  width: 100%;
+  height: .1em;
+  border-radius: 5px;
+  background-color: #333333;
+}
+
+table {
+  width: 100%;
+}
+
+.table-img {
+  width: 75px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  }
+.table-title {
+  width: 50%;
+  }
+.table-price {
+  width: 10%;
+  }
+.table-quant {
+  width: 10%;
+}
+.table-quant input {
+  width: 40px;
+  padding: 4px 3px;
+  text-align: center;
+  }
+.table-counter {
+  width: 30px;
+}
+.table-subtotal {
+  width: 10%;
+}
+.table-remove-btn {
+  border: none;
+  background-color: white;
+  text-decoration: underline;
+  color: rgb(134,206,216);
+  width: 10%;
+  padding-top: 20px;
+}
+
+.cart-total {
+  padding-top: 50px;
+  text-align: right;
+  padding-right: 80px;
+  font-size: 1.4em;
+}
+
+.checkout button {
+  margin-top: 30px;
+  text-align: right;
+  display: block;
+}
+
 
 /***************
 ******FOOTER****

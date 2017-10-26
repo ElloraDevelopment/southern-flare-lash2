@@ -15,7 +15,7 @@ class Footer extends React.Component {
                         <FontAwesome name="facebook" size="2x"/>
                     </a>
 
-                    <a href="https://www.instagram.com/southernflarelash/"className="icons">
+                    <a href="https://www.instagram.com/southernflarelash/" className="icons">
                         <FontAwesome name="instagram" size="2x"/>
                     </a>
                 </div>
@@ -27,7 +27,7 @@ class Footer extends React.Component {
                     </Link>
 
                     <div><a className="footer-links" href="tel:336-212-0188">336-212-0188</a></div>
-                    
+
                     {/*<div className="col-md-2 col-sm-2 col-xs-2">
                         <img className="footer-logo img-responsive" src="/images/southernflare_sub.png" alt=""/>
                     </div>*/}

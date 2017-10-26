@@ -20,7 +20,8 @@ let defaultState = {
       active: false
     }
   ],
-  cart: []
+  cart: [],
+  cartQuantity: []
 }
 
 const mainReducer = (state = defaultState, action) => {
@@ -84,7 +85,46 @@ const mainReducer = (state = defaultState, action) => {
   } else if (action.type === "SET_CART_DATA") {
     return {
       ...state,
-      cart: action.data
+      cart: action.cart
+    }
+  } else if (action.type === 'ADD_ITEM_TO_CART') {
+      if (state.cart.indexOf(action.id) < 0) {
+      return {
+        ...state,
+        cart: [...state.cart, action.id],
+        cartQuantity: [...state.cartQuantity, 1]
+      }
+    } else {
+        return {
+          ...state
+        }
+      }
+    } else if (action.type === 'SET_CART_ITEM_QUANTITY') {
+      let newCartQuantity = [...state.cartQuantity];
+      newCartQuantity[action.index] = action.quant;
+      return {
+        ...state,
+        cartQuantity: newCartQuantity
+    }
+  // } else if (action.type === "SET_CART_QUANTITY") {
+  //   return {
+  //     ...state,
+  //     cartQuantity: action.cartQuantity
+  //   }
+  } else if (action.type === 'REMOVE_CART_ITEM') {
+    let newCartQuantity = [...state.cartQuantity];
+    let newCart = [...state.cart];
+    newCartQuantity.splice(action.index, 1);
+    newCart.splice(action.index, 1);
+    return {
+      ...state,
+      cartQuantity: newCartQuantity,
+      cart: newCart
+    }
+  } else if (action.type === 'COMPLETE_CHECKOUT') {
+    return {
+      ...state,
+      payload: action.payload
     }
   } else {
       return {

@@ -3,31 +3,37 @@ import React from "react";
 import autoBind from "react-autobind";
 
 import CartList from "../components/cart-list.js";
+import Navbar from "../../../navbar.js";
+import Footer from "../../../footer.js";
 
 import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import * as actionCreators from "../../../actions/cms-actions.js";
+import * as cmsActionCreators from "../../../actions/cms-actions.js";
+import * as ecomActionCreators from "../../../actions/ecom-actions.js";
 
 class CartListContainer extends React.Component {
   constructor(props) {
     super(props);
-      this.state = {
-        quantity: 0
-      }
     autoBind(this);
   }
-  handleChange(key, event) {
-    this.setState({
-      [key]: event.target.value
-    })
+  componentDidUpdate() {
+    sessionStorage.setItem('cart', JSON.stringify(this.props.cart));
+    sessionStorage.setItem('quant', JSON.stringify(this.props.cartQuantity));
   }
-  componentWillMount() {
-    this.props.loadCartData();
+  componentDidMount() {
+    let currentCart = JSON.parse(sessionStorage.getItem('cart')) || [];
+    let currentQuantity = JSON.parse(sessionStorage.getItem('quant')) || [];
+    this.props.setCartData(currentCart);
+    this.props.setCartQuantity(currentQuantity);
   }
   render() {
+    // console.log(this.props);
     return (
       <div className="cart-wrapper">
-        <CartList cart={this.props.cart} handleChange={this.props.handleChange} />
+        <div className='wrapper'>
+          <Navbar />
+          <CartList cart={this.props.cart} handleRemove={this.props.removeCartItem} />
+        </div>
+        <Footer />
       </div>
     )
   }
@@ -35,4 +41,4 @@ class CartListContainer extends React.Component {
 
 const mapStateToProps = (state) => { return state; };
 
-export default connect(mapStateToProps, actionCreators)(CartListContainer);
+export default connect(mapStateToProps, {...cmsActionCreators, ...ecomActionCreators})(CartListContainer);

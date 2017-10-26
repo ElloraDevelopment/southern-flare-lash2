@@ -15,6 +15,7 @@ import AuthComponent from "./authentication/auth.js";
 import ProductListContainer from "./ecommerce/product-page/containers/product-list-container.js";
 import CartListContainer from "./ecommerce/cart/containers/cart-list-container.js";
 import StylistListContainer from "./stylist-page/containers/stylist-list-container.js";
+import CheckoutContainer from './ecommerce/checkout/containers/checkout-container.js';
 
 
 import { Provider } from "react-redux";
@@ -38,7 +39,9 @@ class App extends React.Component {
             <Route exact path="/lashes" component={Lash} />
             <Route exact path="/staff" component={StylistListContainer} />
             <Route exact path="/product" component={ProductListContainer} />
+            <Route exact path="/cart" component={CartListContainer} />
             <Route exact path="/login" component={AuthComponent} />
+            <Route exact path='/checkout' component={CheckoutContainer} />
           </Switch>
         </BrowserRouter>
 
