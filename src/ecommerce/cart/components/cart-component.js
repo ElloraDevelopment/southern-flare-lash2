@@ -5,12 +5,18 @@ class CartComponent extends React.Component {
   render() {
     return (
       <div className="cart-component-wrapper">
-        <div className="cart-pic" style={{backgroundImage: `url(${this.props.product.pic})`}}></div>
-        <h3>{this.props.product.title}</h3>
-        <h4>{this.props.product.desc}</h4>
-        <h4>${this.props.product.price}</h4>
-        <h4>Quantity ordered: {this.props.product.quantity}</h4>
-        <h4>Subtotal: { Number(this.props.product.price * this.props.product.quantity).toFixed(2) }</h4>
+        <table>
+          <tbody>
+            <tr>
+              <td><img className='table-img' src={this.props.product.pic} /></td>
+              <td className='table-title'>{this.props.product.title}</td>
+              <td className='table-price'>${this.props.product.price}</td>
+              <td className='table-quant'><input type='text' value={this.props.quantity} onChange={(event) => {this.props.handleChange(event);}} size='3 !important' maxLength='3 !important' pattern='/[0-9/g]'></input></td>
+              <td className='table-subtotal'>$ { Number(this.props.product.price * this.props.quantity).toFixed(2) }</td>
+              <td><button className='table-remove-btn' onClick={(event) => {this.props.handleRemove(event);}}>Remove Item</button></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     )
   }

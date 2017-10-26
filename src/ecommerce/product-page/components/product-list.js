@@ -10,7 +10,7 @@ class ProductList extends React.Component {
       return product.active;
     });
       return activeProducts.map((product, index) => {
-        return <ProductPageComponent key={product.title + index} product={product} updateCart={this.props.updateCart} handleChange={this.props.handleChange} input={this.props.input} />
+        return <ProductPageComponent key={product.title + index} product={product} addItemToCart={this.props.addItemToCart} itemAdded={this.props.itemAdded} input={this.props.input} />
       });
   }
   render() {

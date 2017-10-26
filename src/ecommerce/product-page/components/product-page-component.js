@@ -1,7 +1,37 @@
 import React from "react";
 
 class ProductPageComponent extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      itemAdded: false
+    }
+  }
+  handleAdd() {
+    this.setState({
+      itemAdded: true
+    })
+    setTimeout(() => {
+      this.setState({
+        itemAdded: false
+      })
+    }, 2000);
+  }
+  // componentDidUpdate(prevState) {
+  //   if (prevState.itemAdded) {
+  //     setTimeout(() => {
+  //       this.setState({
+  //         itemAdded: false
+  //       })
+  //     }, 2000);
+  //   } else {
+  //     this.setState({
+  //       ...prevState
+  //     })
+  //   }
+  // }
   render() {
+    // console.log(this.state);
     return (
       <div className="product-page-component-wrapper product-card">
         <div className="product-image">
@@ -12,8 +42,11 @@ class ProductPageComponent extends React.Component {
           <h4 className="product-desc">{this.props.product.desc}</h4>
           <div className="price-cart">
             <h4 className="product-price">${this.props.product.price}</h4>
+            <div className='item-added'>
+              {this.state.itemAdded ? <h4 className="item-added">Item Added</h4> : null}
+            </div>
             <button className="add-button" onClick={() =>
-              {this.props.updateCart(this.props.product._id, this.props.product.pic, this.props.product.title, this.props.product.desc, this.props.product.price, this.props.product.quantity)}}
+              {this.props.addItemToCart(this.props.product._id); this.handleAdd();}}
               >Add to Cart</button>
           </div>
           {/* <div className="quantity-cart"> */}

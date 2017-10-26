@@ -16,36 +16,36 @@ export function setStylistData(data) {
   }
 }
 
-export function setCartData(data) {
-  return {
-    type: "SET_CART_DATA",
-    data
-  }
-}
+// export function setCartData(data) {
+//   return {
+//     type: "SET_CART_DATA",
+//     data
+//   }
+// }
 
 //NEED TO REMOVE http://localhost:8080/ TO GO LIVE
 
-export function loadCartData() {
-  return (dispatch) => {
-    return axios.get(`http://localhost:8080/cart`).then((response) => {
-      dispatch(setCartData(response.data.data));
-    })
-    .catch((err) => {
-      throw err;
-    });
-  }
-}
-
-export function addCartData(item) {
-  return(dispatch) => {
-    return axios.post(`http://localhost:8080/cart/`, item).then((response) => {
-      dispatch(loadCartData());
-    })
-    .catch((err) => {
-      throw err;
-    });
-  }
-}
+// export function loadCartData() {
+//   return (dispatch) => {
+//     return axios.get(`http://localhost:8080/cart`).then((response) => {
+//       dispatch(setCartData(response.data.data));
+//     })
+//     .catch((err) => {
+//       throw err;
+//     });
+//   }
+// }
+//
+// export function addCartData(item) {
+//   return(dispatch) => {
+//     return axios.post(`http://localhost:8080/cart/`, item).then((response) => {
+//       dispatch(loadCartData());
+//     })
+//     .catch((err) => {
+//       throw err;
+//     });
+//   }
+// }
 
 export function loadProductData() {
   return (dispatch) => {

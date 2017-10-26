@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import {Navbar, NavItem, Nav, NavDropdown, MenuItem} from "react-bootstrap";
 
+import { connect } from 'react-redux';
 
 class MyNavbar extends Component {
     render() {
@@ -74,6 +75,14 @@ class MyNavbar extends Component {
               </Link>
             </NavItem>
 
+            <NavItem>
+              <Link to="/cart">
+                <span className="nav-links"><i className="fa fa-shopping-cart cart-icon" aria-hidden="true"></i></span>
+                <span id="nav-cart-quant">(Cart: {this.props.cart.length})</span>
+              </Link>
+
+            </NavItem>
+
             {/*<NavItem activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="">
                 <span className="btn nav-schedule">Schedule Now</span>
             </NavItem>*/}
@@ -89,4 +98,6 @@ class MyNavbar extends Component {
     }
 }
 
-export default MyNavbar;
+const mapStateToProps = (state) => ({cart: state.cart});
+
+export default connect(mapStateToProps, {})(MyNavbar);
