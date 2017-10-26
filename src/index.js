@@ -24,6 +24,7 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import reducers from "./reducers";
+import Favicon from "react-favicon";
 
 const store = createStore(reducers, applyMiddleware(thunk));
 
@@ -31,6 +32,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-container">
+        <Favicon url={"images/sfl-pics/logo/newfav.jpg"}/>
+
         {/* <CartListContainer /> */}
         <BrowserRouter>
           <Switch>

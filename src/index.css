@@ -19,8 +19,23 @@ html{
 ******NAVBAR****
 ****************/
 
-.nav-brand{
-  width: 150px;
+.navbar-container{
+  font-family: 'Open Sans Condensed', sans-serif;
+  /*border-bottom: 2px solid darkgray;*/
+}
+
+.nav-brand {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+@media(max-width: 767px){
+  .nav-brand{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    width: 60%;
+    float: left;
+  }
 }
 
 li{
@@ -28,34 +43,41 @@ li{
 }
 
 .dropdown-menu a{
-    color: black !important;
+    color: #333333 !important;
 }
 
 .navbar-default .navbar-nav>.open>a{
     background-color: white !important;
-    color: black !important;
+    color: #333333 !important;
 }
 
 nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
-    color: black !important;
+    color: #333333 !important;
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
-    background-color: #FFFAFA;
+    background-color: rgb(134,206,216);
 }
 
-.schedule-btn{
-    margin-bottom: 15px;
-    margin-top: 15px;
-    margin-left: 20px;
-    background-color: transparent;
-    color: black;
-    font-weight: bolder;
+.nav-schedule{
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: #333333;
+    color: white;
+    font-size: 16px;
+}
+
+.custom-nav-btn{
+  padding-top: 0px !important;
+}
+
+.nav-schedule:hover{
+  background-color: rgb(134,206,216);
 }
 
 .FAQ{
-    color: black;
-    font-size: 18px;
+    color: #333333;
+    font-size: 22px;
 }
 
 .nav-custom{
@@ -66,9 +88,9 @@ nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
 }
 
 .nav-links{
-    color: black;
-    font-size: 18px;
-    padding: 25px;
+    color: #333333;
+    font-size: 22px;
+    padding: 20px;
 }
 
 button.navbar-toggle{
@@ -76,16 +98,16 @@ button.navbar-toggle{
 }
 
 .navbar-default .navbar-toggle{
-    border-color: black;
+    border-color: #333333;
 }
 
 .navbar-default .navbar-toggle .icon-bar{
-    background-color: black;
+    background-color: #333333;
 }
 
-@media (max-width: 1055px) {
+@media (max-width: 900px) {
     .nav-links{
-        padding: 0;
+        padding: 10px;
     }
     .navbar-default .navbar-nav>li>a{
         padding-right: 2px;
@@ -97,7 +119,7 @@ button.navbar-toggle{
     text-align: right;
     z-index: 1;
   }
-  .schedule-btn{
+  .nav-schedule{
         margin-right: 5px;
     }
 .navbar .navbar-collapse  {
@@ -119,6 +141,9 @@ button.navbar-toggle{
     }
 }
 
+.navbar-toggle.collapsed{
+  margin-top: 40px;
+}
 
 /***************
 *****FAQ's******
@@ -188,66 +213,96 @@ li{
 *****HEADER*****
 ****************/
 
-.header-logo{
-   position: relative;
-   z-index: -1;
-   margin-top: 5%;
+.header-container{
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
-.rectangle{
-  position: absolute;
-  border: 3px solid blue;
-  height: 70vh;
-  width: 70%;
-  margin-left: 5%;
+@media(max-width: 760px){
+  .header-container{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+.img-header{
+  margin-top: 5vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flex-parent{
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-end;
-}
-
-.welcome{
-  margin-right: 5px;
-}
-
-@media(max-width: 770px) {
-    .header-logo{
-      
-    }
 }
 
 /************************
 *****LANDING-SERVICES****
 *************************/
 
-.skew:hover{
-    -webkit-transform: skew(-10deg);
-    transform: skew(-10deg);
-    font-style: italic;
+.service-container{
+  margin-left: 35%;
+  margin-right: 35%;
 }
 
-.contain{
-    margin-bottom: 15px;
-}
+/*@media(max-width: 768px) {
+  .service-container{
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}*/
 
-.services-contain{
-    margin-bottom: 15px;
-}
-
-.circle {
-  position: relative;
-  display: inline-block;
-  width: 50%;
-  height: 0;
-  padding: 25% 0;
-  border-radius: 50%;
-  background: white;
-  color: black;
-  border: 3px solid black;
-  font-family: Helvetica, Arial Black, sans;
-  font-size: 14px;
+.services{
   text-align: center;
-  line-height:0;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.service-col{
+  width: 50%;
+}
+
+.service-divider{
+  font-size: 30px;
+  color:darkgray;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+
+@media(min-width:457px){
+  .makeup-mobile{
+    display: none;
+  }
+}
+
+@media(max-width:456px){
+  .makeup-desktop{
+    display: none
+  }
+  .service-text{
+    font-size: 16px !important;
+  }
+}
+
+.book-now{
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 22px;
+}
+
+.service-text{
+  font-family: 'Cedarville Cursive', cursive;
+  color:#333333;
+  font-size: 24px;
+  font-weight: bolder;
+  margin-top: 1vh;
+}
+
 
 /***********************
 *****SERVICES-PAGES*****
@@ -372,6 +427,9 @@ li{
     .service-para-mobile{
         margin-top: 15px;
     }
+    .service-header{
+      font-size: 34px !important;
+    }
 }
 
 @media(max-width: 1024px){
@@ -469,7 +527,6 @@ li{
   display: flex;
   align-items: center;
   justify-content: center;
-  /*background-color: #FFF7F8;*/
   font-family: 'Raleway', sans-serif;
 }
 
@@ -481,7 +538,6 @@ li{
 
 .contact-icons-wrapper{
   margin-top: 20px;
-  margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
 }

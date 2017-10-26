@@ -1,27 +1,50 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import {Navbar, NavItem, Nav, NavDropdown, MenuItem} from "react-bootstrap";
+import autoBind from "react-autobind";
 
 
 class MyNavbar extends Component {
+  constructor(){
+    super();
+    this.state = {
+      borderBottom: "2px solid darkgray"
+    }
+    autoBind(this);
+  }
+
+  changeNav() {
+    if(document.location.pathname === "/lash_FAQ") {
+      this.setState({
+        borderBottom: "2px solid blue"
+      })
+    }
+  }
+
+  componentDidMount() {
+        window.addEventListener('onchange', this.changeNav, console.log("navchange"));
+    }
+
     render() {
         return (
-          <div id="hide-nav">
+          <div className="navbar-container container-fluid" style={{borderBottom: this.state.borderBottom}}>
             <Navbar collapseOnSelect fluid className="nav-custom">
         <Navbar.Header>
-          <Navbar.Brand>
-            <a href="#">picture</a>
-                {/*<img className="navbar-brand img-responsive" alt="" src={"images/sfl-pics/logo/southernflare.png"}></img>*/}
-          </Navbar.Brand>
+            <div className="nav-brand">
+              <Link to="/">
+                <img className="img-responsive" alt="nav-logo" src={"images/sfl-pics/logo/color-logo-copy.png"}/>
+              </Link>
+            </div>
+                 
           <Navbar.Toggle/>
         </Navbar.Header>
         <Navbar.Collapse >
           <Nav >
-            <NavItem>
+            {/*<NavItem>
               <Link to="/">
                 <span className="nav-links">Home</span>
               </Link>
-            </NavItem>
+            </NavItem>*/}
 
         {/*Services DROPDOWN*/}
             <NavDropdown className="FAQ" eventKey={4} title="Services" id="basic-nav-dropdown">
@@ -73,13 +96,11 @@ class MyNavbar extends Component {
               </Link>
             </NavItem>
 
-            {/*<NavItem activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="">
-                <span className="btn nav-schedule">Schedule Now</span>
-            </NavItem>*/}
-            <a  href="https://www.schedulicity.com/scheduling/SFLPW8" title="Online scheduling" rel="noopener noreferrer" target="_blank"><img className="schedule-btn" src="//cdn.schedulicity.com/images/schedulenow_lt_yellow3_md.png" alt="Online scheduling" title="Online scheduling" border="0" /></a>
-
+            <NavItem activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
+                <span className="btn nav-schedule">Book Now</span>
+            </NavItem>
+            
           </Nav>
-          <script type="text/javascript" src="https://www.schedulicity.com/api/public/widget/SFLPW8/popup"></script>
         </Navbar.Collapse>
       </Navbar>
 
