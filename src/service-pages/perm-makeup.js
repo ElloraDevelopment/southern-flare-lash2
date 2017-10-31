@@ -3,16 +3,34 @@ import { Link } from "react-router-dom";
 
 import Navbar from "../navbar.js";
 import Footer from "../footer.js";
+import FontAwesome from "react-fontawesome";
+
 
 class PermMakeup extends Component {
+    componentDidMount() {
+        window.addEventListener('scroll', this.scrollFunction);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.scrollFunction);
+    }
+    scrollFunction() {
+        if(document.body.scrollTop > 20  || document.documentElement.scrollTop > 20) {
+            document.getElementById('scrollBtn').style.display = 'block';
+        } else {
+            document.getElementById('scrollBtn').style.display = "none";
+        }
+    }
+    topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
     render() {
         return (
             <div>
+                <button onClick={() => {this.topFunction()}} id="scrollBtn" className="service-scroll-btn" title="Go to top"><FontAwesome name="angle-up" size="2x"/></button>
                 <div className="wrapper container-fluid">
                 <Navbar />
-                <div className="row text-center service-header">
-                    <p>Permanent Makeup</p>
-                </div>
+                <div className="row text-center service-header">Permanent Makeup</div>
     
     {/*PICTURE LEFT*/}
                 <div className="row flex-vert-align">
@@ -89,6 +107,12 @@ class PermMakeup extends Component {
                     </div> 
                 </div>
                 <div className="row gray-line"></div>
+
+                <center>    
+                    <a activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
+                        <span className="btn nav-schedule book-now">Book Now</span>
+                    </a>
+                </center>
                 
                 <div className="row text-center any-questions">
                     Feel free to <Link className="contact-link" to="/contact">CONTACT US</Link> with any questions about our services.

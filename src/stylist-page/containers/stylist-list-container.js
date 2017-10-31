@@ -20,6 +20,11 @@ class StylistListContainer extends React.Component {
           <div className="wrapper nav-stylistlist-block">
             <StylistList stylists={this.props.stylists} />
           </div>
+          <center>    
+            <a activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
+              <span className="btn nav-schedule book-now">Book Now</span>
+            </a>
+          </center>
         </div>
         <Footer />
       </div>

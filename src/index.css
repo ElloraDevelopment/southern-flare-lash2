@@ -19,39 +19,65 @@ html{
 ******NAVBAR****
 ****************/
 
+.navbar-container{
+  font-family: 'Open Sans Condensed', sans-serif;
+  /*border-bottom: 2px solid darkgray;*/
+}
+
+.nav-brand {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+@media(max-width: 767px){
+  .nav-brand{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    width: 60%;
+    float: left;
+  }
+}
+
 li{
     padding: 5px;
 }
 
 .dropdown-menu a{
-    color: black !important;
+    color: #333333 !important;
 }
 
 .navbar-default .navbar-nav>.open>a{
-    background-color: #9DE9E7 !important;
-    color: black !important;
+    background-color: white !important;
+    color: #333333 !important;
 }
 
 nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
-    color: black !important;
+    color: #333333 !important;
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
-    background-color: #9DE9E7;
+    background-color: rgb(134,206,216);
 }
 
-.schedule-btn{
-    margin-bottom: 15px;
-    margin-top: 15px;
-    margin-left: 20px;
-    background-color: #9DE9E7;
-    color: black;
-    font-weight: bolder;
+.nav-schedule{
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: #333333;
+    color: white;
+    font-size: 16px;
+}
+
+.custom-nav-btn{
+  padding-top: 0px !important;
+}
+
+.nav-schedule:hover{
+  background-color: rgb(134,206,216);
 }
 
 .FAQ{
-    color: black;
-    font-size: 18px;
+    color: #333333;
+    font-size: 22px;
 }
 
 .nav-custom{
@@ -62,21 +88,21 @@ nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
 }
 
 .nav-links{
-    color: black;
-    font-size: 18px;
-    padding: 25px;
+    color: #333333;
+    font-size: 22px;
+    padding: 20px;
 }
 
 button.navbar-toggle{
-    background-color: #9DE9E7 !important;
+    background-color: white;
 }
 
 .navbar-default .navbar-toggle{
-    border-color: black;
+    border-color: #333333;
 }
 
 .navbar-default .navbar-toggle .icon-bar{
-    background-color: black;
+    background-color: #333333;
 }
 
 .cart-icon {
@@ -89,8 +115,9 @@ button.navbar-toggle{
 }
 
 @media (max-width: 1055px) {
+@media (max-width: 900px) {
     .nav-links{
-        padding: 0;
+        padding: 10px;
     }
     .navbar-default .navbar-nav>li>a{
         padding-right: 2px;
@@ -105,7 +132,7 @@ button.navbar-toggle{
     text-align: right;
     z-index: 1;
   }
-  .schedule-btn{
+  .nav-schedule{
         margin-right: 5px;
     }
 .navbar .navbar-collapse  {
@@ -130,6 +157,9 @@ button.navbar-toggle{
     }
 }
 
+.navbar-toggle.collapsed{
+  margin-top: 40px;
+}
 
 /***************
 *****FAQ's******
@@ -138,7 +168,7 @@ button.navbar-toggle{
 .faq-title{
     padding-top: 3vh;
     padding-bottom: 3vh;
-    font-family: Bakery;
+    font-family: 'Poiret One', cursive;
     font-size: 26px;
     border-bottom: 3px solid darkgray;
     border-top: 3px solid darkgray;
@@ -190,67 +220,119 @@ li{
   .accord-contain{
       margin-top: 100px;
   }
+  .faq-contact{
+    margin-top: 2em;
+  }
 }
 
 /***************
 *****HEADER*****
 ****************/
 
-.header-logo{
-    margin-top: -150px;
-    margin-bottom: -100px;
+.header-container{
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
-@media(max-width: 770px) {
-    .header-logo{
-        margin-top: -75px;
-        margin-bottom: -50px;
-    }
+@media(max-width: 760px){
+  .header-container{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+.img-header{
+  margin-top: 5vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flex-parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /************************
 *****LANDING-SERVICES****
 *************************/
 
-.skew:hover{
-    -webkit-transform: skew(-10deg);
-    transform: skew(-10deg);
-    font-style: italic;
+.service-container{
+  margin-left: 35%;
+  margin-right: 35%;
 }
 
-.contain{
-    margin-bottom: 15px;
-}
+/*@media(max-width: 768px) {
+  .service-container{
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}*/
 
-.services-contain{
-    margin-bottom: 15px;
-}
-
-.circle {
-  position: relative;
-  display: inline-block;
-  width: 50%;
-  height: 0;
-  padding: 25% 0;
-  border-radius: 50%;
-  background: white;
-  color: black;
-  border: 3px solid black;
-  font-family: Helvetica, Arial Black, sans;
-  font-size: 14px;
+.services{
   text-align: center;
-  line-height:0;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.service-col{
+  width: 50%;
+}
+
+.service-divider{
+  font-size: 30px;
+  color:darkgray;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+
+@media(min-width:457px){
+  .makeup-mobile{
+    display: none;
+  }
+}
+
+@media(max-width:456px){
+  .makeup-desktop{
+    display: none
+  }
+  .service-text{
+    font-size: 16px !important;
+  }
+}
+
+.book-now{
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 22px;
+}
+
+.service-text{
+  font-family: 'Cedarville Cursive', cursive;
+  color:#333333;
+  font-size: 24px;
+  font-weight: bolder;
+  margin-top: 1vh;
+}
+
 
 /***********************
 *****SERVICES-PAGES*****
 ************************/
 
+.service-scroll-btn{
+  bottom: 15% !important;
+}
+
 .service-header{
     margin-bottom: 1em;
     padding-top: 1vh;
     padding-bottom: 1vh;
-    font-family: Bakery;
+    font-family: 'Poiret One', cursive;
     font-size: 68px;
     border-bottom: 3px solid darkgray;
     border-top: 3px solid darkgray;
@@ -260,7 +342,7 @@ li{
 .flex-vert-align{
     display: flex;
     align-items: center;
-    font-family: Caviar Dreams;
+    font-family: 'Raleway', sans-serif;
 }
 
 .service-page-img{
@@ -294,7 +376,7 @@ li{
 /*PERM_MAKEUP*/
 
 .ombre{
-    background-position-y: 80%;
+    background-position-y: 20%;
 }
 
 .microstroking{
@@ -315,8 +397,9 @@ li{
 }
 
 .service-title{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bolder;
+    font-family: 'Poiret One', cursive;
 }
 
 .gray-line{
@@ -356,7 +439,7 @@ li{
         display: inline;
     }
     .service-header{
-        margin-bottom: 1em;
+        margin-bottom: 20px;
     }
     .service-para-desktop{
         display: none;
@@ -364,12 +447,14 @@ li{
     .service-para-mobile{
         margin-top: 15px;
     }
+    .service-header{
+      font-size: 34px !important;
+    }
 }
 
 @media(max-width: 1024px){
     .lips{
         background-position-y: 60%;
-
     }
 }
 
@@ -395,28 +480,95 @@ li{
 }
 
 
+/*FACIALS*/
+
+.facial-treat-makeup{
+  margin-left: 10px;
+  font-size: 45px;
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+}
+
+.gray-line-mobile{
+    height: 2px;
+    background-color: darkgray;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+@media(max-width: 768px){
+  .desktop-facial{
+    display: none;
+  }
+}
+
+@media(min-width: 769px){
+  .mobile-facial{
+    display: none;
+  }
+}
+
+/*WAXING*/
+
+.wax-name{
+  font-size: 20px;
+  display: inline-block;
+}
+
+.wax-price{
+  font-size: 18px;
+  display: inline-block;
+  float: right;
+}
+
+.waxing-img{
+    height: 40vh;
+}
+
+.waxing-line{
+  margin-top: 7vh;
+}
+
+@media(max-width:768px){
+  .waxing-line{
+    margin-top: 0px;
+  }
+}
+
+
 
 /***************
 *****CONTACT****
 ****************/
 
-.contact-box{
-    height: 45vh;
-    position: relative;
-    margin: 15px 15px 15px 15px;
-
+.contact-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
 }
 
-.contact-us{
-    font-size: 30px;
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    color: black;
+.contact-links{
+  display: block;
+  color: black;
+  margin-top: 15px;
+}
+
+.contact-icons-wrapper{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-icons{
+  color: black;
 }
 
 .map{
-    height: 30vh;
+    height: 40vh;
+    margin-bottom: 15px;
 }
 
 .marker{
@@ -1317,6 +1469,7 @@ table {
 
 .icon-wrapper{
     padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .icons:hover {
@@ -1326,6 +1479,10 @@ table {
 .footer-links:hover {
     text-decoration: none !important;
     color: black;
+}
+
+.git-icon {
+    margin-left: 5px;
 }
 
 @media(max-width: 768px) {

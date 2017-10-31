@@ -126,7 +126,14 @@ class PermFAQ extends Component {
                     </div>
 
                 </div>
-                 <div className="row text-center any-questions">
+
+                <center>    
+                    <a activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
+                        <span className="btn nav-schedule book-now">Book Now</span>
+                    </a>
+                </center>
+
+                 <div className="row text-center any-questions faq-contact">
                     Feel free to <Link className="contact-link" to="/contact">CONTACT US</Link> with any questions about our services.
                 </div>
             </div>

@@ -3,6 +3,7 @@ import Navbar from "../navbar.js";
 import Footer from "../footer.js";
 import { Panel, Accordion } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import FontAwesome from "react-fontawesome";
 
 
 class LashFAQ extends Component {
@@ -68,7 +69,14 @@ class LashFAQ extends Component {
                     </div>
 
                 </div>
-                 <div className="row text-center any-questions">
+                
+                <center>    
+                    <a activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
+                        <span className="btn nav-schedule book-now">Book Now</span>
+                    </a>
+                </center>
+
+                 <div className="row text-center any-questions faq-contact">
                     Feel free to <Link className="contact-link" to="/contact">CONTACT US</Link> with any questions about our services.
                 </div>
             </div>

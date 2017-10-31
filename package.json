@@ -20,6 +20,7 @@
     "react-autobind": "^1.0.6",
     "react-bootstrap": "^0.31.3",
     "react-dom": "^15.6.1",
+    "react-favicon": "0.0.9",
     "react-fontawesome": "^1.6.1",
     "react-modal": "^2.3.2",
     "react-redux": "^5.0.6",
