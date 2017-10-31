@@ -114,7 +114,7 @@ button.navbar-toggle{
   color: rgb(134,206,216);
 }
 
-@media (max-width: 1055px) {
+/*@media (max-width: 1055px) {*/
 @media (max-width: 900px) {
     .nav-links{
         padding: 10px;
