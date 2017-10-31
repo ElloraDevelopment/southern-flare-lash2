@@ -114,10 +114,10 @@ button.navbar-toggle{
   color: rgb(134,206,216);
 }
 
-/*@media (max-width: 1055px) {*/
-@media (max-width: 900px) {
+
+@media (max-width: 957px) {
     .nav-links{
-        padding: 10px;
+        padding: 4px;
     }
     .navbar-default .navbar-nav>li>a{
         padding-right: 2px;
@@ -1500,7 +1500,7 @@ table {
         line-height: 0;
     }
     .footer{
-        height: 10vh;
+        height: 12vh;
         padding-top: 0px;
     }
 }

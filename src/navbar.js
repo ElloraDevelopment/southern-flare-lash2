@@ -105,11 +105,6 @@ class MyNavbar extends Component {
 
             </NavItem>
 
-            {/*<NavItem activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="">
-                <span className="btn nav-schedule">Schedule Now</span>
-            </NavItem>*/}
-            <a  href="https://www.schedulicity.com/scheduling/SFLPW8" title="Online scheduling" rel="noopener noreferrer" target="_blank"><img className="schedule-btn" src="//cdn.schedulicity.com/images/schedulenow_lt_yellow3_md.png" alt="Online scheduling" title="Online scheduling" border="0" /></a>
-
             <NavItem activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
                 <span className="btn nav-schedule">Book Now</span>
             </NavItem>
