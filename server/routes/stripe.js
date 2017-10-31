@@ -7,7 +7,7 @@ const keySecret = process.env.sk_test_BtCc2OhT0RqdqYPv4vtL9dGr;
 const stripe = require('stripe')(keySecret);
 
 //not sure if this pug file is supposed to be here or in app
-stripeRouter.set('view engine', 'pug');
+// stripeRouter.set('view engine', 'pug');
 
 stripeRouter.get('/', (req, res) =>
   res.render('index.pug', {keyPublishable}));
