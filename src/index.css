@@ -308,6 +308,10 @@ li{
 *****SERVICES-PAGES*****
 ************************/
 
+.service-scroll-btn{
+  bottom: 15% !important;
+}
+
 .service-header{
     margin-bottom: 1em;
     padding-top: 1vh;

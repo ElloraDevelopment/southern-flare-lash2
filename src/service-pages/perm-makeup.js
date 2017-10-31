@@ -3,11 +3,31 @@ import { Link } from "react-router-dom";
 
 import Navbar from "../navbar.js";
 import Footer from "../footer.js";
+import FontAwesome from "react-fontawesome";
+
 
 class PermMakeup extends Component {
+    componentDidMount() {
+        window.addEventListener('scroll', this.scrollFunction);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.scrollFunction);
+    }
+    scrollFunction() {
+        if(document.body.scrollTop > 20  || document.documentElement.scrollTop > 20) {
+            document.getElementById('scrollBtn').style.display = 'block';
+        } else {
+            document.getElementById('scrollBtn').style.display = "none";
+        }
+    }
+    topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
     render() {
         return (
             <div>
+                <button onClick={() => {this.topFunction()}} id="scrollBtn" className="service-scroll-btn" title="Go to top"><FontAwesome name="angle-up" size="2x"/></button>
                 <div className="wrapper container-fluid">
                 <Navbar />
                 <div className="row text-center service-header">Permanent Makeup</div>
