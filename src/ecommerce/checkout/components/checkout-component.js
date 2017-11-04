@@ -41,8 +41,8 @@ class CheckoutComponent extends React.Component {
                     this.setState({ loading: true });
                     // use fetch or some other AJAX library here if you dont want to use axios
                     console.log(token.id);
-                    axios.post('http://localhost:8080/checkout', {
-                        stripeToken: token.id,
+                    axios.post('http://localhost:8080/charge', {
+                        stripeToken: token.id
                     });
                 }
             });
@@ -77,7 +77,7 @@ class CheckoutComponent extends React.Component {
         <h1>Checkout</h1>
         {(loading || stripeLoading)
                    ? <p>loading..</p>
-                   : <button onClick={this.onStripeUpdate}>Add CC</button>
+                   : <button onClick={this.onStripeUpdate}>Charge CC</button>
                }
         {/* <form action="/charge" method="POST">
           <script

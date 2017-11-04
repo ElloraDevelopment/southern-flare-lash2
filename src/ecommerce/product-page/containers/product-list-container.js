@@ -38,6 +38,7 @@ class ProductListContainer extends React.Component {
   }
   componentDidUpdate(){
    sessionStorage.setItem('cart', JSON.stringify(this.props.cart));
+   sessionStorage.setItem('quant', JSON.stringify(this.props.cartQuantity));
   }
   componentWillMount() {
     this.props.loadProductData();

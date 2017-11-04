@@ -13,7 +13,7 @@ class CartComponentContainer extends React.Component {
       super(props);
       this.state={
         product: {},
-        quantity: props.quantity
+        quantity: props.quantity[props.index]
       }
       autoBind(this);
     }
@@ -22,16 +22,27 @@ class CartComponentContainer extends React.Component {
     }
     handleChange(event) {
       this.setState({
-        quantity: event.target.value
+        quantity: Number(event.target.value)
       })
+
     }
     //should checks this first before it will go to componentDidUpdate
     shouldComponentUpdate(nextProps, nextState) {
-      console.log(nextState, this.state);
-      // return this.state.quantity != nextProps.quantity || (this.state.quantity != nextState.quantity && this.state.quantity == nextProps.quantity)
+      if(this.state.quantity !== nextProps.quantity[this.props.index] ) {
+        return true;
+      }
+      if(Object.keys(this.state.product).length === 0) {
+        return true;
+      }
+      let compareQuant = JSON.parse(sessionStorage.getItem('quant'))[this.props.index];
+      if(this.state.quantity !== compareQuant) {
+        return true;
+      }
+      return false;
     }
     componentDidUpdate() {
       this.props.setCartItemQuantity(this.props.index, this.state.quantity);
+      sessionStorage.setItem('quant', JSON.stringify(this.props.quantity));
     }
       // sessionStorage.setItem('quant', JSON.stringify(this.state.quantity));
       // this.setState({

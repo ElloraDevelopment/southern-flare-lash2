@@ -5,10 +5,11 @@ export function addItemToCart(id) {
   }
 }
 
-export function setCartData(cart) {
+export function setCartData(cart, quant) {
   return {
     type: 'SET_CART_DATA',
-    cart
+    cart,
+    quant
   }
 }
 
