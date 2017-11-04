@@ -11,7 +11,6 @@ class CheckoutContainer extends React.Component {
   //   this.props.completeCheckout();
   // }
   render() {
-    let total = 300;
     return (
       <div className='checkout-container-wrapper'>
         <div className='wrapper'>

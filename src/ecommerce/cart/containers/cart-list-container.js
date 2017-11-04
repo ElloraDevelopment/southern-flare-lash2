@@ -26,7 +26,6 @@ class CartListContainer extends React.Component {
     this.props.setCartQuantity(currentQuantity);
   }
   render() {
-    // console.log(this.props);
     return (
       <div className="cart-wrapper">
         <div className='wrapper'>

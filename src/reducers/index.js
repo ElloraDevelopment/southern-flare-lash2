@@ -86,6 +86,7 @@ const mainReducer = (state = defaultState, action) => {
     return {
       ...state,
       cart: action.cart
+      // cartQuantity: action.quant
     }
   } else if (action.type === 'ADD_ITEM_TO_CART') {
       if (state.cart.indexOf(action.id) < 0) {
@@ -98,6 +99,12 @@ const mainReducer = (state = defaultState, action) => {
         return {
           ...state
         }
+      }
+    } else if (action.type === 'SET_CART_QUANTITY') {
+      return {
+        ...state,
+        cartQuantity: action.cartQuantity
+        // cartQuantity: action.quant
       }
     } else if (action.type === 'SET_CART_ITEM_QUANTITY') {
       let newCartQuantity = [...state.cartQuantity];
