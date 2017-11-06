@@ -12,7 +12,7 @@ class CartComponent extends React.Component {
               <td className='table-title'>{this.props.product.title}</td>
               <td className='table-price'>${this.props.product.price}</td>
               <td className='table-quant'><input type='text' value={this.props.quantity} onChange={(event) => {this.props.handleChange(event);}} size='3 !important' maxLength='3 !important' pattern='/[0-9/g]'></input></td>
-              <td className='table-subtotal'>$ { Number(this.props.product.price * this.props.quantity).toFixed(2) }</td>
+              <td className='table-subtotal'>$ {this.props.handleSubtotal()}</td>
               <td><button className='table-remove-btn' onClick={(event) => {this.props.handleRemove(event);}}>Remove Item</button></td>
             </tr>
           </tbody>

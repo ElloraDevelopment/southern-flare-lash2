@@ -22,13 +22,13 @@ class MyNavbar extends Component {
     }
   }
 
-  componentDidMount() {
-        window.addEventListener('onchange', this.changeNav, console.log("navchange"));
-    }
+  // componentDidMount() {
+  //       window.addEventListener('onchange', this.changeNav, console.log("navchange"));
+  //   }
 
     render() {
         return (
-          <div className="navbar-container container-fluid" style={{borderBottom: this.state.borderBottom}}>
+          <div className="navbar-container container-fluid" id='hide-nav' style={{borderBottom: this.state.borderBottom}}>
             <Navbar collapseOnSelect fluid className="nav-custom">
         <Navbar.Header>
             <div className="nav-brand">
@@ -36,7 +36,7 @@ class MyNavbar extends Component {
                 <img className="img-responsive" alt="nav-logo" src={"images/sfl-pics/logo/color-logo-copy.png"}/>
               </Link>
             </div>
-                 
+
           <Navbar.Toggle/>
         </Navbar.Header>
         <Navbar.Collapse >
@@ -108,7 +108,7 @@ class MyNavbar extends Component {
             <NavItem activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
                 <span className="btn nav-schedule">Book Now</span>
             </NavItem>
-            
+
           </Nav>
         </Navbar.Collapse>
       </Navbar>

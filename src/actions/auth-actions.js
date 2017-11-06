@@ -1,6 +1,6 @@
 import axios from "axios";
 
-Add a response interceptor
+//Add a response interceptor
 axios.interceptors.response.use(function (response) {
     // Do something with response data
     return response;
