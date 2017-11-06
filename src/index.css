@@ -1506,15 +1506,24 @@ table {
 .footer-links{
     color: #f2f2f2;
     font-family: 'Open Sans Condensed', sans-serif;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: .2em;
 }
 
 .footer-copyright {
   color: #f2f2f2;
   font-family: 'Open Sans Condensed', sans-serif;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   letter-spacing: .2em;
+}
+
+.ellora-dev {
+  /*color: rgb(134,206,216) !important;*/
+  font-family: 'Poiret One', cursive;
+  font-variant: small-caps;
+  /*text-transform: capitalize;*/
+  font-size: 1.2em;
+  letter-spacing: .3em;
 }
 
 .footer-links:hover {
