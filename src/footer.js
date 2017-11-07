@@ -6,8 +6,15 @@ class Footer extends React.Component {
     render() {
         return (
             <div className="footer">
-                <div className="icon-wrapper">
-                <a target="_blank" href="tel:+1-307-277-1828" className="icons">
+                <div className='align-left'>
+                    <Link to="/login"><div className="footer-links padding-bottom">Admin Login</div></Link>
+                    <div className="footer-copyright footer-inline padding-bottom">&copy; 2017 Southern Flare Lash</div>
+                    <div><a className="footer-links footer-inline" target="_blank" href="https://www.Elloradev.com">Website created by <span className='ellora-dev'>Ellora Dev</span></a></div>
+                </div>
+
+
+                <div className="icon-wrapper align-right">
+                    <a href="tel:+1-336-212-0188" className="icons">
                         <FontAwesome name="phone" size="2x"/>
                     </a>
                     <a href="mailto:southernFlareLash@hotmail.com" className="icons">
@@ -20,20 +27,6 @@ class Footer extends React.Component {
                         <FontAwesome name="instagram" size="2x"/>
                     </a>
                 </div>
-                
-                    <Link className="footer-links footer-inline" to="/contact">Contact</Link>
-
-                    <Link to="/careers">
-                        <div className="footer-links footer-inline">Careers</div>
-                    </Link>
-                    <Link to="/login">
-                        <div className="footer-links footer-inline">Login</div>
-                    </Link>
-
-                    <div><a className="footer-links" target="_blank" href="tel:307-277-1828">307-277-1828</a></div>
-
-                    <div><a className="footer-links" target="_blank" href="https://github.com/ElloraDevelopment">Created by Ellora Dev<FontAwesome className="git-icon" name="github" size="1x"/></a></div>
-                
             </div>
         )
     }
