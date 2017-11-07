@@ -89,7 +89,7 @@ class Lash extends Component {
                     <div className="col-md-4 col-md-offset-2 col-xs-10 col-xs-offset-1 service-para-mobile">
                         <p className="service-title">Lash Lift and Tint</p>
                         <p>A Lash Lift is a great low maintenance way to lift those straight lashes. In 45 minutes you can have longer looking, black, lifted  lashes that last from 8-12 weeks.</p>
-                        <p>Price: $75</p>
+                        <p>Price: $85</p>
                     </div> 
                 </div>
                 <div className="row gray-line"></div>
