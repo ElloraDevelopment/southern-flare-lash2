@@ -16,14 +16,17 @@ class CartListContainer extends React.Component {
     autoBind(this);
   }
   componentDidUpdate() {
+    console.log(this.props.cartQuantity);
     sessionStorage.setItem('cart', JSON.stringify(this.props.cart));
     sessionStorage.setItem('quant', JSON.stringify(this.props.cartQuantity));
   }
   componentDidMount() {
+
     let currentCart = JSON.parse(sessionStorage.getItem('cart')) || [];
     let currentQuantity = JSON.parse(sessionStorage.getItem('quant')) || [];
     this.props.setCartData(currentCart);
     this.props.setCartQuantity(currentQuantity);
+    console.log(currentQuantity);
   }
   render() {
     return (
