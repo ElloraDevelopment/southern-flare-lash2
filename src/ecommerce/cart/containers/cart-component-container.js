@@ -13,7 +13,8 @@ class CartComponentContainer extends React.Component {
       super(props);
       this.state={
         product: {},
-        quantity: props.quantity[props.index]
+        quantity: props.quantity[props.index],
+        subtotal: []
       }
       autoBind(this);
     }
@@ -27,8 +28,11 @@ class CartComponentContainer extends React.Component {
 
     }
     handleSubtotal() {
-      return Number(this.state.product.price * this.state.quantity).toFixed(2);
+      let sub = Number(this.state.product.price * this.state.quantity).toFixed(2);
+      return sub;
     }
+    
+
     //COMPONENT SHOULD UPDATE AND COMPONENT DID UPDATE CREATING MAX STACK CALL SIZE EXCEEDED
     //should checks this first before it will go to componentDidUpdate
     // shouldComponentUpdate(nextProps, nextState) {

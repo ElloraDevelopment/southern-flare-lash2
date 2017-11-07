@@ -2,7 +2,9 @@
 import React from "react";
 
 class CartComponent extends React.Component {
+
   render() {
+    console.log(this.props)
     return (
       <div className="cart-component-wrapper">
         <table>
