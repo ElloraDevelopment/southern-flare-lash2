@@ -30,8 +30,11 @@ class PermMakeup extends Component {
                 <button onClick={() => {this.topFunction()}} id="scrollBtn" className="service-scroll-btn" title="Go to top"><FontAwesome name="angle-up" size="2x"/></button>
                 <div className="wrapper container-fluid">
                 <Navbar />
-                <div className="row text-center service-header">Permanent Makeup</div>
-    
+                <div className="row text-center section-header">
+                  <h1>Permanent Makeup</h1>
+                </div>
+                
+
     {/*PICTURE LEFT*/}
                 <div className="row flex-vert-align">
                     <div className="col-md-4 col-md-offset-2 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 service-page-img  microstroking" style={{backgroundImage: 'url("images/sfl-pics/microstroking/microstroking.jpg")'}}></div>
@@ -41,7 +44,7 @@ class PermMakeup extends Component {
                         <p>Price: $400</p>
                         <p>Price includes perfecting session at 6-8 weeks.</p>
                         <p>More <Link to="/perm_FAQ">QUESTIONS</Link> about Microblading?</p>
-                    </div> 
+                    </div>
                 </div>
                 <div className="row gray-line"></div>
 
@@ -52,14 +55,14 @@ class PermMakeup extends Component {
                         <p>Ombre brow is a beautiful technique that starts with a darker tail of the brow and fades to a lighter front of the brow. This brow heals very natural and powdery. The ombre brow can last from 3-5 years depending on skin type and texture.</p>
                         <p>Price: $400</p>
                         <p>*Price includes perfecting session at 6-8 weeks.</p>
-                    </div> 
+                    </div>
                     <div className="col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 service-page-img service-img-right ombre" style={{backgroundImage: 'url("images/sfl-pics/ombre-brow/ombre1.jpg")'}}></div>
                     <div className="col-md-4 col-md-offset-2 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 service-para-mobile">
                         <p className="service-title">Ombre/Powder Brows</p>
                         <p>Ombre brow is a beautiful technique that starts with a darker tail of the brow and fades to a lighter front of the brow. This brow heals very natural and powdery. The ombre brow can last from 3-5 years depending on skin type and texture.</p>
                         <p>Price: $400</p>
                         <p>*Price includes perfecting session at 6-8 weeks.</p>
-                    </div> 
+                    </div>
                 </div>
                 <div className="row gray-line"></div>
 
@@ -71,7 +74,7 @@ class PermMakeup extends Component {
                         <p>Mega Volume lashes are 5-15 extensions glued to one single natural lash. These lashes are very light weight (normally .03 or .04). This creates a dense black lash line. A full set takes 3 hours plus.</p>
                         <p>Price: $400</p>
                         <p>*Price includes perfecting session at 6-8 weeks.</p>
-                    </div> 
+                    </div>
                 </div>
                 <div className="row gray-line"></div>
 
@@ -81,14 +84,14 @@ class PermMakeup extends Component {
                         <p className="service-title">Eyeliner Top + Bottom</p>
                         <p>Eyeliner or lash Enhancement is a very natural dark line in the base of the lashes to create the illusion of thicker lashes. This method lasts 2-3 years</p>
                         <p>Price: $75</p>
-                    </div> 
+                    </div>
                     <div className="col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 service-page-img service-img-right eyeliner" style={{backgroundImage: 'url("images/sfl-pics/eye-liner/eyeliner4.jpg")'}}></div>
                     <div className="col-md-4 col-md-offset-2 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 service-para-mobile">
                         <p className="service-title">Eyeliner Top + Bottom</p>
                         <p>Eyeliner or lash Enhancement is a very natural dark line in the base of the lashes to create the illusion of thicker lashes. This method lasts 2-3 years</p>
                         <p>Price: $400</p>
                         <p>*Price includes perfecting session at 6-8 weeks.</p>
-                    </div> 
+                    </div>
                 </div>
                 <div className="row gray-line"></div>
 
@@ -104,16 +107,16 @@ class PermMakeup extends Component {
                         <p>Lip Blush lasts 3-5 years needing 1-2 year color boosts. Lips are very bright for the first week then heal to a nice tint.</p>
                         <p>Price: $450</p>
                         <p>*Price includes perfecting session at 6-8 weeks.</p>
-                    </div> 
+                    </div>
                 </div>
                 <div className="row gray-line"></div>
 
-                <center>    
+                <center>
                     <a activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
                         <span className="btn nav-schedule book-now">Book Now</span>
                     </a>
                 </center>
-                
+
                 <div className="row text-center any-questions">
                     Feel free to <Link className="contact-link" to="/contact">CONTACT US</Link> with any questions about our services.
                 </div>

@@ -10,24 +10,27 @@ class PermFAQ extends Component {
             <div>
             <div id="lash_FAQ" className="wrapper">
                 <Navbar/>
-                    <h4 className="text-center faq-title">Frequently Asked Microblading Questions</h4>
+                <div className='text-center section-header'>
+                  <h1>Frequently Asked Microblading Questions</h1>
+                </div>
+                
                 <div className="row accord-contain">
                     <div className="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                         <Accordion>
                             <Panel header="What is Microblading?" eventKey="1">Microblading (also referred to as Microstroking, Eyebrow Embroidery, Feather Stroke Brows, 3D Brows, or Micro Pigmentation, etc) is the process of manually implanting color pigment beneath the surface of the skin by means of tiny, sterile, disposable needles to produce the appearance of hair strokes. The result is a very natural looking, well shaped, fuller brow that you won’t have to fill in with cosmetics everyday.</Panel>
-                        </Accordion>  
+                        </Accordion>
                     </div>
 
                     <div className="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                         <Accordion>
                             <Panel header="How long is the healing time?" eventKey="2">The eyebrow area will be slightly red after the procedure and color will appear very dark. This is normal for the procedure and part of the healing process. Immediately after your microblading procedure and in the first 10 days, your brows will appear significantly darker and defined than perhaps your desired look. It may continue to get darker over the next few days as scabs begin to form, however this is not an accurate indication of the finished and healed result. 30-50% of your brow color will fade as the scabs fall off within 7-10 days. In some cases, the scabs may take longer to heal and fall off. DO NOT PICK YOUR SCABS. The pigment is within the scab and you do not want to pull any pigment out of your skin prematurely. You'll notice the color is very light right after the two weeks after healing; the skin will have an opaque milky looking quality to it. This is known as the milk skin and is common in tattooing. This is due to the the tissue still healing from the inside out even though the surface of the skin is healed. No down time is required after microblading procedure.  It takes approximately 7-14 days for the brows to heal over, and about 1 month for the color to fully set in.  True color will reveal itself once healed. We all heal differently and what works on one client may not be effective on another so please do not compare your results. The complete healing process takes approximately 6 weeks.</Panel>
-                        </Accordion>  
+                        </Accordion>
                     </div>
 
                     <div className="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                         <Accordion>
                             <Panel header="Is it tattooing?" eventKey="3">With the sudden popularity and media attention to the term microblading, many are led to falsely believe microblading is not a tattoo process. Permanent cosmetics, micropigmentation, dermal implantation, microblading/microstroking, eyebrow embroidery, and long-time/long-lasting makeup, are all different names for the same procedure – cosmetic tattooing. Any time pigment  is placed into the skin with any device, it is a tattoo process as defined by many well informed regulators, the medical community, and dictionary sources. Denying this process is a tattoo can be problematic for those who would, for religious or other personal reasons, normally refuse to have a tattoo.</Panel>
-                        </Accordion>  
+                        </Accordion>
                     </div>
 
                     <div className="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
@@ -44,7 +47,7 @@ class PermFAQ extends Component {
                                     <li className="bullet-pnt">Smoking</li>
                                 </ul>
                             </Panel>
-                        </Accordion>  
+                        </Accordion>
                     </div>
 
                     <div className="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
@@ -62,7 +65,7 @@ class PermFAQ extends Component {
                                     <li className="bullet-pnt">Do not take Fish Oil or Vitamin E one week prior (natural blood thinners)</li>
                                     <li className="bullet-pnt">Do not wax or tint your eyebrows 3 days before the procedure.</li>
                                     <li className="bullet-pnt">Feel free to come in with their brow makeup on so our technician can see your every day look you prefer. Reference pictures of shapes and colors of brows are always welcomed. We will then work together to create the perfect brows!</li>
-                                </ul> 
+                                </ul>
                                 <br/><strong>After your procedure, clients MUST follow these instructions:</strong>
                                 <ul>
                                     <li className="bullet-pnt">Day 1: 2 hours after the procedure, clean brows using a q-tip or cotton round and lightly moisten with distilled water. Gently wipe away the old healing balm and any lymphatic liquid (clear yellowish liquid) that may have built up. Lightly pat dry with tissue and using a new q-tip or cotton round, re-apply healing balm to the brows. Repeat this step every hour for the first day.</li>
@@ -83,9 +86,9 @@ class PermFAQ extends Component {
                                     <li className="bullet-pnt">Avoid swimming, lakes, hot tubs for the first 10 days.</li>
                                     <li className="bullet-pnt">Avoid topical makeup including sunscreen on the area.</li>
                                     <li className="bullet-pnt">DO NOT rub, pick or scratch the treated area.</li>
-                                </ul> 
+                                </ul>
                             </Panel>
-                        </Accordion>  
+                        </Accordion>
                     </div>
 
                     <div className="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
@@ -108,26 +111,26 @@ class PermFAQ extends Component {
                                     <li className="bullet-pnt">Pacemaker or major heart problems.</li>
                                     <li className="bullet-pnt">Sick (cold, flu, etc.) Viral infections and/or diseases.</li>
                                     <li className="bullet-pnt">Any treatment, medication, or illness that compromises the immune system / healing would make you NOT a good candidate for micro-pigmentation procedures.</li>
-                                </ul> 
+                                </ul>
                             </Panel>
-                        </Accordion>  
+                        </Accordion>
                     </div>
 
                     <div className="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                         <Accordion>
                             <Panel header="Can you microblade over an existing brow tattoo?" eventKey="6">Microblading can be done over an existing brow tattoo, however the old tattoo must be significantly faded for the hair strokes to show through and look natural. Please advise if you have an existing tattoo and submit a picture to determine if you are a candidate for this procedure. If not a good candidate we will discuss what other options you have.</Panel>
-                        </Accordion>  
+                        </Accordion>
                     </div>
-                    
+
                     <div className="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                         <Accordion>
                             <Panel header="What are your cancellations/missed appointments policies?" eventKey="7">When booking your Permanent Makeup appointment a $100 NON REFUNDABLE deposit is required to hold your spot. Any cancelations made will result in the loss of your deposit. Rescheduling must be done one week prior to appointment time. No Shows or less than a 24 hour cancelation may result in being charged the full service amount.</Panel>
-                        </Accordion>  
+                        </Accordion>
                     </div>
 
                 </div>
 
-                <center>    
+                <center>
                     <a activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
                         <span className="btn nav-schedule book-now">Book Now</span>
                     </a>

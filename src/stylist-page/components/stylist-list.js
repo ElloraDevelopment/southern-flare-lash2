@@ -14,8 +14,10 @@ class StylistList extends React.Component {
   render() {
     return (
       <div className="stylist-list-wrapper">
-        <h1 className="staff-header">Southern Flare Lash Staff</h1>
-        <h2 className="staff-pitch">Our staff Street art poke 8-bit, fam truffaut selvage godard vaporware deep v bitters listicle wolf. Irony vinyl authentic green juice. Blog art party hella drinking vinegar small batch pitchfork.</h2>
+        <div className='text-center section-header'>
+          <h1>Southern Flare Lash Staff</h1>
+          <h2>Our staff Street art poke 8-bit, fam truffaut selvage godard vaporware deep v bitters listicle wolf. Irony vinyl authentic green juice. Blog art party hella drinking vinegar small batch pitchfork.</h2>
+        </div>
         <div className="flexbox-stylists">
           {this.genStylists()}
         </div>
