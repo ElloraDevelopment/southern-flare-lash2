@@ -111,8 +111,8 @@ class PermMakeup extends Component {
                 </div>
                 <div className="row gray-line"></div>
 
-                <center>
-                    <a activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
+                <center>    
+                    <a target="_blank" href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
                         <span className="btn nav-schedule book-now">Book Now</span>
                     </a>
                 </center>
