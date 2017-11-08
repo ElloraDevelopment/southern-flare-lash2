@@ -132,7 +132,7 @@ li{
 }
 
 .dropdown-menu a:hover{
-  color: #333333 !important; 
+  color: #333333 !important;
 }
 
 .dropdown-menu a{
@@ -159,13 +159,6 @@ nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
     font-size: 16px;
 }
 
-<<<<<<< HEAD
-.custom-nav-btn{
-
-}
-
-=======
->>>>>>> 87947a3ebe9eb92270c8e442d1fcc48f3d5d0982
 .nav-schedule:hover{
   background-color: rgb(134,206,216);
 }
