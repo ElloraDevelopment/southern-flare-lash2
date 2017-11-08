@@ -18,7 +18,7 @@ class ProductList extends React.Component {
       <div className="product-list-wrapper">
         <div className='text-center section-header'>
           <h1>Southern Flare Lash Products</h1>
-          <h2>We sell Elleebana Products Cornhole narwhal kale chips, whatever live-edge coloring book keffiyeh 3 wolf moon tacos sriracha enamel pin man bun bespoke hella edison bulb. Banh mi man braid plaid, asymmetrical seitan sartorial poutine kogi lumbersexual vinyl adaptogen flannel gastropub.</h2>
+          {/* <h2>We sell Elleebana Products Cornhole narwhal kale chips, whatever live-edge coloring book keffiyeh 3 wolf moon tacos sriracha enamel pin man bun bespoke hella edison bulb. Banh mi man braid plaid, asymmetrical seitan sartorial poutine kogi lumbersexual vinyl adaptogen flannel gastropub.</h2> */}
         </div>
         <section className="products">
           {this.genProducts()}
