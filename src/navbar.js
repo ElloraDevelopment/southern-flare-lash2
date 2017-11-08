@@ -105,9 +105,9 @@ class MyNavbar extends Component {
 
             </NavItem>
 
-            <NavItem activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
+            <a href="https://www.schedulicity.com/scheduling/SFLPW8" target="_blank" className="custom-nav-btn">
                 <span className="btn nav-schedule">Book Now</span>
-            </NavItem>
+            </a>
 
           </Nav>
         </Navbar.Collapse>

@@ -81,7 +81,7 @@ class Services extends Component {
             </div>
 
             <center>    
-                <a activeHref href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
+                <a href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
                     <span className="btn nav-schedule book-now">Book Now</span>
                 </a>
             </center>
