@@ -43,7 +43,7 @@ class PermMakeup extends Component {
                         <p>Microblading (also referred to as Microstroking, Eyebrow Embroidery, Feather Stroke Brows, 3D Brows, or Micro Pigmentation, etc) is the process of manually implanting color pigment beneath the surface of the skin by means of tiny, sterile, disposable needles to produce the appearance of hair strokes. The result is a very natural looking, well shaped, fuller brow that you won’t have to fill in with cosmetics everyday.</p>
                         <p>Price: $400</p>
                         <p>Price includes perfecting session at 6-8 weeks.</p>
-                        <p>More <Link to="/perm_FAQ">QUESTIONS</Link> about Microblading?</p>
+                        <p>More <Link to="/perm_FAQ" className="perm-makeup-question-link">QUESTIONS</Link> about Microblading?</p>
                     </div>
                 </div>
                 <div className="row gray-line"></div>
