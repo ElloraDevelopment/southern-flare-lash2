@@ -1,6 +1,7 @@
 //DATA FROM REDUX FOR EACH ITEM IN THE ARRAY MAP
 import React from "react";
 import { Link } from 'react-router-dom';
+import FontAwesome from 'react-fontawesome';
 
 import CartComponentContainer from "../containers/cart-component-container.js";
 import CheckoutContainer from '../../checkout/containers/checkout-container.js';
@@ -15,7 +16,10 @@ class CartList extends React.Component {
     // console.log(this.props)
     return (
       <div className="cart-list-wrapper">
-        <h2>Cart</h2>
+        <div className='text-center section-header'>
+          <h1>Shopping Cart</h1>
+          <h2>We apologize, our shopping cart and checkout are under construction. Please email your order to southernFlareLash@hotmail.com</h2>
+        </div>
         <table>
           <thead>
             <tr>
@@ -28,18 +32,21 @@ class CartList extends React.Component {
             </tr>
           </thead>
         </table>
-        <div className="cart-separator-line"></div>
-        {this.genCart()}
-        <table className='checkout'>
-          <tfoot>
-            <tr>
-              <td className='cart-total'>Total: $</td>
-            </tr>
-            <tr>
-              <td><Link to='/checkout'><button className="cms-button">Checkout</button></Link></td>
-            </tr>
-          </tfoot>
-        </table>
+        <div className='cart-width'>
+          <div className="cart-separator-line"></div>
+          {this.genCart()}
+          <table className='checkout'>
+            <tfoot>
+              {/* <tr>
+                <td className='cart-total'>Total: $</td>
+              </tr>
+              <tr>
+                <td><Link to='/checkout'><button className="cms-button">Checkout</button></Link></td>
+              </tr> */}
+            </tfoot>
+          </table>
+        </div>
+
 
       </div>
     )
