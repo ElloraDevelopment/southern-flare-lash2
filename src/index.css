@@ -41,10 +41,10 @@ html{
   font-family: 'Open Sans Condensed', sans-serif;
   text-align: center;
   letter-spacing: .04em;
-  line-height: 1.2em;
+  line-height: 1.4em;
   width: 75%;
   margin: .65em auto 0em auto !important;
-  padding: 0 2% !important;
+  padding: 0 2%;
 }
 
 @media (max-width: 1025px) {
@@ -161,10 +161,6 @@ nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
     padding: 20px;
 }
 
-.navbar-nav a:hover {
-  text-decoration: none !important;
-  color: rgb(86,206,216)!important;
-}
 .navbar-nav li a:hover {
   text-decoration: none !important;
   color: rgb(86,206,216)!important;
@@ -264,23 +260,19 @@ button.navbar-toggle{
 
 .panel-body{
     overflow: auto;
-    /*font-family: 'Open Sans Condensed', sans-serif;*/
-    font-family: 'Raleway', sans-serif;
-    font-size: 14px;
+    height: 45vh;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .panel-default>.panel-heading{
     background-color: white;
     text-align: center;
+    /*font-family: SummerFont-Light;*/
     font-family: 'Open Sans Condensed', sans-serif;
-    letter-spacing: .08em;
-    font-size: 22px !important;
-    /*font-family: 'Poiret One', cursive;*/
-    /*font-family: 'Raleway', sans-serif;*/
 }
 
-.panel-title a {
-  font-size: 22px !important;
+.panel-title{
+    font-size: 22px;
 }
 
 li{
@@ -303,16 +295,14 @@ li{
   .faq-title{
       font-size: 34px;
   }
+  .panel-title{
+      font-size: 28px;
+  }
   .accord-contain{
       /*margin-top: 100px;*/
   }
   .faq-contact{
     margin-top: 2em;
-  }
-}
-@media (max-width: 768px) {
-  .panel-title a {
-    font-size: 17px !important;
   }
 }
 
@@ -513,7 +503,7 @@ li{
 }
 
 .any-questions{
-    font-family: 'Raleway', sans-serif;
+    font-family: Caviar Dreams;
     font-size: 13px;
     margin-bottom: 15px;
 }
@@ -659,44 +649,23 @@ li{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2em;
-  /*letter-spacing: 1px;*/
   font-family: 'Raleway', sans-serif;
-  /*font-family: 'Open Sans Condensed', sans-serif;*/
-}
-
-.extra-directions {
-  padding: 9px 0;
-  max-width: 400px;
-  /*text-indent: 8px;*/
-  font-weight: bold;
 }
 
 .contact-links{
   display: block;
-  color: #333;
+  color: black;
   margin-top: 15px;
 }
 
 .contact-icons-wrapper{
-  margin: 20px auto 0 auto;
-  max-width: 360px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
 }
 
-.book-now-contact-page {
-  margin-top: 40px !important;
-}
-
-@media (max-width: 360px) {
-  .contact-icons-wrapper{
-    max-width: 310px !important;
-  }
-}
-
 .contact-icons{
-  color: #333;
+  color: black;
 }
 
 .map{
@@ -784,30 +753,15 @@ li{
 }
 
 .product-title {
-  font-family: 'Poiret One', cursive;
-  text-transform: capitalize !important;
+  font-family: 'Raleway', sans-serif;
   letter-spacing: 1.2px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bolder;
-  height: 55px !important;
-}
-
-@media (max-width: 1416px) {
-  .product-title {
-    height: 75px !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .product-card {
-    margin-bottom: 25px;
-  }
+  text-align: left;
+  height: 75px;
 }
 
 .product-desc  {
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  /*font-size: 1.4em;*/
   letter-spacing: 1px;
   text-align: justify;
   height: 250px;
@@ -884,29 +838,10 @@ font-family: 'Open Sans Condensed', sans-serif;*/
   align-self: center;
 }
 
-.services-gallery h4 {
-  font-family: 'Poiret One', cursive;
-  /*font-family: 'Raleway', sans-serif;*/
-  letter-spacing: 1.2px !important;
-  text-align: center;
-  font-size: 20px !important;
-}
-
-/*.stylist-services {
-  letter-spacing: 1.2px !important;
-  text-align: center;
-}*/
-
 .stylist-name {
   margin: 20px  auto 20px auto !important;
   padding-bottom: 0 !important;
   padding-top: 0 !important;
-  /*font-family: 'Raleway', sans-serif;*/
-  font-family: 'Poiret One', cursive;
-  letter-spacing: 1.2px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bolder;
 }
 
 .stylist-bio {
@@ -917,13 +852,6 @@ font-family: 'Open Sans Condensed', sans-serif;*/
   max-height: 200px;
   padding-right: 3px !important;
   overflow-y: scroll;
-  /*font-family: 'Open Sans Condensed', sans-serif;*/
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  line-height: 1.2em;
-  letter-spacing: 1px;
-  text-align: left;
-  padding-right: 3px;
 }
 
 @media (max-width: 1099px) {
@@ -977,7 +905,30 @@ font-family: 'Open Sans Condensed', sans-serif;*/
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.stylist-name {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
 
+.stylist-bio  {
+  font-family: 'Open Sans Condensed', sans-serif;
+  letter-spacing: 1px;
+  text-align: justify;
+  padding-right: 3px;
+}
+
+.stylist-services {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.stylist-gallery {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
 
 /******************************
 ************CMS****************
@@ -989,24 +940,12 @@ font-family: 'Raleway', sans-serif;
 font-family: 'Open Sans Condensed', sans-serif;*/
 
 .cms-component {
-  margin: 0% 3%;
+  margin: 4% 3%;
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .header-block-cms {
   text-align: center;
-  margin-top: -90px;
-}
-
-@media (max-width: 767px) {
-  .header-block-cms {
-    margin-top: 0px !important;
-  }
-}
-@media (max-width: 1024px) {
-  .header-block-cms {
-    margin-top: -60px;
-  }
 }
 
 .cms-h1 {
@@ -1202,7 +1141,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
     font-size: 2em;
   }
   .header-block-cms {
-    /*margin: 10px 0 !important;*/
+    margin: 10px 0 !important;
     padding-bottom: 2em;
     letter-spacing: .01em;
     width: 100%;
@@ -1322,9 +1261,21 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 
 
 
+.stylist-name {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1.2px;
+  text-align: center;
+  padding-bottom: 15px;
+}
 
+.stylist-bio  {
+  font-family: 'Open Sans Condensed', sans-serif;
+  letter-spacing: 1px;
+  text-align: justify;
+  padding-bottom: 15px;
+}
 
-/*.stylist-services {
+.stylist-services {
   font-family: 'Raleway', sans-serif;
   letter-spacing: 1px;
   text-align: center;
@@ -1334,7 +1285,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
   font-family: 'Raleway', sans-serif;
   letter-spacing: 1px;
   text-align: center;
-}*/
+}
 
 
 
@@ -1447,11 +1398,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 *****CART PAGE******
 **********************/
 .cart-list-wrapper {
-  /*margin: 0 7%;*/
-}
-
-.cart-width {
-  margin: 0 7%;
+  margin: 5% 7%;
 }
 
 @media (max-width: 720px) {
@@ -1460,14 +1407,14 @@ font-family: 'Open Sans Condensed', sans-serif;*/
   }
 }
 
-/*.cart-list-wrapper h2 {
+.cart-list-wrapper h2 {
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: bolder;
   text-align: left;
   letter-spacing: .08em;
   font-size: 2.5em;
   margin-bottom: 30px;
-}*/
+}
 
 .cart-list-wrapper th {
   font-family: 'Raleway', cursive;
@@ -1484,7 +1431,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
   width: 100%;
   height: .1em;
   border-radius: 5px;
-  background-color: rgba(45, 45, 45, 0.4);
+  background-color: #333333;
 }
 
 table {
@@ -1602,16 +1549,14 @@ table {
 
 .footer-links{
     color: #f2f2f2;
-    /*font-family: 'Open Sans Condensed', sans-serif;*/
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     /*text-transform: uppercase;*/
-    letter-spacing: .1em;
+    letter-spacing: .2em;
 }
 
 .footer-copyright {
   color: #f2f2f2;
-  font-family: 'Raleway', sans-serif;
-  /*font-family: 'Open Sans Condensed', sans-serif;*/
+  font-family: 'Open Sans Condensed', sans-serif;
   /*text-transform: uppercase;*/
   letter-spacing: .2em;
 }
@@ -1637,7 +1582,7 @@ table {
 
 @media(max-width: 767px) {
     .icons{
-        font-size: 10px !important;
+        font-size: 11px !important;
         padding-left: 10px;
         padding-right: 10px;
         margin-top: 10px;
@@ -1646,7 +1591,7 @@ table {
       padding-top: 10px;
     }
     .footer-links, .footer-copyright{
-        font-size: 8.5px;
+        font-size: 9px;
     }
     .footer-address{
         line-height: 0;

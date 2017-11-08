@@ -18,7 +18,7 @@ class CartList extends React.Component {
       <div className="cart-list-wrapper">
         <div className='text-center section-header'>
           <h1>Shopping Cart</h1>
-          <h2>We apologize, our shopping cart and checkout are under construction. Please email your order to southernFlareLash@hotmail.com</h2>
+          <h2 style={{color: 'red'}}>We apologize, our shopping cart and checkout are under construction. Please email your order to southernFlareLash@hotmail.com</h2>
         </div>
         <table>
           <thead>
