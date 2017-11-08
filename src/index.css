@@ -93,22 +93,46 @@ html{
   border: none !important;
 }
 
-.nav-brand {
-  margin-left: 40%;
-  margin-right: 40%;
+.navbar-brand {
+  height: 120px !important;
 }
 
-@media(max-width: 767px){
+.nav-brand{
+  float: left;
+  width: 16%;
+  min-width: 150px;
+}
+
+@media(max-width: 849px){
+  .navbar-default .navbar-nav>li>av>li>a{
+    padding-left: 5px !important;
+  }
+}
+
+
+.navbar-nav{
+  padding-top: 25px;
+}
+
+.navbar-collapse.collapse{
+  padding-right: 0px !important;
+}
+
+/*@media(max-width: 767px){
   .nav-brand{
     margin-right: 0px !important;
     margin-left: 0px !important;
     width: 60%;
     float: left;
   }
-}
+}*/
 
 li{
     padding: 5px;
+}
+
+.dropdown-menu a:hover{
+  color: #333333 !important; 
 }
 
 .dropdown-menu a{
@@ -135,10 +159,13 @@ nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
     font-size: 16px;
 }
 
+<<<<<<< HEAD
 .custom-nav-btn{
 
 }
 
+=======
+>>>>>>> 87947a3ebe9eb92270c8e442d1fcc48f3d5d0982
 .nav-schedule:hover{
   background-color: rgb(134,206,216);
 }
@@ -158,13 +185,18 @@ nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
 .nav-links{
     color: #333333;
     font-size: 22px;
-    padding: 20px;
+    /*padding: 20px;*/
 }
 
-.navbar-nav li a:hover {
+a#basic-nav-dropdown.dropdown-toggle:hover{
   text-decoration: none !important;
   color: rgb(86,206,216)!important;
 }
+
+/*.navbar-nav li a:hover {
+  text-decoration: none !important;
+  color: rgb(86,206,216)!important;
+}*/
 
 .nav-links:hover {
   text-decoration: none !important;
@@ -188,23 +220,24 @@ button.navbar-toggle{
 }
 
 #nav-cart-quant {
-  margin-left: -12px;
+  /*margin-left: -12px;*/
   color: rgb(86,206,216);
   font-size: 1.1em;
 }
 
 
-@media (max-width: 957px) {
+/*@media (max-width: 957px) {*/
     .nav-links{
         padding: 4px;
     }
     .navbar-default .navbar-nav>li>a{
         padding-right: 2px;
+        padding-left: 5px;
     }
     #nav-cart-quant {
       margin-left: 5px;
     }
-}
+/*}*/
 
 @media (max-width: 768px) {
   .navbar-nav li {
@@ -226,8 +259,8 @@ button.navbar-toggle{
 
 @media (min-width: 768px) {
     .navbar .navbar-nav {
-        display: inline-block;
-        float: none !important;
+        /*display: inline-block;*/
+        float: right !important;
         vertical-align: top;
     }
 
@@ -260,8 +293,11 @@ button.navbar-toggle{
 
 .panel-body{
     overflow: auto;
-    height: 45vh;
     font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.xl-panel{
+  height: 40vh;
 }
 
 .panel-default>.panel-heading{
@@ -381,8 +417,6 @@ li{
   margin-right: 10px;
 }
 
-
-
 @media(min-width:457px){
   .makeup-mobile{
     display: none;
@@ -446,7 +480,6 @@ li{
 }
 
 
-
 /*LASHES*/
 .classic{
     background-position-y: 80%;
@@ -465,6 +498,15 @@ li{
 }
 
 /*PERM_MAKEUP*/
+
+.perm-makeup-question-link{
+  color: #333333 !important;
+  text-decoration: underline;
+}
+
+.perm-makeup-question-link:hover{
+  color: rgb(86,206,216)!important;
+}
 
 .ombre{
     background-position-y: 20%;
@@ -506,6 +548,15 @@ li{
     font-family: Caviar Dreams;
     font-size: 13px;
     margin-bottom: 15px;
+}
+
+.contact-link{
+  color: #333333 !important;
+  text-decoration: underline;
+}
+
+.contact-link:hover{
+  color: rgb(86,206,216)!important;
 }
 
 .contact-link{
@@ -1468,7 +1519,7 @@ table {
   border: none;
   background-color: white;
   text-decoration: underline;
-  color: rgb(134,206,216);
+  color: rgb(86,206,216);
   width: 10%;
   padding-top: 20px;
 }
@@ -1499,6 +1550,7 @@ table {
     width: 100%;
     font-size: 12px !important;
     padding: 20px 15px;
+    height: 10vh;
     /*display: inline-block;*/
     /*vertical-align: middle;*/
 }
@@ -1597,7 +1649,7 @@ table {
         line-height: 0;
     }
     .footer{
-        height: 12vh;
+        height: 10vh;
         vertical-align: middle !important;
     }
     .align-left {
