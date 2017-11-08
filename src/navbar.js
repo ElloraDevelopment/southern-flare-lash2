@@ -28,17 +28,17 @@ class MyNavbar extends Component {
 
     render() {
         return (
-          <div className="navbar-container container-fluid" id='hide-nav' style={{borderBottom: this.state.borderBottom}}>
+          <div className="navbar-container" id='hide-nav' style={{borderBottom: this.state.borderBottom}}>
             <Navbar collapseOnSelect fluid className="nav-custom">
-        <Navbar.Header>
-            <div className="nav-brand">
-              <Link to="/">
-                <img className="img-responsive" alt="nav-logo" src={"images/sfl-pics/logo/color-logo-copy.png"}/>
-              </Link>
-            </div>
-
+        {/*<Navbar.Header>*/}
+              <Link to="/" >
+                {/*<Navbar.Brand>*/}
+                  <img className="nav-brand" alt="southernflare-lash" src={"images/sfl-pics/logo/color-logo-copy.png"}/>
+                {/*</Navbar.Brand>*/}
+              </Link>          
           <Navbar.Toggle/>
-        </Navbar.Header>
+        {/*</Navbar.Header>*/}
+
         <Navbar.Collapse >
           <Nav >
             {/*<NavItem>
@@ -82,7 +82,7 @@ class MyNavbar extends Component {
 
         {/*FAQ DROPDOWN*/}
               <NavDropdown className="FAQ" eventKey={2} title="FAQ's" id="basic-nav-dropdown">
-                <MenuItem eventKey={3.1}>
+                <MenuItem className="nav-dropdown-hover" eventKey={3.1}>
                   <Link to="/lash_FAQ">Lashes</Link>
                 </MenuItem>
 
