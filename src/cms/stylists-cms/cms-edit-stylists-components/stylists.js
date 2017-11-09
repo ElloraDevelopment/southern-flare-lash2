@@ -8,7 +8,7 @@ class Stylists extends React.Component {
       <div className="stylists-wrapper col-sm-6 col-md-3">
           <div className="stylist-pic" style={{backgroundImage: `url(${this.props.stylist.pic})`}}></div>
           <h2>{this.props.stylist.firstName} {this.props.stylist.lastName}</h2>
-          <textarea type="text" rows="6">{this.props.stylist.bio}</textarea>
+          <textarea type="text" rows="6" maxLength='477'>{this.props.stylist.bio}</textarea>
           <h4>{this.props.stylist.services.join(",")}</h4>
           <h4>{this.props.stylist.instagram}</h4>
           <h4>Current Status: {this.props.stylist.active ? "active" : "inactive"}</h4>
@@ -26,8 +26,8 @@ class Stylists extends React.Component {
             <input onChange={(event) => {this.props.handleUpdate("firstName", event)}} placeholder="change first name" type="text" value={this.props.stylist.firstName} />
             <h4>Last Name: </h4>
             <input onChange={(event) => {this.props.handleUpdate("lastName", event)}} placeholder="change last name" value={this.props.inputs.lastName} />
-            <h4>Bio: </h4>
-            <textarea rows="8" type="text" onChange={(event) => {this.props.handleUpdate("bio", event)}} placeholder="change bio" value={this.props.inputs.bio}></textarea>
+            <h4>Bio (limit of 477 characters): </h4>
+            <textarea rows="8" type="text" maxLength='477' onChange={(event) => {this.props.handleUpdate("bio", event)}} placeholder="change bio" value={this.props.inputs.bio}></textarea>
             <h4>Services: </h4>
             <input onChange={(event) => {this.props.handleUpdate("services", event);}} placeholder="change services" value={this.props.inputs.services} />
             <h4>Instagram Link: </h4>

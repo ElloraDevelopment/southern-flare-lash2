@@ -21,7 +21,8 @@ let defaultState = {
     }
   ],
   cart: [],
-  cartQuantity: []
+  cartQuantity: [],
+  cartTotal: 0
 }
 
 const mainReducer = (state = defaultState, action) => {
@@ -81,6 +82,11 @@ const mainReducer = (state = defaultState, action) => {
     return {
       ...state,
       stylists: action.data
+    }
+  } else if (action.type === "CART_TOTAL") {
+    return {
+      ...state,
+      cartTotal: action.total
     }
   } else if (action.type === "SET_CART_DATA") {
     return {

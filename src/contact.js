@@ -25,21 +25,10 @@ class Contact extends React.Component {
                             <p className='extra-directions'>We are located Right behind the back entrance of Racca's Pizza, beside the Gas Light Social Bar. Parking is in the big parking lot across from Racca's.</p>
 
                             <div className="contact-icons-wrapper text-center">
-                                <a className="contact-icons" href="tel:+1-336-212-0188" >
-                                    <FontAwesome name="phone" size="2x"/>
-                                </a>
-
-                                <a className="contact-icons" href="mailto:southernFlareLash@hotmail.com" >
-                                    <FontAwesome name="envelope-o" size="2x"/>
-                                </a>
-
-                                <a className="contact-icons" target="_blank" href="https://www.facebook.com/Southernflarelash/?pnref=lhc" >
-                                    <FontAwesome name="facebook" size="2x"/>
-                                </a>
-
-                                <a className="contact-icons" target="_blank" href="https://www.instagram.com/southernflarelash/">
-                                    <FontAwesome name="instagram" size="2x"/>
-                                </a>
+                                <a className="contact-icons" href="tel:+1-336-212-0188" ><FontAwesome name="phone" size="2x"/></a>
+                                <a className="contact-icons" href="mailto:southernFlareLash@hotmail.com" ><FontAwesome name="envelope-o" size="2x"/></a>
+                                <a className="contact-icons" target="_blank" href="https://www.facebook.com/Southernflarelash/?pnref=lhc" ><FontAwesome name="facebook" size="2x"/></a>
+                                <a className="contact-icons" target="_blank" href="https://www.instagram.com/southernflarelash/"><FontAwesome name="instagram" size="2x"/></a>
                             </div>
 
                             <center>

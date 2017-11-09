@@ -20,7 +20,7 @@ class StylistsForm extends React.Component {
             </li>
             <li>
               <label for="bio">Bio</label>
-              <textarea rows="6" type="text" id="bio" placeholder="stylist bio" value={this.props.input.bio} onChange={(event) => {this.props.handleChange("bio", event)}}></textarea>
+              <textarea rows="6" type="text" id="bio" placeholder="stylist bio" maxLength='477' value={this.props.input.bio} onChange={(event) => {this.props.handleChange("bio", event)}}></textarea>
             </li>
             <li>
               <label for="services">Services</label>

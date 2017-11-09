@@ -50,7 +50,7 @@ class App extends React.Component {
             <Route exact path="/product" component={ProductListContainer} />
             <Route exact path="/cart" component={CartListContainer} />
             <Route exact path="/login" component={AuthComponent} />
-            <Route exact path='/checkout' component={CheckoutContainer} />
+            <Route exact path='/charge' component={CheckoutContainer} />
           </Switch>
         </BrowserRouter>
 

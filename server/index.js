@@ -38,18 +38,26 @@ app.use('/stylists', stylistRouter);
 //*******************************
 //*******STRIPE******************
 //*******************************
-const keyPublishable = process.env.pk_test_KrcPjBqVxWedbXNf7N3v0u9b;
-const keySecret = process.env.sk_test_BtCc2OhT0RqdqYPv4vtL9dGr;
+//import model
+let Charge = require('./models/stripe.js');
+
+const keyPublishable = process.env.PUBLISHABLE_KEY;
+const keySecret = process.env.SECRET_KEY;
+console.log("publishable key: ", keyPublishable)
+console.log("secret key: ", keySecret)
+
 const stripe = require('stripe')(keySecret);
-//pug is for stripe to work
+// pug is for stripe to work
 app.set('view engine', 'pug');
 app.get('/', (req, res) =>
   res.render('index.pug', {keyPublishable}));
 
 app.post('/charge', (req, res) => {
+  // let newCharge = new Charge(req.body.amount);
   console.log('called');
   //deliver amount in cents
-  let amount = 500;
+  let amount = req.body.amount / 100.0;
+  console.log(amount);
 
   stripe.customers.create({
     email: req.body.stripeEmail,
@@ -64,7 +72,16 @@ app.post('/charge', (req, res) => {
     }))
     .then(charge => res.render('charge.pug'));
 });
-
+// app.post('/', (req, res) => {
+//   let newCharge = new Charge(req.body);
+//   newCharge.save((err, data) => {
+//     if (err) {
+//       res.status(500).send({"message":"Server Error", err})
+//     } else {
+//       res.status(201).send({"message":"Item successfully added", data});
+//     }
+//   });
+// });
 
 app.listen(PORT, () => {
   console.log(`Server has started on port ${PORT}`);

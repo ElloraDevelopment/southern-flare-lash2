@@ -20,34 +20,35 @@ class CartList extends React.Component {
           <h1>Shopping Cart</h1>
           <h2 style={{color: 'red'}}>We apologize, our shopping cart and checkout are under construction. Please email your order to southernFlareLash@hotmail.com</h2>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th className='table-img'></th>
-              <th className='table-title'>Product Name</th>
-              <th className='table-price'>Unit Price</th>
-              <th className='table-quant'>Qty</th>
-              <th className='table-subtotal'>Subtotal</th>
-              <th className='table-remove-btn'></th>
-            </tr>
-          </thead>
-        </table>
-        <div className='cart-width'>
-          <div className="cart-separator-line"></div>
-          {this.genCart()}
-          <table className='checkout'>
-            <tfoot>
-              {/* <tr>
-                <td className='cart-total'>Total: $</td>
-              </tr>
+        <div className='cart-list-bottom-wrapper'>
+          <div className='cart-width'>
+          <table>
+            <thead>
               <tr>
-                <td><Link to='/checkout'><button className="cms-button">Checkout</button></Link></td>
-              </tr> */}
-            </tfoot>
+                <th className='table-img'></th>
+                <th className='table-title'>Product Name</th>
+                <th className='table-price'>Unit Price</th>
+                <th className='table-quant'>Qty</th>
+                <th className='table-subtotal'>Subtotal</th>
+                <th className='table-remove-btn'></th>
+              </tr>
+            </thead>
           </table>
+
+            <div className="cart-separator-line"></div>
+            {this.genCart()}
+            <table className='checkout'>
+              <tfoot>
+                {/* <tr>
+                  <td className='cart-total'>Total: $</td>
+                </tr> */}
+                <tr>
+                  <td><Link to='/charge'><button className="cms-button">Checkout</button></Link></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
         </div>
-
-
       </div>
     )
   }

@@ -34,3 +34,10 @@ export function removeCartItem(index) {
     index
   }
 }
+
+export function cartTotal(total) {
+  return {
+    type: 'CART_TOTAL',
+    total
+  }
+}
