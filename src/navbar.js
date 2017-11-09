@@ -30,14 +30,14 @@ class MyNavbar extends Component {
         return (
           <div className="navbar-container" id='hide-nav' style={{borderBottom: this.state.borderBottom}}>
             <Navbar collapseOnSelect fluid className="nav-custom">
-        {/*<Navbar.Header>*/}
+        <Navbar.Header>
               <Link to="/" >
                 {/*<Navbar.Brand>*/}
                   <img className="nav-brand" alt="southernflare-lash" src={"images/sfl-pics/logo/color-logo-copy.png"}/>
                 {/*</Navbar.Brand>*/}
               </Link>          
           <Navbar.Toggle/>
-        {/*</Navbar.Header>*/}
+        </Navbar.Header>
 
         <Navbar.Collapse >
           <Nav >
