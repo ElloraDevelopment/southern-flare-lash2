@@ -100,7 +100,7 @@ class MyNavbar extends Component {
             <NavItem>
               <Link to="/cart">
                 <span className="nav-links"><i className="fa fa-shopping-cart cart-icon" aria-hidden="true"></i></span>
-                <span id="nav-cart-quant">(Cart: {this.props.cart.length})</span>
+                <span id="nav-cart-quant">({this.props.cart.length})</span>
               </Link>
 
             </NavItem>
