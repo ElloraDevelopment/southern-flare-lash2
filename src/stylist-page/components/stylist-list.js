@@ -1,6 +1,6 @@
 import React from "react";
 
-import StylistComponent from "./stylist-component.js";
+import StylistComponentRedo from "./stylist-component-redo.js";
 
 class StylistList extends React.Component {
   genStylists() {
@@ -8,7 +8,7 @@ class StylistList extends React.Component {
       return stylist.active;
     });
       return activeStylists.map((stylist, index) => {
-        return <StylistComponent key={stylist.firstName + index} stylist={stylist} />
+        return <StylistComponentRedo key={stylist.firstName + index} stylist={stylist} />
       });
   }
   render() {
@@ -18,9 +18,9 @@ class StylistList extends React.Component {
           <h1>Southern Flare Lash Staff</h1>
           {/* <h2>Our staff Street art poke 8-bit, fam truffaut selvage godard vaporware deep v bitters listicle wolf. Irony vinyl authentic green juice. Blog art party hella drinking vinegar small batch pitchfork.</h2> */}
         </div>
-        <div className="flexbox-stylists">
+        <section className="flexbox-stylists">
           {this.genStylists()}
-        </div>
+        </section>
       </div>
     )
   }
