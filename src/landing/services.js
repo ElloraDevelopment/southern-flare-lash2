@@ -71,7 +71,7 @@ class Services extends Component {
                 <div className="service-col">
                     <Link to="/facials">
                         <img className="home-icon img-responsive" src="images/sfl-pics/home-icons/face-icon.png" alt="lash-icon"/>
-                        <p className="service-text">Facials</p>
+                        <p className="service-text facial-icon">Facials</p>
                         {/*<div className="home-service face-img" style={{backgroundImage: 'url("images/sfl-pics/home/home-facial.jpg")'}}></div>   */}
                     </Link>
                 </div>

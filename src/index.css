@@ -238,7 +238,7 @@ ul.nav.navbar-nav{
 
 @media(min-width: 767px){
   .navbar-nav{
-    padding-top: 45px;
+    padding-top: 50px;
   }
   .nav-links{
     padding-left: 11px;
@@ -370,6 +370,12 @@ li{
   }
 }
 
+@media(min-width: 769px){
+  .img-header{
+    max-height: 46vh;
+  }
+}
+
 /*@media(min-width:768px){
   .header-img-mobile{
     display: none;
@@ -406,6 +412,16 @@ li{
   align-items: center;
 }
 
+@media(min-width: 769px){
+  .services{
+    margin-top: 1vh;
+  }
+  .book-now{
+    margin-top: 2vh !important;
+    margin-bottom: 2vh !important;
+  }
+}
+
 .service-col{
   width: 50%;
 }
@@ -417,14 +433,18 @@ li{
   padding-right: 9%;
 }
 
-@media(min-width:457px){
+@media(min-width:607px){
   .makeup-mobile{
     display: none;
   }
 }
 
+<<<<<<< HEAD
 @media(max-width:456px){
 /*@media(max-width: 601px) {*/
+=======
+@media(max-width:606px){
+>>>>>>> 7e571410eb1e8a1fda12ac46dec922c89bb3cac5
   .makeup-desktop{
     display: none
   }
@@ -434,8 +454,13 @@ li{
 }
 
 .book-now{
+<<<<<<< HEAD
   margin-top: 2vh;
   margin-bottom: 2vh;
+=======
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+>>>>>>> 7e571410eb1e8a1fda12ac46dec922c89bb3cac5
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 22px;
 }
@@ -443,7 +468,7 @@ li{
 .service-text{
   font-family: 'Cedarville Cursive', cursive;
   color:#333333;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bolder;
   margin-top: 1vh;
 }
@@ -499,6 +524,25 @@ li{
 }
 
 /*PERM_MAKEUP*/
+
+/*@media(max-width:899px){
+  .lips-desktop{
+    display: none;
+  } 
+}
+
+@media(min-width:900px){
+  .lips-mobile{
+    display: none;
+  }
+  .lip-caption{
+    color: white;
+    height: 60% !important;
+    margin-left: 140px !important;
+    font-size: 20px;
+  }
+}*/
+
 
 .perm-makeup-question-link{
   color: #333333 !important;
@@ -699,9 +743,7 @@ li{
 }
 
 .contact-info{
-  /*display: flex;*/
   align-items: center;
-  /*justify-content: center;*/
   font-family: 'Raleway', sans-serif;
 }
 
@@ -709,7 +751,6 @@ li{
   padding: 0 2vw 5px 2vw;
   display: block;
   color: #333;
-  /*margin-top: 15px;*/
 }
 
 .contact-icons-wrapper {
