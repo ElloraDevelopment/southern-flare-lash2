@@ -364,6 +364,11 @@ li{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
 }
+@media(min-width: 1025px) {
+  .img-header {
+    max-height: 46vh;
+  }
+}
 
 /*@media(min-width:768px){
   .header-img-mobile{
@@ -395,7 +400,7 @@ li{
 
 .services{
   text-align: center;
-  margin-top: 5vh;
+  margin-top: 1vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -419,6 +424,7 @@ li{
 }
 
 @media(max-width:456px){
+/*@media(max-width: 601px) {*/
   .makeup-desktop{
     display: none
   }
@@ -428,8 +434,8 @@ li{
 }
 
 .book-now{
-  margin-top: 7vh;
-  margin-bottom: 7vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 22px;
 }

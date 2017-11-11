@@ -10,7 +10,7 @@ class Header extends Component {
                 <img className="img-header header-img-desktop img-responsive" src="images/sfl-pics/header/pretty-pic.jpg" alt="headaer-img"/>
             </div>
         </div>
-           
+
         );
     }
 }
