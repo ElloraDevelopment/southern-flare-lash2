@@ -97,11 +97,16 @@ class PermMakeup extends Component {
 
     {/*PICTURE LEFT*/}
                 <div className="row flex-vert-align">
-                    <div className="col-md-5 col-md-offset-1 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 service-page-img  lips" style={{backgroundImage: 'url("images/sfl-pics/lips/lips2.jpg")'}}>
+                    <div className="col-md-5 col-md-offset-1 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 service-page-img lips-mobile lips" style={{backgroundImage: 'url("images/sfl-pics/lips/lips2.jpg")'}}>
                     <div className="row lip-caption before">Before</div>
                     <div className="row lip-caption right-after">Right After</div>
                     <div className="row lip-caption healed">Healed</div>
                     </div>
+                    {/*<div className="col-md-5 col-md-offset-1 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 service-page-img lips-desktop lips" style={{backgroundImage: 'url("images/sfl-pics/lips/lips2-1.jpg")'}}>
+                    <div className="row lip-caption before">Before</div>
+                    <div className="row lip-caption right-after">Right After</div>
+                    <div className="row lip-caption healed">Healed</div>
+                    </div>*/}
                     <div className="col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 service-para-right">
                       <p className="service-title">Lips</p>
                         <p>Lip Blush lasts 3-5 years needing 1-2 year color boosts. Lips are very bright for the first week then heal to a nice tint.</p>
