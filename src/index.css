@@ -448,6 +448,10 @@ li{
   }
 }
 
+.book-now-contact-page {
+  margin: 4vh 0 !important;
+}
+
 .book-now{
   margin-top: 6vh;
   margin-bottom: 6vh;
@@ -826,7 +830,7 @@ li{
   font-family: 'Raleway', sans-serif;
   letter-spacing: 1.2px;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 .price-cart {
@@ -1013,7 +1017,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
   font-family: 'Raleway', sans-serif;
   letter-spacing: 1.2px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 15px;
   margin-top: 2px !important;
 }
 
