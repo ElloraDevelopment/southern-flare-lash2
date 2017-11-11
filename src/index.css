@@ -433,34 +433,24 @@ li{
   padding-right: 9%;
 }
 
-@media(min-width:607px){
-  .makeup-mobile{
+@media(min-width: 607px) {
+  .makeup-mobile {
     display: none;
   }
 }
 
-<<<<<<< HEAD
-@media(max-width:456px){
-/*@media(max-width: 601px) {*/
-=======
-@media(max-width:606px){
->>>>>>> 7e571410eb1e8a1fda12ac46dec922c89bb3cac5
-  .makeup-desktop{
-    display: none
+@media(max-width: 606px) {
+  .makeup-desktop {
+    display: none;
   }
-  .service-text{
-    font-size: 16px !important;
+  .service-text {
+    font-size: 16px;
   }
 }
 
 .book-now{
-<<<<<<< HEAD
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-=======
   margin-top: 6vh;
   margin-bottom: 6vh;
->>>>>>> 7e571410eb1e8a1fda12ac46dec922c89bb3cac5
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 22px;
 }
@@ -528,7 +518,7 @@ li{
 /*@media(max-width:899px){
   .lips-desktop{
     display: none;
-  } 
+  }
 }
 
 @media(min-width:900px){
