@@ -365,6 +365,12 @@ li{
   border-radius: 5px;
 }
 
+@media(min-width: 769px){
+  .img-header{
+    max-height: 46vh;
+  }
+}
+
 /*@media(min-width:768px){
   .header-img-mobile{
     display: none;
@@ -401,6 +407,16 @@ li{
   align-items: center;
 }
 
+@media(min-width: 769px){
+  .services{
+    margin-top: 2vh;
+  }
+  .book-now{
+    margin-top: 2vh !important;
+    margin-bottom: 2vh !important;
+  }
+}
+
 .service-col{
   width: 50%;
 }
@@ -412,13 +428,13 @@ li{
   padding-right: 9%;
 }
 
-@media(min-width:457px){
+@media(min-width:607px){
   .makeup-mobile{
     display: none;
   }
 }
 
-@media(max-width:456px){
+@media(max-width:606px){
   .makeup-desktop{
     display: none
   }
@@ -693,9 +709,7 @@ li{
 }
 
 .contact-info{
-  /*display: flex;*/
   align-items: center;
-  /*justify-content: center;*/
   font-family: 'Raleway', sans-serif;
 }
 
@@ -703,7 +717,6 @@ li{
   padding: 0 2vw 5px 2vw;
   display: block;
   color: #333;
-  /*margin-top: 15px;*/
 }
 
 .contact-icons-wrapper {
