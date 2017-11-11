@@ -27,7 +27,7 @@ export function clear() {
 
 export function login (username, password) {
   return (dispatch) => {
-    return axios.post("http://localhost:8080/auth/login", {username, password}).then((response) => {
+    return axios.post("/login", {username, password}).then((response) => {
       dispatch(setToken(response.data.token));
       dispatch(setPriv(response.data.priv));
       console.log(response.data.token);
@@ -43,7 +43,7 @@ export function login (username, password) {
 
 export function signup(username, password) {
   return (dispatch) => {
-    return axios.post("http://localhost:8080/auth/signup", {username, password}).then((response) => {
+    return axios.post("/auth/signup", {username, password}).then((response) => {
       alert("account created");
     })
     .catch((err) => {
@@ -55,7 +55,7 @@ export function signup(username, password) {
 
 export function loadUserQue(token) {
   return (dispatch) => {
-    return axios.get("http://localhost:8080/auth/userque", {headers: {Authorization: `Bearer ${token}`}}).then((response) => {
+    return axios.get("/auth/userque", {headers: {Authorization: `Bearer ${token}`}}).then((response) => {
       dispatch(setUserQue(response.data.data));
       dispatch(loadUserQue(token));
     })
@@ -68,7 +68,7 @@ export function loadUserQue(token) {
 
 export function loadUsers(token) {
   return (dispatch) => {
-    return axios.get("http://localhost:8080/auth/user", {headers: {Authorization: `Bearer ${token}`}}).then((response) => {
+    return axios.get("/auth/user", {headers: {Authorization: `Bearer ${token}`}}).then((response) => {
       dispatch(setCurrentUsers(response.data.data));
     })
     .catch((err) => {
@@ -82,7 +82,7 @@ export function loadUsers(token) {
 export function changeStatus(id, priv, token) {
   return (dispatch) => {
     //priv value is what is being updated
-    return axios.put(`http://localhost:8080/auth/user/${id}`, {priv}, {headers: {Authorization: `Bearer ${token}`}}).then((response) => {
+    return axios.put(`/auth/user/${id}`, {priv}, {headers: {Authorization: `Bearer ${token}`}}).then((response) => {
       alert(`${id} status changed to: ${priv}`)
       dispatch(loadUsers(token));
     })
@@ -95,7 +95,7 @@ export function changeStatus(id, priv, token) {
 
 export function addUser(username, priv, token) {
   return (dispatch) => {
-    return axios.post("http://localhost:8080/auth/userque", {username, priv}, {headers: {Authorization: `Bearer ${token}`}}).then((response) => {
+    return axios.post("/auth/userque", {username, priv}, {headers: {Authorization: `Bearer ${token}`}}).then((response) => {
       alert(`${username} added with authorization level: ${priv}`)
       dispatch(loadUserQue(token));
       dispatch(loadUsers(token));
@@ -109,7 +109,7 @@ export function addUser(username, priv, token) {
 
 export function deleteUserQue(username, id, token) {
   return (dispatch) => {
-    return axios.delete(`http://localhost:8080/auth/userque/${id}`, {headers: {Authorization: `Bearer ${token}`}}).then((response) => {
+    return axios.delete(`/auth/userque/${id}`, {headers: {Authorization: `Bearer ${token}`}}).then((response) => {
       alert(`${username} has been deleted`)
       dispatch(loadUserQue(token));
     })
@@ -122,7 +122,7 @@ export function deleteUserQue(username, id, token) {
 
 export function deleteUserList(username, id, token) {
   return (dispatch) => {
-    return axios.delete(`http://localhost:8080/auth/user/${id}`, {headers: {Authorization: `Bearer ${token}`}}).then((response) => {
+    return axios.delete(`/auth/user/${id}`, {headers: {Authorization: `Bearer ${token}`}}).then((response) => {
       alert(`${username} has been deleted`)
       dispatch(loadUsers(token));
     })

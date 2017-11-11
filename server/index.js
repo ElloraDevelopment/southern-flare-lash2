@@ -14,13 +14,15 @@ let productRouter = require('./routes/products.js');
 let stylistRouter = require('./routes/stylists.js');
 // let stripeRouter = require('./routes/stripe.js');
 
+//import path is for going live
+let path = require('path');
+
 
 let PORT = process.env.PORT || settings.port;
 
 mongoose.connect(`mongodb://localhost:27017/${settings.db}`);
 
 const app = express();
-
 
 app.use(cors());
 app.use(bodyParser.urlencoded({extended:false}));
@@ -82,6 +84,19 @@ app.post('/charge', (req, res) => {
 //     }
 //   });
 // });
+
+//for going live
+//setup static files
+//__dirname shows you the path from root to where you are
+//build will minify your javascript
+app.use(express.static(path.resolve(__dirname, "..", "build")));
+
+
+//for going live
+//send index.html file when someone comes to /
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve(__dirname, "..", "build", "index.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`Server has started on port ${PORT}`);
