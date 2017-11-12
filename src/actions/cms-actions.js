@@ -49,7 +49,7 @@ export function setStylistData(data) {
 
 export function loadProductData() {
   return (dispatch) => {
-    return axios.get(`http://localhost:8080/products`).then((response) => {
+    return axios.get(`/products`).then((response) => {
       dispatch(setProductData(response.data.data));
     })
     .catch((err) => {
@@ -60,7 +60,7 @@ export function loadProductData() {
 
 export function addProductData(data) {
   return (dispatch) => {
-    return axios.post('http://localhost:8080/products', data).then((response) => {
+    return axios.post('/products', data).then((response) => {
       dispatch(loadProductData());
       console.log("Item added");
     })
@@ -72,7 +72,7 @@ export function addProductData(data) {
 
   export function editProductData(id, data) {
     return (dispatch) => {
-      return axios.put(`http://localhost:8080/products/${id}`, data).then((response) => {
+      return axios.put(`/products/${id}`, data).then((response) => {
         dispatch(loadProductData());
         alert("product updated");
       })
@@ -85,7 +85,7 @@ export function addProductData(data) {
   export function deleteProductData(id) {
     console.log("called");
     return (dispatch) => {
-      return axios.delete(`http://localhost:8080/products/${id}`).then((response) => {
+      return axios.delete(`/products/${id}`).then((response) => {
         dispatch(loadProductData());
       })
       .catch((err) => {
@@ -96,7 +96,7 @@ export function addProductData(data) {
 
   export function loadStylistData() {
     return (dispatch) => {
-      return axios.get(`http://localhost:8080/stylists`).then((response) => {
+      return axios.get(`/stylists`).then((response) => {
         dispatch(setStylistData(response.data.data));
       })
       .catch((err) => {
@@ -107,7 +107,7 @@ export function addProductData(data) {
 
   export function addStylistData(data) {
     return (dispatch) => {
-      return axios.post(`http://localhost:8080/stylists`, data).then((response) => {
+      return axios.post(`/stylists`, data).then((response) => {
         dispatch(loadStylistData());
       })
       .catch((err) => {
@@ -118,7 +118,7 @@ export function addProductData(data) {
 
     export function editStylistData(id, data) {
       return (dispatch) => {
-        return axios.put(`http://localhost:8080/stylists/${id}`, data).then((response) => {
+        return axios.put(`/stylists/${id}`, data).then((response) => {
           dispatch(loadStylistData());
           alert("stylist updated");
         })
@@ -130,7 +130,7 @@ export function addProductData(data) {
 
     export function deleteStylistData(id) {
       return (dispatch) => {
-        return axios.delete(`http://localhost:8080/stylists/${id}`).then((response) => {
+        return axios.delete(`/stylists/${id}`).then((response) => {
           dispatch(loadStylistData());
         })
         .catch((err) => {

@@ -6,6 +6,10 @@ const pug = require('pug');
 
 const settings = require('./config/settings.js');
 
+//Import path at the top of your server for deployment
+let  path = require('path');
+
+
 //*******************************
 //********IMPORT ROUTES**********
 //*******************************
@@ -17,10 +21,18 @@ let stylistRouter = require('./routes/stylists.js');
 
 let PORT = process.env.PORT || settings.port;
 
-mongoose.connect(`mongodb://localhost:27017/${settings.db}`);
+//changed this from mongoose.connect(`mongodb://localhost:27017/${settings.db}`);
+mongoose.connect(`mongodb://localhost/${settings.db}`);
 
 const app = express();
 
+//setup static files for deployment
+app.use(express.static(path.resolve(__dirname, "..", "build")));
+
+//Setup your root / to be direct to your index.html for deployment
+app.get("/", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "..", "build", "index.html"));
+});
 
 app.use(cors());
 app.use(bodyParser.urlencoded({extended:false}));
