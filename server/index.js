@@ -22,7 +22,7 @@ let stylistRouter = require('./routes/stylists.js');
 let PORT = process.env.PORT || settings.port;
 
 //changed this from mongoose.connect(`mongodb://localhost:27017/${settings.db}`);
-mongoose.connect(`mongodb://localhost/${settings.db}`);
+mongoose.connect(settings.db);
 
 const app = express();
 

@@ -1,5 +1,5 @@
 module.exports = {
-  db: "southernflarelash",
+  db: "mongodb://localhost/southernflarelash",
   port: 8080,
   secret: "big lashes are better"
 }
