@@ -5,7 +5,7 @@ let mongoose = require('mongoose');
 let bcrypt = require('bcrypt');
 let salt = bcrypt.genSaltSync(10);
 
-mongoose.connect(`mongodb://localhost:27017/${settings.db}`);
+mongoose.connect(settings.db);
 
 let setup = () => {
   console.log("Starting initial authorization...");
@@ -18,7 +18,7 @@ let setup = () => {
     } else {
       console.log("User saved");
     }
-  }); 
+  });
 }
 
 setup();
