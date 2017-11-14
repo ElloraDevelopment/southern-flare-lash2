@@ -16,10 +16,12 @@ class UsersContainer extends React.Component {
   }
 componentDidUpdate() {
   if(!this.state.didReq && this.props.currentUsers.length <=0 && this.props.priv === "admin"){
+    console.log('ran users if statement');
     this.props.loadUsers(this.props.token);
     this.setState({
       didReq: !this.state.didReq
     });
+
   }
 }
 

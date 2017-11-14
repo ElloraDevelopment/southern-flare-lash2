@@ -3,6 +3,7 @@ import AddRemoveUser from "./add-remove-user.js";
 
 class UserQue extends React.Component {
   genUsers() {
+    console.log(this.props.users);
     return this.props.users.map((item, index) => {
       return (
         <div className="row">
