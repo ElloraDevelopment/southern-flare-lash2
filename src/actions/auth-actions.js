@@ -27,7 +27,7 @@ export function clear() {
 
 export function login (username, password) {
   return (dispatch) => {
-    return axios.post("/login", {username, password}).then((response) => {
+    return axios.post("/auth/login", {username, password}).then((response) => {
       dispatch(setToken(response.data.token));
       dispatch(setPriv(response.data.priv));
       console.log(response.data.token);
