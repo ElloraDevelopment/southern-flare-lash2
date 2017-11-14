@@ -11,7 +11,7 @@ import PermMakeup from "./service-pages/perm-makeup.js";
 import Facials from "./service-pages/facials.js";
 import Waxing from "./service-pages/waxing.js";
 
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {HashRouter, Route, Switch} from "react-router-dom";
 
 import AuthComponent from "./authentication/auth.js";
 
@@ -36,7 +36,7 @@ class App extends React.Component {
         <Favicon url={"images/sfl-pics/home-icons/lash-icon.jpg"}/>
 
         {/* <CartListContainer /> */}
-        <BrowserRouter>
+        <HashRouter>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/contact" component={Contact} />
@@ -52,7 +52,7 @@ class App extends React.Component {
             <Route exact path="/login" component={AuthComponent} />
             <Route exact path='/charge' component={CheckoutContainer} />
           </Switch>
-        </BrowserRouter>
+        </HashRouter>
 
       </div>
     )
