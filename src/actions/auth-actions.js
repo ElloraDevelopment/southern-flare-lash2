@@ -30,7 +30,6 @@ export function login (username, password) {
     return axios.post("http://localhost:8080/auth/login", {username, password}).then((response) => {
       dispatch(setToken(response.data.token));
       dispatch(setPriv(response.data.priv));
-      console.log(response.data.token);
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("priv", response.data.priv);
     })

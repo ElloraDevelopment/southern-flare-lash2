@@ -15,6 +15,7 @@ class AddRemoveUser extends React.Component {
     });
   }
   render() {
+    console.log(this.props.user.username);
     return (
       <div className="users-wrapper">
         <h4 className="user-name">{this.props.user.username}</h4>

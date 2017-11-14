@@ -55,7 +55,7 @@ class CmsComponent extends React.Component {
             <h1 className="cms-h1"><a href="#user-que">  Admin</a></h1>
           </div>
 
-          <div id="#edit-products"><EditProductsListContainer /></div>
+          <div id="edit-products"><EditProductsListContainer /></div>
           <div id="edit-stylists"><EditStylistsListContainer priv={this.props.priv} token={this.props.token} /></div>
         </div>
     )
