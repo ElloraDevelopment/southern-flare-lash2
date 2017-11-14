@@ -62,7 +62,7 @@ export function addProductData(data) {
   return (dispatch) => {
     return axios.post('http://localhost:8080/products', data).then((response) => {
       dispatch(loadProductData());
-      console.log("Item added");
+      alert("Product added");
     })
     .catch((err) => {
       throw err;
@@ -74,7 +74,7 @@ export function addProductData(data) {
     return (dispatch) => {
       return axios.put(`http://localhost:8080/products/${id}`, data).then((response) => {
         dispatch(loadProductData());
-        alert("product updated");
+        alert("Product updated");
       })
       .catch((err) => {
         throw err;
@@ -83,7 +83,7 @@ export function addProductData(data) {
   }
 
   export function deleteProductData(id) {
-    console.log("called");
+    // console.log("called");
     return (dispatch) => {
       return axios.delete(`http://localhost:8080/products/${id}`).then((response) => {
         dispatch(loadProductData());
@@ -109,6 +109,7 @@ export function addProductData(data) {
     return (dispatch) => {
       return axios.post(`http://localhost:8080/stylists`, data).then((response) => {
         dispatch(loadStylistData());
+        alert("Stylist added");
       })
       .catch((err) => {
         throw err;
