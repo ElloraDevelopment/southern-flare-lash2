@@ -7,8 +7,6 @@ const morgan = require("morgan");
 
 const settings = require('./config/settings.js');
 
-app.use(morgan("dev"));
-
 //Import path at the top of your server for deployment
 let  path = require('path');
 
@@ -47,6 +45,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "..", "build", "index.html"));
 });
 
+app.use(morgan("dev"));
 app.use(cors());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
