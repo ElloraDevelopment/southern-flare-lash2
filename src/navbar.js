@@ -33,7 +33,7 @@ class MyNavbar extends Component {
         <Navbar.Header>
               <Link to="/" >
                 {/*<Navbar.Brand>*/}
-                  <img className="nav-brand" alt="southernflare-lash" src={"images/sfl-pics/logo/color-logo-copy.png"}/>
+                  <img className="nav-brand" alt="southernflare-lash" src={"images/sfl-pics/logo/color-logo-copy.jpg"}/>
                 {/*</Navbar.Brand>*/}
               </Link>          
           <Navbar.Toggle/>

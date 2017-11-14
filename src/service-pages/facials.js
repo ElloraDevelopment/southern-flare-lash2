@@ -94,7 +94,7 @@ class Facials extends Component {
                         <div className="col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1 service-para-right ">
                             <p className="service-title">Microdermabrasion</p>
                             <p>Microdermabrasion is a non-chemical, non-invasive procedure that uses a spray of microcrystals to remove the outermost layer of dry, dead skin cells and reveal younger, healthier-looking skin.</p>
-                            <p>$30</p>
+                            <p>$60</p>
                             <p> * Add to any facial for an additional $30</p>
                         </div>
                         <div className="col-md-4 col-md-offset-1 col-xs-10 col-xs-offset-1 service-para-right desktop-facial">
