@@ -41,13 +41,11 @@ class Services extends Component {
 
                 <div className="service-col text-center">
                     <Link to="/facials">
-<<<<<<< HEAD
-                        <img className="home-icon img-responsive" src="images/sfl-pics/home-icons/face-icon1.png" alt="lash-icon"/>
-                        <p className="service-text facial-icon ">Facials</p>
-=======
+                    {/* conflict - keeping both, not sure which is correct */}
+                        {/* <img className="home-icon img-responsive" src="images/sfl-pics/home-icons/face-icon1.png" alt="lash-icon"/>
+                        <p className="service-text facial-icon ">Facials</p> */}
                         <img className="home-icon img-responsive " src="images/sfl-pics/home-icons/face-icon1.jpg" alt="lash-icon"/>
                         <p className="service-text ">Facials</p>
->>>>>>> landing
                         {/*<div className="home-service face-img" style={{backgroundImage: 'url("images/sfl-pics/home/home-facial.jpg")'}}></div>   */}
                     </Link>
                 </div>
@@ -56,13 +54,13 @@ class Services extends Component {
             </div>
             </div>
 
-<<<<<<< HEAD
+{/* <<<<<<< HEAD */}
             <center>
                 <a href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
-=======
-            <center>    
-                <a target="_blank" href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn">
->>>>>>> landing
+{/* ======= */}
+            {/* <center>     */}
+                {/* <a target="_blank" href="https://www.schedulicity.com/scheduling/SFLPW8" className="custom-nav-btn"> */}
+{/* >>>>>>> landing */}
                     <span className="btn nav-schedule book-now">Book Now</span>
                 </a>
             </center>
