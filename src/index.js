@@ -33,7 +33,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-container">
-        <Favicon url={"images/sfl-pics/home-icons/lash-icon.png"}/>
+        <Favicon url={"images/sfl-pics/home-icons/lash-icon.jpg"}/>
 
         {/* <CartListContainer /> */}
         <BrowserRouter>
