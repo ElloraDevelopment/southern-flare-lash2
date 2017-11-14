@@ -25,13 +25,14 @@ let PORT = process.env.PORT || settings.port;
 
 // Fixes warnings about promises in mongoose
 mongoose.Promise = global.Promise;
-mongoose.connect(settings.db, err => {
-  if (err) throw err;
-
-  // Removes the deprecation warnings
+mongoose.connect(
+  settings.db,// Removes the deprecation warnings
   { useMongoClient: true },
-  console.log("Connected to the database");
-});
+  err => {
+    if (err) throw err;
+    console.log("Connected to the database");
+  }
+);
 
 const app = express();
 
