@@ -3,8 +3,11 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const pug = require('pug');
+const morgan = require("morgan");
 
 const settings = require('./config/settings.js');
+
+app.use(morgan("dev"));
 
 //Import path at the top of your server for deployment
 let  path = require('path');
