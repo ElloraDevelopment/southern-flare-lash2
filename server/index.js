@@ -22,7 +22,16 @@ let stylistRouter = require('./routes/stylists.js');
 let PORT = process.env.PORT || settings.port;
 
 //changed this from mongoose.connect(`mongodb://localhost:27017/${settings.db}`);
-mongoose.connect(settings.db);
+
+// Fixes warnings about promises in mongoose
+mongoose.Promise = global.Promise;
+mongoose.connect(settings.db, err => {
+  if (err) throw err;
+
+  // Removes the deprecation warnings
+  { useMongoClient: true },
+  console.log("Connected to the database");
+});
 
 const app = express();
 
