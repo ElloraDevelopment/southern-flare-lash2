@@ -289,7 +289,6 @@ ul.nav.navbar-nav{
 }
 
 
-
 /***************
 *****FAQ's******
 ****************/
@@ -371,19 +370,6 @@ li{
   }
 }
 
-/*@media(min-width:768px){
-  .header-img-mobile{
-    display: none;
-  }
-}*/
-
-
-/*@media(max-width:767px){
-  .header-img-desktop{
-    display: none;
-  }
-}*/
-
 .flex-parent{
   display: flex;
   justify-content: center;
@@ -421,6 +407,12 @@ li{
   width: 50%;
 }
 
+.facial-icon{
+  width: 90% !important;
+  display: block !important;
+  
+}
+
 .service-divider{
   font-size: 30px;
   color:darkgray;
@@ -439,7 +431,7 @@ li{
     display: none
   }
   .service-text{
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
 }
 
