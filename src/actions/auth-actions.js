@@ -57,7 +57,7 @@ export function loadUserQue(token) {
   return (dispatch) => {
     return axios.get("http://localhost:8080/auth/userque", {headers: {Authorization: `Bearer ${token}`}}).then((response) => {
       dispatch(setUserQue(response.data.data));
-      dispatch(loadUserQue(token));
+      // dispatch(loadUserQue(token));
     })
     .catch((err) => {
       dispatch(clear());
