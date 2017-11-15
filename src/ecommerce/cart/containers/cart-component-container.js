@@ -82,7 +82,7 @@ class CartComponentContainer extends React.Component {
     // }
     loadProduct(){
       let id = this.props.id;
-      let url = "/products";
+      let url = "/products/";
       axios.get(url + id).then((response)=>{
         this.setState({
           product: response.data.data
