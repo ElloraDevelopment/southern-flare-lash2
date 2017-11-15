@@ -415,7 +415,7 @@ li{
 .facial-icon{
   width: 90% !important;
   display: block !important;
-  
+
 }
 
 .service-divider{
@@ -562,7 +562,7 @@ li{
 
 .service-title{
     font-size: 24px;
-    font-weight: bolder;
+    font-weight: bold;
     font-family: 'Poiret One', cursive;
 }
 
@@ -800,6 +800,7 @@ li{
 
 .product-title {
   font-family: 'Poiret One', cursive;
+  font-weight: bold;
   font-size: 24px;
   letter-spacing: 1.2px;
   text-align: left;
@@ -934,7 +935,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 
 .line-divider-stylist-page {
   height: 1px;
-  width: 70%;
+  width: 70% !important;
   background: rgba(45, 45, 45, 0.7);
   margin: auto;
   margin-bottom: 5px;
@@ -984,6 +985,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 
 .stylist-title {
   font-family: 'Poiret One', cursive;
+  font-weight: bold;
   font-size: 24px;
   letter-spacing: 1.2px;
   text-align: center;
