@@ -35,7 +35,7 @@ class MyNavbar extends Component {
                 {/*<Navbar.Brand>*/}
                   <img className="nav-brand" alt="southernflare-lash" src={"images/sfl-pics/logo/color-logo-copy.jpg"}/>
                 {/*</Navbar.Brand>*/}
-              </Link>          
+              </Link>
           <Navbar.Toggle/>
         </Navbar.Header>
 
@@ -99,8 +99,10 @@ class MyNavbar extends Component {
 
             <NavItem>
               <Link to="/cart">
+              <div className='cart-icon-inline'>
                 <span className="nav-links"><i className="fa fa-shopping-cart cart-icon" aria-hidden="true"></i></span>
                 <span id="nav-cart-quant">({this.props.cart.length})</span>
+              </div>
               </Link>
 
             </NavItem>

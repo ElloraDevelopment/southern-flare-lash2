@@ -30,11 +30,11 @@ class CartListContainer extends React.Component {
     this.props.setCartData(currentCart);
     this.props.setCartQuantity(currentQuantity);
     this.props.setCartSubtotal(currentSubtotal);
-    console.log(currentQuantity);
-    console.log(currentSubtotal);
+    // console.log(currentQuantity);
+    // console.log(currentSubtotal);
   }
   render() {
-    console.log(this.props.cartSubtotal)
+    // console.log(this.props.cartSubtotal)
     return (
       <div className="cart-wrapper">
         <div className='wrapper'>
