@@ -20,22 +20,11 @@ class CartComponentContainer extends React.Component {
       this.loadProduct();
     }
     handleSubtotal() {
-      let sub = Number(this.state.product.price * this.props.cartQuantity).toFixed(2);
+      let sub = Number(this.state.product.price * this.props.cartQuantity);
+      this.props.setCartSubtotal(this.props.index, sub);
+      sub = sub.toFixed(2);
       return sub;
     }
-    // genCartTotal() {
-    //   console.log('called');
-    //   return this.props.cartQuantity((price, quant) => {
-    //     let total = Number(this.state.product.price * this.props.cartQuantity).toFixed(2);
-    //     console.log(total);
-    //     return total;
-    //   })
-    // }
-    // genCart() {
-    //   return this.props.cart.map((id, index) => {
-    //     return <CartComponentContainer key={id + index} id={id} index={index} setCartQuantity={this.props.setCartQuantity} cartQuantity={this.props.cartQuantity[index]} handleRemove={this.props.handleRemove} />
-    //   })
-    // }
     loadProduct(){
       let id = this.props.id;
       let url = "http://localhost:8080/products/";

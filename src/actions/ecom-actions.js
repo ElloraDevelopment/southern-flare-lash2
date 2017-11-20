@@ -28,6 +28,21 @@ export function setCartQuantity(cartQuantity) {
   }
 }
 
+export function setCartItemSubtotal(index, subtotal) {
+  return {
+    type: 'SET_CART_ITEM_SUBTOTAL',
+    index,
+    subtotal
+  }
+}
+
+export function setCartSubtotal(cartSubtotal) {
+  return {
+    type: 'SET_CART_SUBTOTAL',
+    cartSubtotal
+  }
+}
+
 export function removeCartItem(index) {
   return {
     type: 'REMOVE_CART_ITEM',
