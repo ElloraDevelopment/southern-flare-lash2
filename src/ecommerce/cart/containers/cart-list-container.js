@@ -16,16 +16,17 @@ class CartListContainer extends React.Component {
     autoBind(this);
   }
   componentDidUpdate() {
-    // console.log(this.props.cartQuantity);
+    console.log(this.props.cartQuantity);
     sessionStorage.setItem('cart', JSON.stringify(this.props.cart));
-    // sessionStorage.setItem('quant', JSON.stringify(this.props.cartQuantity));
+    sessionStorage.setItem('quant', JSON.stringify(this.props.cartQuantity));
   }
-  componentDidMount() {
 
+  componentDidMount() {
     let currentCart = JSON.parse(sessionStorage.getItem('cart')) || [];
-    // let currentQuantity = JSON.parse(sessionStorage.getItem('quant')) || [];
+    let currentQuantity = JSON.parse(sessionStorage.getItem('quant')) || [];
+    // console.log(currentQuantity);
     this.props.setCartData(currentCart);
-    // this.props.setCartQuantity(currentQuantity);
+    this.props.setCartQuantity(currentQuantity);
     // console.log(currentQuantity);
   }
   render() {
@@ -33,7 +34,7 @@ class CartListContainer extends React.Component {
       <div className="cart-wrapper">
         <div className='wrapper'>
           <Navbar />
-          <CartList cart={this.props.cart} handleRemove={this.props.removeCartItem} />
+          <CartList cart={this.props.cart} setCartQuantity={this.props.setCartItemQuantity} cartQuantity={this.props.cartQuantity} handleRemove={this.props.removeCartItem} />
         </div>
         <Footer />
       </div>

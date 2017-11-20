@@ -9,7 +9,7 @@ import CheckoutContainer from '../../checkout/containers/checkout-container.js';
 class CartList extends React.Component {
   genCart() {
     return this.props.cart.map((id, index) => {
-      return <CartComponentContainer key={id + index} id={id} index={index} handleRemove={this.props.handleRemove} />
+      return <CartComponentContainer key={id + index} id={id} index={index} setCartQuantity={this.props.setCartQuantity} cartQuantity={this.props.cartQuantity[index]} handleRemove={this.props.handleRemove} />
     })
   }
   render() {
@@ -39,9 +39,9 @@ class CartList extends React.Component {
             {this.genCart()}
             <table className='checkout'>
               <tfoot>
-                {/* <tr>
+                <tr>
                   <td className='cart-total'>Total: $</td>
-                </tr> */}
+                </tr>
                 <tr>
                   <td><Link to='/charge'><button className="cms-button">Checkout</button></Link></td>
                 </tr>

@@ -12,73 +12,29 @@ class CartComponentContainer extends React.Component {
     constructor(props){
       super(props);
       this.state={
-        product: {},
-        quantity: props.quantity[props.index]
+        product: {}
       }
       autoBind(this);
     }
     componentDidMount(){
       this.loadProduct();
     }
-    handleChange(event) {
-      this.setState({
-        quantity: Number(event.target.value)
-      })
-
-    }
     handleSubtotal() {
-      let sub = Number(this.state.product.price * this.state.quantity).toFixed(2);
+      let sub = Number(this.state.product.price * this.props.cartQuantity).toFixed(2);
       return sub;
     }
-
-
-    //COMPONENT SHOULD UPDATE AND COMPONENT DID UPDATE CREATING MAX STACK CALL SIZE EXCEEDED
-    //should checks this first before it will go to componentDidUpdate
-    // shouldComponentUpdate(nextProps, nextState) {
-    //   if(this.state.quantity !== nextProps.quantity[this.props.index] ) {
-    //     return true;
-    //   }
-    //   if(Object.keys(this.state.product).length === 0) {
-    //     return true;
-    //   }
-    //   let compareQuant = JSON.parse(sessionStorage.getItem('quant'))[this.props.index];
-    //   if(this.state.quantity !== compareQuant) {
-    //     return true;
-    //   }
-    //   return false;
-    // }
-    // componentDidUpdate() {
-    //   this.props.setCartItemQuantity(this.props.index, this.state.quantity);
-    //   sessionStorage.setItem('quant', JSON.stringify(this.props.quantity));
-    // }
-      // sessionStorage.setItem('quant', JSON.stringify(this.state.quantity));
-      // this.setState({
-      //   quantity: JSON.parse(sessionStorage.getItem("quant")) || 1
-      // })
-
-
-
-
-    //OLDER CODE
-    // componentDidMount(){
-    //   let currentQuant = JSON.parse(sessionStorage.getItem('quant')) ;
-    //   this.setState({
-    //     quantity: currentQuant
+    // genCartTotal() {
+    //   console.log('called');
+    //   return this.props.cartQuantity((price, quant) => {
+    //     let total = Number(this.state.product.price * this.props.cartQuantity).toFixed(2);
+    //     console.log(total);
+    //     return total;
     //   })
     // }
-    // componentDidUpdate() {
-    //   sessionStorage.setItem('quant', JSON.stringify(this.state.quantity));
-    //
-    //   // componentDidUpdate() {return JSON.parse(sessionStorage.getItem("quant")) || 1}
-    //   console.log(sessionStorage)
-    // }
-    // componentDidMount() {
-    //     this.setState(
-    //         {
-    //             ...this.state,
-    //             quantity: JSON.parse(sessionStorage.getItem("quant")) || 1
-    //         }
-    //     )
+    // genCart() {
+    //   return this.props.cart.map((id, index) => {
+    //     return <CartComponentContainer key={id + index} id={id} index={index} setCartQuantity={this.props.setCartQuantity} cartQuantity={this.props.cartQuantity[index]} handleRemove={this.props.handleRemove} />
+    //   })
     // }
     loadProduct(){
       let id = this.props.id;
@@ -92,7 +48,7 @@ class CartComponentContainer extends React.Component {
   render() {
     return (
       <div className='cart-component-container-wrapper'>
-        <CartComponent product={this.state.product} quantity={this.state.quantity} index={this.props.index} handleSubtotal={this.handleSubtotal} handleChange={this.handleChange} handleRemove={this.props.handleRemove} />
+        <CartComponent product={this.state.product} setCartQuantity={this.props.setCartQuantity} cartQuantity={this.props.cartQuantity} index={this.props.index} handleSubtotal={this.handleSubtotal} handleChange={this.handleChange} handleRemove={this.props.handleRemove} />
       </div>
     )
   }
