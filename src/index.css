@@ -1789,10 +1789,14 @@ table {
 .table-remove-btn {
   border: none;
   background-color: white;
-  text-decoration: underline;
+  text-decoration: none;
   color: rgb(47,185,195);
   width: 10%;
   padding-top: 20px;
+}
+
+.table-remove-btn:hover {
+  text-decoration: underline;
 }
 
 .cart-total {
@@ -1807,10 +1811,18 @@ table {
   margin-top: 30px;
   text-align: right;
   display: block;
+  text-decoration: none !important;
 }
 
 .checkout button:hover {
+  /*color: rgb(100,206,216);*/
   background-color: rgb(100,206,216);
+  color: #333;
+  text-decoration: none !important;
+}
+
+.checkout a:hover {
+  text-decoration: none !important;
 }
 
 
