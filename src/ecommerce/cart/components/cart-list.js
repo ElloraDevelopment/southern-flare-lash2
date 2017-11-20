@@ -9,11 +9,20 @@ import CheckoutContainer from '../../checkout/containers/checkout-container.js';
 class CartList extends React.Component {
   genCart() {
     return this.props.cart.map((id, index) => {
-      return <CartComponentContainer key={id + index} id={id} index={index} handleRemove={this.props.handleRemove} />
+      return <CartComponentContainer key={id + index} id={id} index={index} setCartSubtotal={this.props.setCartSubtotal} setCartQuantity={this.props.setCartQuantity} cartQuantity={this.props.cartQuantity[index]} handleRemove={this.props.handleRemove} />
     })
   }
+  genCartTotal() {
+    let subtotals = this.props.cartSubtotal;
+    // console.log(typeOf (subtotals));
+    let total = 0;
+    for (let i = 0; i < subtotals.length; i++) {
+      total += subtotals[i];
+    }
+    let decimalTotal = total.toFixed(2);
+    return decimalTotal;
+  }
   render() {
-    // console.log(this.props)
     return (
       <div className="cart-list-wrapper">
         <div className='text-center section-header'>
@@ -39,9 +48,9 @@ class CartList extends React.Component {
             {this.genCart()}
             <table className='checkout'>
               <tfoot>
-                {/* <tr>
-                  <td className='cart-total'>Total: $</td>
-                </tr> */}
+                <tr>
+                  <td className='cart-total'>Total: ${this.genCartTotal()}</td>
+                </tr>
                 <tr>
                   <td><Link to='/charge'><button className="cms-button">Checkout</button></Link></td>
                 </tr>

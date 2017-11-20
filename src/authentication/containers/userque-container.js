@@ -14,14 +14,18 @@ class UserQueContainer extends React.Component {
     }
     autoBind(this);
   }
-  componentDidUpdate() {
-    if(this.props.userQue.length <=0 && this.props.priv === "admin" && !this.state.didReq) {
-      this.props.loadUserQue(this.props.token);
-      this.setState({
-        didReq: !this.state.didReq
-      });
-    }
+
+  componentDidMount() {
+    this.props.loadUserQue(this.props.token);
   }
+  // componentDidUpdate() {
+  //   if(this.props.userQue.length <= 0 && this.props.priv === "admin" && !this.state.didReq) {
+  //     this.props.loadUserQue(this.props.token);
+  //     this.setState({
+  //       didReq: !this.state.didReq
+  //     });
+  //   }
+  // }
   render() {
     console.log(this.props.userQue);
     return (

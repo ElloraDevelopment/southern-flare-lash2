@@ -22,7 +22,8 @@ let defaultState = {
   ],
   cart: [],
   cartQuantity: [],
-  cartTotal: 0
+  cartTotal: 0,
+  cartSubtotal: []
 }
 
 const mainReducer = (state = defaultState, action) => {
@@ -124,7 +125,19 @@ const mainReducer = (state = defaultState, action) => {
   //     ...state,
   //     cartQuantity: action.cartQuantity
   //   }
-  } else if (action.type === 'REMOVE_CART_ITEM') {
+} else if (action.type === 'SET_CART_ITEM_SUBTOTAL') {
+  let newCartSubtotal = [...state.cartSubtotal];
+  newCartSubtotal[action.index] = action.subtotal;
+  return {
+    ...state,
+    cartSubtotal: newCartSubtotal
+  }
+} else if (action.type === 'SET_CART_SUBTOTAL') {
+  return {
+    ...state,
+    cartSubtotal: [...state.cartSubtotal, Number(action.cartSubtotal)]
+  }
+} else if (action.type === 'REMOVE_CART_ITEM') {
     let newCartQuantity = [...state.cartQuantity];
     let newCart = [...state.cart];
     newCartQuantity.splice(action.index, 1);
